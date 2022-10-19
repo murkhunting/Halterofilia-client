@@ -1,6 +1,8 @@
 # CLUB HALTEROFILIA BARCELONA
 
-Se trata de una Aplicación Web para el Club de Halterofilia de Barcelona. Una web dinámica y sencilla con para usuarios del Gimansio.
+Se trata de una Aplicación Web realizada con React.js y Next.js para el frontend y el SEO y con una base de datos en MongoDB.
+
+Nueva web para el Club de Halterofilia de Barcelona, dinámica y sencilla para usuarios del Gimansio.
 
 La web tiene como objetivo crear algo viasualmente agradable y dinámico y con un user flow sencillo para que los nuevos usuarios descubran lo que se ofrece de forma directa y rápida.
 
