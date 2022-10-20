@@ -1,6 +1,8 @@
-import Layout from "../layouts/Layout";
+// import Layout from "../layouts/Layout";
 
-import { Link, Image } from "next/link";
+// import logo from "../public/images/logo.png";
+
+// import { Link, Image } from "next/link";
 
 export default function Home() {
   return (

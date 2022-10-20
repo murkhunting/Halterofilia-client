@@ -1,13 +1,18 @@
 .navbar {
-  background-color: rgba(0, 0, 0, 0);
-  position: absolute;
-  height: 60px;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: $second;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 500;
+
+  .container {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $second;
+  }
   .logo {
+    display: flex;
     margin-left: 20px;
     text-decoration: none;
   }
@@ -31,5 +36,6 @@
   }
   .perfil {
     margin-right: 20px;
+    display: flex;
   }
 }

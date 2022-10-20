@@ -7,57 +7,61 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <Link href="/">
-        <a className="logo">LOGO</a>
-      </Link>
-      <div className="menu">
-        <Link href="/online">
-          <a
-            className={
-              router.pathname == "/online" ? "menuactive" : "menuinactive"
-            }
-          >
-            ONLINE
-          </a>
+      <div className="container">
+        <Link href="/">
+          <a className="logo">LOGO</a>
         </Link>
-        <Link href="/formaciones">
-          <a
-            className={
-              router.pathname == "/formaciones" ? "menuactive" : "menuinactive"
-            }
-          >
-            FORMACIONES
-          </a>
-        </Link>
-        <Link href="/presencial">
-          <a
-            className={
-              router.pathname == "/presencial" ? "menuactive" : "menuinactive"
-            }
-          >
-            PRESENCIAL
-          </a>
-        </Link>
-        <Link href="/nosotros">
-          <a
-            className={
-              router.pathname == "/nosotros" ? "menuactive" : "menuinactive"
-            }
-          >
-            NOSOTROS
-          </a>
-        </Link>
-        <Link href="/contacto">
-          <a
-            className={
-              router.pathname == "/contacto" ? "menuactive" : "menuinactive"
-            }
-          >
-            CONTACTO
-          </a>
-        </Link>
+        <div className="menu">
+          <Link href="/online">
+            <a
+              className={
+                router.pathname == "/online" ? "menuactive" : "menuinactive"
+              }
+            >
+              ONLINE
+            </a>
+          </Link>
+          <Link href="/formaciones">
+            <a
+              className={
+                router.pathname == "/formaciones"
+                  ? "menuactive"
+                  : "menuinactive"
+              }
+            >
+              FORMACIONES
+            </a>
+          </Link>
+          <Link href="/presencial">
+            <a
+              className={
+                router.pathname == "/presencial" ? "menuactive" : "menuinactive"
+              }
+            >
+              PRESENCIAL
+            </a>
+          </Link>
+          <Link href="/nosotros">
+            <a
+              className={
+                router.pathname == "/nosotros" ? "menuactive" : "menuinactive"
+              }
+            >
+              NOSOTROS
+            </a>
+          </Link>
+          <Link href="/contacto">
+            <a
+              className={
+                router.pathname == "/contacto" ? "menuactive" : "menuinactive"
+              }
+            >
+              CONTACTO
+            </a>
+          </Link>
+        </div>
+        <div className="perfil">IDIOMA</div>
       </div>
-      <div className="perfil">IDIOMA</div>
     </div>
   );
 };
