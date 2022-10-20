@@ -1,22 +1,10 @@
 @import "./index.scss";
 @import "./colors.scss";
-@font-face {
-  font-family: "Capture";
-  src: url("../assets/fonts/Capture\ it.ttf");
-}
-@font-face {
-  font-family: "Stencil";
-  src: url("../assets/fonts/SairaStencilOne-Regular.ttf");
-}
-@font-face {
-  font-family: "Alerta";
-  src: url("../assets/fonts/AllertaStencil-Regular.ttf");
-}
 
 html,
 body {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Oswald", sans-serif;
   background-color: $main;
 }
