@@ -1,15 +1,30 @@
 import React from "react";
 import Link from "next/link";
+
 import { useRouter } from "next/router";
+import { useState, useEffect } from "react";
 
 const Navbar = () => {
   const router = useRouter();
+  const [windowHeight, setWindowHeight] = useState("0");
+
+  const handleScroll = () => {
+    setWindowHeight(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
+  console.log(windowHeight);
 
   return (
     <div className="navbar">
       <div className="container">
         <Link href="/">
-          <a className="logo">LOGO</a>
+          <a>
+            <img className="logo" src="/images/logo.png" alt="logo" />
+          </a>
         </Link>
         <div className="menu">
           <Link href="/online">

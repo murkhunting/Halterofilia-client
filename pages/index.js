@@ -18,9 +18,9 @@ export default function Home() {
           <h2>TRAIN DIFFERENT</h2>
         </div>
       </div>
-      <div className="programaonline"></div>
-      <div className="formacionestécnicas"></div>
-      <div className="sobrenosotros"></div>
+      <div className="programaonline">PROGRAMA ONLINE</div>
+      <div className="formacionestecnicas">FORMACIONES TÉCNICAS</div>
+      <div className="sobrenosotros">NOSOTROS</div>
     </div>
   );
 }

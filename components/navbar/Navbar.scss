@@ -5,7 +5,7 @@
   z-index: 500;
 
   .container {
-    height: 60px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -13,29 +13,42 @@
   }
   .logo {
     display: flex;
-    margin-left: 20px;
+    margin-left: 80px;
     text-decoration: none;
+    height: 60px;
+    transition: 0.2s ease-in-out;
+  }
+  .logo:hover {
+    scale: 1.1;
   }
   .menu {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    font-weight: 800;
 
     .menuinactive {
       text-decoration: none;
-      padding: 0 10px;
+      padding: 0 15px;
       color: $second;
+      transition: 0.2s ease-in-out;
+    }
+    .menuinactive:hover {
+      scale: 1.05;
     }
     .menuactive {
       text-decoration: line-through;
       text-decoration-color: $detalles;
+      text-decoration-thickness: 3px;
       color: $second;
+      opacity: 0.8;
       padding: 0 10px;
+      cursor: default;
     }
   }
   .perfil {
-    margin-right: 20px;
+    margin-right: 60px;
     display: flex;
   }
 }
