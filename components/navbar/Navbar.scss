@@ -1,3 +1,35 @@
 .navbar {
-  background-color: $main;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  height: 60px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $second;
+  .logo {
+    margin-left: 20px;
+    text-decoration: none;
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .menuinactive {
+      text-decoration: none;
+      padding: 0 10px;
+      color: $second;
+    }
+    .menuactive {
+      text-decoration: line-through;
+      text-decoration-color: $detalles;
+      color: $second;
+      padding: 0 10px;
+    }
+  }
+  .perfil {
+    margin-right: 20px;
+  }
 }

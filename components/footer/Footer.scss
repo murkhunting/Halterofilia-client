@@ -1,0 +1,39 @@
+.footer {
+  position: relative;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $second;
+  z-index: -100;
+
+  .contacta {
+    margin: 20px 0 0 0;
+    font-size: 20px;
+  }
+
+  .social {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0 0 0;
+    h5 {
+      margin: 0 15px;
+      font-size: 20px;
+      padding: 8px 8px 2px 8px;
+      border: 2px solid $main;
+      border-radius: 50%;
+      transition: 0.2s ease-in-out;
+      cursor: pointer;
+    }
+    h5:hover {
+      opacity: 0.8;
+      scale: 1.1;
+    }
+  }
+
+  .diseño {
+    display: flex;
+    margin: 10px 0;
+  }
+}

@@ -1,0 +1,36 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: $main;
+
+  .portada {
+    color: $second;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .titulo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 60px 0 0 0;
+      h1 {
+      }
+    }
+    .baner {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      background-color: $detalles;
+      width: 100vw;
+      h2 {
+        margin: 0 40px;
+      }
+    }
+  }
+}
