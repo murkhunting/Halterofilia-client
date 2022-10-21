@@ -20,6 +20,7 @@ const Ficha = () => {
               III CURSO ESPECIALISTA EN LEVANTAMIENTOS OLÍMPICOS III CURSO
               ESPECIALISTA EN LEVANTAMIENTOS OLÍMPICOS
             </h3>
+            <h3 className="titulo">17/12/2022</h3>
             <h3 className="precio">350€</h3>
             <h3 className="oferta">OFERTA: 250€</h3>
           </div>
@@ -48,6 +49,7 @@ const Ficha = () => {
                 III CURSO ESPECIALISTA EN LEVANTAMIENTOS OLÍMPICOS III CURSO
                 ESPECIALISTA EN LEVANTAMIENTOS OLÍMPICOS
               </h3>
+              <h3 className="titulo">17/12/2022</h3>
               <h3 className="precio">350€</h3>
               <h3 className="oferta">OFERTA: 250€</h3>
             </div>

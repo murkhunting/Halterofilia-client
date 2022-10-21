@@ -35,13 +35,13 @@
         object-fit: cover;
       }
       .titulo {
-        margin: 8px;
+        margin: 2px;
       }
       .precio {
-        margin: 8px;
+        margin: 2px;
       }
       .oferta {
-        margin: 8px;
+        margin: 2px;
         color: $third;
       }
     }
@@ -89,16 +89,16 @@
         object-fit: cover;
       }
       .titulo {
-        margin: 8px;
+        margin: 2px;
       }
       .precio {
         text-decoration: line-through;
         text-decoration-color: $detalles;
         text-decoration-thickness: 3px;
-        margin: 8px;
+        margin: 2px;
       }
       .oferta {
-        margin: 8px;
+        margin: 2px;
         color: $detalles;
       }
     }

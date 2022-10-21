@@ -43,7 +43,7 @@ export default function Home() {
             <Link href="/online">
               <a>
                 <img
-                  className="programaboton"
+                  className="boton"
                   src="/images/programaboton.png"
                   alt="logo"
                 />
@@ -56,20 +56,35 @@ export default function Home() {
       <div className="formacionestecnicas">
         <div className="texto">
           <h1>FORMACIONES TÉCNICAS</h1>
-          <h2>
-            · SEMINARIOS Y CURSOS DE MEJORA TÉCNICA DIRIGIDOS A ATLETAS,
-            ENTRENADORES Y PROFESIONALES DE LA HALTEROFILIA ·
-          </h2>
         </div>
 
         <div className="container">
-          <Fichas />
-          <Fichas />
-          <Fichas />
+          <div className="formacionlink">
+            <h2>
+              SI ERES UN ATLETA PROFESIONAL, UN ENTRENADOR O PREPARADOR FÍSICO O
+              QUIERES APRENDER AL ÁXIMO NIVEL NO TE PIERDAS NUESTROS SEMINARIOS
+              Y CURSOS DE MEJORA TÉCNICA.
+            </h2>
+            <Link href="/formaciones">
+              <a>
+                <img
+                  className="boton"
+                  src="/images/programaboton.png"
+                  alt="logo"
+                />
+              </a>
+            </Link>
+          </div>
+          <div className="nextformacion">
+            <h2>PRÓXIMO CURSO DISPONIBLE:</h2>
+            <Fichas />
+          </div>
         </div>
       </div>
       {/* SECCION 3 NOSOTROS */}
       <div className="sobrenosotros">NOSOTROS</div>
+      {/* SECCION 4 CLASES PRESENCIALES */}
+      <div className="clasespresenciales">CLASES PRESENCIALES</div>
     </div>
   );
 }

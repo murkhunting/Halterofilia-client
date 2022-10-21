@@ -1,4 +1,6 @@
 import React from "react";
+import Link from "next/link";
+
 import { AiFillInstagram, AiFillYoutube } from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa";
 
@@ -10,9 +12,12 @@ const Footer = () => {
           <h2>· THINK DIFFERENT - TRAIN DIFFERENT ·</h2>
         </div>
       </div>
-      <div className="contacta">
-        <h5>SI QUIERES SABER MÁS NO DUDES EN CONTACTAR CON NOSOTROS</h5>
-      </div>
+
+      <Link href="/contacto">
+        <a className="contacta">
+          <h5>SI QUIERES SABER MÁS NO DUDES EN CONTACTAR CON NOSOTROS</h5>
+        </a>
+      </Link>
       <div className="social">
         <h5>
           <AiFillInstagram />
@@ -24,9 +29,8 @@ const Footer = () => {
           <AiFillYoutube />
         </h5>
       </div>
-      <div className="diseño">
-        <h5>DESIGN & CODE BY @MURKHUNTING</h5>
-      </div>
+
+      <h5 className="diseño">DESIGN & CODE BY @MURKHUNTING</h5>
     </div>
   );
 };

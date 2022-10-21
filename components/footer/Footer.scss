@@ -32,8 +32,16 @@
   }
 
   .contacta {
+    color: $second;
+    text-decoration: none;
     margin: 20px 0 0 0;
     font-size: 20px;
+    transition: 0.2s ease-in-out;
+  }
+
+  .contacta:hover {
+    scale: 1.05;
+    color: white;
   }
 
   .social {
@@ -50,14 +58,14 @@
       cursor: pointer;
     }
     h5:hover {
-      opacity: 0.8;
+      color: white;
       scale: 1.1;
     }
   }
 
   .diseño {
     display: flex;
-    margin: 10px 0;
+    margin: 50px 0 10px 0;
   }
 }
 

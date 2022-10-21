@@ -66,7 +66,7 @@
     right: 0px;
     bottom: 0px;
     left: 0px;
-    background-color: #1f1f1fc5;
+    background-color: #1f1f1f81;
   }
 
   //SECCION 1 PROGRAMA ONLINE
@@ -109,11 +109,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        .programaboton {
+        .boton {
           height: 250px;
           transition: transform 0.4s ease-in-out;
         }
-        .programaboton:hover {
+        .boton:hover {
           scale: 1.1;
           transform: rotate(-360deg);
         }
@@ -123,11 +123,12 @@
 
   //SECCION 2 FORMACIONES
   .formacionestecnicas {
+    border-top: 3px solid $detalles;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-top: 1px solid white;
+
     height: 100vh;
     width: 100%;
     .texto {
@@ -136,28 +137,68 @@
       align-items: center;
       justify-content: center;
       h1 {
-        font-size: 3.5vw;
+        font-size: 5vw;
         margin: 10px 0 5px 0;
-      }
-      h2 {
-        margin: 5px;
-        font-size: 1.1vw;
       }
     }
     .container {
       width: auto;
       height: 700px;
-      margin-top: 20px;
       display: flex;
       flex-direction: row;
-      align-items: flex-start;
-      justify-content: center;
+      align-items: center;
+      justify-content: space-around;
+      .nextformacion {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        h2 {
+          margin-left: 30px;
+        }
+      }
+      .formacionlink {
+        text-align: left;
+        width: 900px;
+        margin-right: 40px;
+        height: 700px;
+        z-index: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding-bottom: 60px;
+
+        h2 {
+          font-size: 1.8vw;
+          margin: 20px 40px;
+        }
+        .boton {
+          height: 250px;
+          margin-left: 200px;
+          transition: transform 0.4s ease-in-out;
+        }
+        .boton:hover {
+          scale: 1.1;
+          transform: rotate(-360deg);
+        }
+      }
     }
   }
 
   //SECCION 3 NOSOTROS
   .sobrenosotros {
-    border-top: 1px solid white;
+    border-top: 3px solid $detalles;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+  }
+
+  //SECCION 4 CLASES PRESENCIALES
+  .clasespresenciales {
+    border-top: 3px solid $detalles;
     display: flex;
     flex-direction: column;
     align-items: center;
