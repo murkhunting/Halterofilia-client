@@ -8,6 +8,7 @@
   background-color: $main;
   color: $second;
 
+  //PANTALLA PRINCIPAL
   .portada {
     display: flex;
     flex-direction: column;
@@ -67,6 +68,8 @@
     left: 0px;
     background-color: #1f1f1fc5;
   }
+
+  //SECCION 1 PROGRAMA ONLINE
   .programaonline {
     display: flex;
     flex-direction: row;
@@ -102,7 +105,7 @@
     }
     .de {
       width: 45%;
-      .ficha {
+      .wrap {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -117,6 +120,8 @@
       }
     }
   }
+
+  //SECCION 2 FORMACIONES
   .formacionestecnicas {
     display: flex;
     flex-direction: column;
@@ -140,11 +145,17 @@
       }
     }
     .container {
-      width: 65vw;
-      height: 70vh;
-      background-color: $third;
+      width: auto;
+      height: 700px;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
     }
   }
+
+  //SECCION 3 NOSOTROS
   .sobrenosotros {
     border-top: 1px solid white;
     display: flex;

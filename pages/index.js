@@ -1,6 +1,7 @@
 // import Layout from "../layouts/Layout";
 
 // import logo from "../public/images/logo.png";
+import Fichas from "../components/fichas/Fichas";
 import { MdDoubleArrow } from "react-icons/md";
 
 import Link from "next/link";
@@ -8,6 +9,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="home">
+      {/* PANTALLA PRINCIPAL */}
       <div className="portada">
         <div className="separador"></div>
         <div className="titulo">
@@ -21,6 +23,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* SECCION 1 PROGRAMA ONLINE */}
       <div className="programaonline">
         <div className="iz">
           <h1>PREFIERES ENTRENAR DESDE CUALQUIER LUGAR DEL MUNDO?</h1>
@@ -36,7 +39,7 @@ export default function Home() {
           </div>
         </div>
         <div className="de">
-          <div className="ficha">
+          <div className="wrap">
             <Link href="/online">
               <a>
                 <img
@@ -49,6 +52,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* SECCION 2 FORMACIONES */}
       <div className="formacionestecnicas">
         <div className="texto">
           <h1>FORMACIONES TÉCNICAS</h1>
@@ -57,8 +61,14 @@ export default function Home() {
             ENTRENADORES Y PROFESIONALES DE LA HALTEROFILIA ·
           </h2>
         </div>
-        <div className="container"></div>
+
+        <div className="container">
+          <Fichas />
+          <Fichas />
+          <Fichas />
+        </div>
       </div>
+      {/* SECCION 3 NOSOTROS */}
       <div className="sobrenosotros">NOSOTROS</div>
     </div>
   );

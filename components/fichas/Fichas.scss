@@ -1,0 +1,129 @@
+.ficha {
+  z-index: 400;
+  margin: 0 20px;
+  text-decoration: none;
+  color: $second;
+  box-shadow: 4px 10px 20px black;
+  transition: transform 0.4s ease-in-out;
+
+  .fichacont {
+    width: 420px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    object-fit: auto;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    background-color: $third;
+
+    .space {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      h2 {
+        font-size: 30px;
+        color: $third;
+        margin: 10px 5px 10px 5px;
+      }
+
+      img {
+        height: 200px;
+        width: 350px;
+        filter: grayscale(100%);
+        object-fit: cover;
+      }
+      .titulo {
+        margin: 8px;
+      }
+      .precio {
+        margin: 8px;
+      }
+      .oferta {
+        margin: 8px;
+        color: $third;
+      }
+    }
+
+    .fichaboton {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 15px;
+      transition: transform 0.4s ease-in-out;
+    }
+    .fichaboton:hover {
+      transform: rotate(-360deg);
+      scale: 1.05;
+    }
+  }
+
+  //HOVERED
+  .fichaconthover {
+    width: 420px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    object-fit: auto;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    background-image: url("/images/giphy.gif");
+    background-size: cover;
+
+    .spacehover {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      h2 {
+        font-size: 30px;
+        color: $detalles;
+        margin: 10px 5px 10px 5px;
+      }
+
+      img {
+        height: 200px;
+        width: 350px;
+        filter: grayscale(100%);
+        object-fit: cover;
+      }
+      .titulo {
+        margin: 8px;
+      }
+      .precio {
+        text-decoration: line-through;
+        text-decoration-color: $detalles;
+        text-decoration-thickness: 3px;
+        margin: 8px;
+      }
+      .oferta {
+        margin: 8px;
+        color: $detalles;
+      }
+    }
+
+    .fichaboton {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 15px;
+      transition: transform 0.4s ease-in-out;
+    }
+    .fichaboton:hover {
+      transform: rotate(-360deg);
+      scale: 1.05;
+    }
+  }
+  //   .fichaconthover:before {
+  //     content: "";
+  //     position: absolute;
+  //     top: 0px;
+  //     right: 0px;
+  //     bottom: 0px;
+  //     left: 0px;
+  //     background-color: #1f1f1fc5;
+  //   }
+}
+.ficha:hover {
+  scale: 1.02;
+}
