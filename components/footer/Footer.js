@@ -5,6 +5,11 @@ import { FaFacebook } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className="footer">
+      <div className="baner">
+        <div className="scroll">
+          <h2>· THINK DIFFERENT - TRAIN DIFFERENT ·</h2>
+        </div>
+      </div>
       <div className="contacta">
         <h5>SI QUIERES SABER MÁS NO DUDES EN CONTACTAR CON NOSOTROS</h5>
       </div>

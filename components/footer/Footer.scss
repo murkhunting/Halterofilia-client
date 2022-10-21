@@ -5,8 +5,31 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: $second;
+  background-color: $main;
+  color: $second;
   z-index: 100;
+  // border-top: 5px solid $detalles;
+  .baner {
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $detalles;
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+
+    .scroll {
+      font-size: 45px;
+      margin: 0 40px;
+      display: block; /* Important to give the content a width */
+      width: 100vw;
+      transform: translateX(100%); /* Animation start out of the screen */
+      /* infinite make reapeat the animation indefinitely */
+      animation: move 8s linear infinite;
+    }
+  }
 
   .contacta {
     margin: 20px 0 0 0;
@@ -20,9 +43,9 @@
     h5 {
       margin: 0 15px;
       font-size: 20px;
-      padding: 8px 8px 2px 8px;
-      border: 2px solid $main;
-      border-radius: 50%;
+      padding: 7px 11px 5px 11px;
+      border: 2px solid $second;
+      border-radius: 50px;
       transition: 0.2s ease-in-out;
       cursor: pointer;
     }
@@ -35,5 +58,11 @@
   .diseño {
     display: flex;
     margin: 10px 0;
+  }
+}
+
+@keyframes move {
+  to {
+    transform: translateX(-100%);
   }
 }

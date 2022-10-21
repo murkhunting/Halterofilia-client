@@ -30,12 +30,13 @@
 
     .menuinactive {
       text-decoration: none;
-      padding: 0 15px;
+      padding: 0 25px;
       color: $second;
       transition: 0.2s ease-in-out;
     }
     .menuinactive:hover {
       scale: 1.05;
+      color: white;
     }
     .menuactive {
       text-decoration: line-through;
@@ -43,7 +44,7 @@
       text-decoration-thickness: 3px;
       color: $second;
       opacity: 0.8;
-      padding: 0 10px;
+      padding: 0 25px;
       cursor: default;
     }
   }

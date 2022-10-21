@@ -17,37 +17,44 @@
     background-image: url("/images/giphy.gif");
     background-size: cover;
     background-color: $main;
-
     width: 100%;
+    .separador {
+      height: 10px;
+    }
     .titulo {
       z-index: 200;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin: 80px 0 40px 0;
 
       h1 {
-        font-size: 8vw;
+        font-size: 9vw;
         font-weight: 800;
-        margin: 0.5vw 0;
+        margin: -10px;
         letter-spacing: 8px;
-        text-shadow: 10px 10px 20px black;
+        text-shadow: 4px 10px 20px black;
       }
     }
     .baner {
       z-index: 200;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       background-color: $detalles;
       width: 100%;
       height: 80px;
+      overflow: hidden;
 
-      h2 {
+      .scroll {
         font-size: 45px;
         margin: 0 40px;
+        display: block; /* Important to give the content a width */
+        width: 100vw;
+        transform: translateX(100%); /* Animation start out of the screen */
+        /* infinite make reapeat the animation indefinitely */
+        animation: move 8s linear infinite;
       }
     }
   }
@@ -62,19 +69,81 @@
   }
   .programaonline {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     height: 100vh;
     width: 100%;
+    .iz {
+      width: 55%;
+      height: 100;
+      display: flex;
+      flex-direction: column;
+      padding: 60px 20px 60px 160px;
+      align-items: center;
+      justify-content: center;
+      h1 {
+        font-size: 5vw;
+        margin: 20px 0;
+      }
+      .flecha {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        h2 {
+          font-size: 1.8vw;
+        }
+        .ico {
+          font-size: 150px;
+          color: $detalles;
+        }
+      }
+    }
+    .de {
+      width: 45%;
+      .ficha {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .programaboton {
+          height: 250px;
+          transition: transform 0.4s ease-in-out;
+        }
+        .programaboton:hover {
+          scale: 1.1;
+          transform: rotate(-360deg);
+        }
+      }
+    }
   }
   .formacionestecnicas {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    border-top: 1px solid white;
     height: 100vh;
     width: 100%;
+    .texto {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      h1 {
+        font-size: 4vw;
+        margin: 10px 0;
+      }
+      h2 {
+        margin: 5px;
+        font-size: 1.1vw;
+      }
+    }
+    .container {
+      width: 80vw;
+      height: 70vh;
+      background-color: $third;
+    }
   }
   .sobrenosotros {
     display: flex;
@@ -86,14 +155,8 @@
   }
 }
 
-@-webkit-keyframes tiembla {
-  0% {
-    -webkit-transform: rotateZ(-5deg);
-  }
-  50% {
-    -webkit-transform: rotateZ(0deg) scale(0.8);
-  }
-  100% {
-    -webkit-transform: rotateZ(5deg);
+@keyframes move {
+  to {
+    transform: translateX(-100%);
   }
 }
