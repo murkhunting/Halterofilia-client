@@ -2,15 +2,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   text-align: center;
   color: $second;
   background-color: $main;
+  height: 100vh;
   // background-image: url("../../assets/images/fondo.jpg");
 
   .container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     .name {
       margin: 80px 0 0 0;
       z-index: 200;
@@ -19,22 +21,6 @@
         font-size: 60px;
         font-weight: 800;
         margin-bottom: -10px;
-      }
-      .touch {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-
-        h1 {
-          font-size: 55px;
-        }
-
-        .arrow {
-          transform: rotate(90deg);
-          margin: 50px 0 0 30px;
-        }
       }
     }
     img {
@@ -62,9 +48,9 @@
 
     .separador {
       border: none;
-      color: rgb(75, 75, 75);
-      background-color: rgb(247, 247, 247);
-      margin: 0 30px;
+      color: $second;
+      background-color: $main;
+      margin: 0 50px;
       transition: transform 0.5s;
       cursor: pointer;
       transition: scale 0.2s ease-in-out;
@@ -78,7 +64,7 @@
       transform: rotate(20deg);
     }
     .separador:hover {
-      scale: 1.2;
+      scale: 1.06;
     }
   }
 }
