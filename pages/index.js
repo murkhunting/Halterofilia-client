@@ -84,7 +84,40 @@ export default function Home() {
       {/* SECCION 3 NOSOTROS */}
       <div className="sobrenosotros">NOSOTROS</div>
       {/* SECCION 4 CLASES PRESENCIALES */}
-      <div className="clasespresenciales">CLASES PRESENCIALES</div>
+      <div className="clasespresenciales">
+        <h1>CLASES PRESENCIALES</h1>
+        <div className="cont">
+          <div className="iz">
+            <div className="wrap">
+              <Link href="/online">
+                <a>
+                  <img
+                    className="boton"
+                    src="/images/programaboton.png"
+                    alt="logo"
+                  />
+                </a>
+              </Link>
+            </div>
+          </div>
+          <div className="de">
+            <div className="flecha">
+              <div className="ico">
+                <MdDoubleArrow />
+              </div>
+              <div className="hor">
+                <h2>
+                  DESCUBRE MÁS SOBRE NUESTRAS CLASES PRESENCIALES Y NO DUDES EN
+                  APUNTARTE!
+                </h2>
+                <h2> TÉCNICA, FUERZA Y POTENCIA ·</h2>
+                <h2> 2 MOVIMIENTOS OLÍMPICOS ·</h2>
+                <h2> 100% HALTEOFILIA ·</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

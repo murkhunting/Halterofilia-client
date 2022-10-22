@@ -123,7 +123,7 @@
 
   //SECCION 2 FORMACIONES
   .formacionestecnicas {
-    border-top: 3px solid $detalles;
+    border-top: 3px solid $opacity;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -165,6 +165,7 @@
         z-index: 400px;
         display: flex;
         flex-direction: column;
+        align-items: center;
         justify-content: space-around;
         padding-bottom: 60px;
 
@@ -174,7 +175,7 @@
         }
         .boton {
           height: 250px;
-          margin-left: 200px;
+
           transition: transform 0.4s ease-in-out;
         }
         .boton:hover {
@@ -187,7 +188,7 @@
 
   //SECCION 3 NOSOTROS
   .sobrenosotros {
-    border-top: 3px solid $detalles;
+    border-top: 3px solid $opacity;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -198,13 +199,75 @@
 
   //SECCION 4 CLASES PRESENCIALES
   .clasespresenciales {
-    border-top: 3px solid $detalles;
+    border-top: 3px solid $opacity;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
-    height: 100vh;
+    height: 80vh;
     width: 100%;
+    h1 {
+      font-size: 5vw;
+      margin: 0 180px 30px 0;
+    }
+    .cont {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      .iz {
+        width: 45%;
+        .wrap {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .boton {
+            height: 250px;
+            transition: transform 0.4s ease-in-out;
+          }
+          .boton:hover {
+            scale: 1.1;
+            transform: rotate(-360deg);
+          }
+        }
+      }
+      .de {
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 0 160px 0px 20px;
+
+        h2 {
+          font-size: 1.8vw;
+          margin: 10px 0;
+        }
+        .flecha {
+          margin-right: 40px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          .ico {
+            font-size: 150px;
+            color: $detalles;
+            transform: scaleX(-1);
+          }
+          .hor {
+            margin-left: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
+            h2 {
+              text-align: right;
+              font-size: 1.8vw;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
