@@ -31,7 +31,7 @@ const Ficha = () => {
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
                 className="fichaboton"
-                src="/images/programaboton.png"
+                src="/images/7masbtn.png"
                 alt="logo"
               />
             </a>
@@ -60,7 +60,7 @@ const Ficha = () => {
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
                   className="fichaboton"
-                  src="/images/programaboton.png"
+                  src="/images/7masbtn.png"
                   alt="logo"
                 />
               </a>

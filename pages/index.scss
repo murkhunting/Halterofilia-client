@@ -190,11 +190,49 @@
   .sobrenosotros {
     border-top: 3px solid $opacity;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     height: 100vh;
     width: 100%;
+    .iz {
+      width: 55%;
+      height: 100;
+      display: flex;
+      flex-direction: column;
+      padding: 10px 20px 60px 160px;
+      align-items: flex-start;
+      justify-content: center;
+      h1 {
+        font-size: 5vw;
+        margin: 0 0 80px;
+      }
+      img {
+        height: 500px;
+      }
+    }
+    .de {
+      width: 45%;
+      .wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        h2 {
+          font-size: 1.8vw;
+          padding: 0 120px 20px 60px;
+        }
+        .boton {
+          height: 250px;
+          transition: transform 0.4s ease-in-out;
+        }
+        .boton:hover {
+          scale: 1.1;
+          transform: rotate(-360deg);
+        }
+      }
+    }
   }
 
   //SECCION 4 CLASES PRESENCIALES

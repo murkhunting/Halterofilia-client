@@ -3,7 +3,7 @@ import React from "react";
 import { VscMail } from "react-icons/vsc";
 import { BsPhone } from "react-icons/bs";
 import { SlSocialInstagram } from "react-icons/sl";
-import { IoChatboxEllipsesOutline } from "react-icons/io5";
+import { IoChatboxEllipsesOutline, IoLocationOutline } from "react-icons/io5";
 import ReactWhatsapp from "react-whatsapp";
 
 const Contacto = () => {
@@ -19,10 +19,6 @@ const Contacto = () => {
       </div>
       <div className="contactinfo">
         <div className="separador">
-          <VscMail className="iconos" />
-          <h5>HalterofiliaBarcelona@gmail.com</h5>
-        </div>
-        <div className="separador">
           <BsPhone className="iconos" />
           <h5>+34 616 956 279</h5>
         </div>
@@ -30,10 +26,18 @@ const Contacto = () => {
           <SlSocialInstagram className="iconos" />
           <h5>@halterofiliabarcelona</h5>
         </div>
+        <div className="separador">
+          <VscMail className="iconos" />
+          <h5>HalterofiliaBarcelona@gmail.com</h5>
+        </div>
         <ReactWhatsapp className="separador" number="+34 616 956 279">
           <IoChatboxEllipsesOutline className="iconos" />
-          <h5>whatsapp chat</h5>
+          <h5>whatsapp</h5>
         </ReactWhatsapp>
+        <div className="separador">
+          <IoLocationOutline className="iconos" />
+          <h5>Google Maps</h5>
+        </div>
       </div>
     </div>
   );

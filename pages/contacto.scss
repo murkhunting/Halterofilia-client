@@ -56,15 +56,18 @@
       transition: scale 0.2s ease-in-out;
 
       .iconos {
-        font-size: 90px;
-        transition: transform 0.3s;
+        font-size: 100px;
+        transition: transform 0.2s;
+      }
+      h5 {
+        font-size: 23px;
       }
     }
     .separador:hover .iconos {
       transform: rotate(20deg);
     }
     .separador:hover {
-      scale: 1.06;
+      scale: 1.02;
     }
   }
 }

@@ -44,7 +44,7 @@ export default function Home() {
               <a>
                 <img
                   className="boton"
-                  src="/images/programaboton.png"
+                  src="/images/1onlinebtn.png"
                   alt="logo"
                 />
               </a>
@@ -69,7 +69,7 @@ export default function Home() {
               <a>
                 <img
                   className="boton"
-                  src="/images/programaboton.png"
+                  src="/images/2formacionesbtn.png"
                   alt="logo"
                 />
               </a>
@@ -82,7 +82,29 @@ export default function Home() {
         </div>
       </div>
       {/* SECCION 3 NOSOTROS */}
-      <div className="sobrenosotros">NOSOTROS</div>
+      <div className="sobrenosotros">
+        <div className="iz">
+          <h1>NUESTRO EQUIPO</h1>
+          <img className="team" src="/images/team.png" alt="team" />
+        </div>
+        <div className="de">
+          <div className="wrap">
+            <h2>
+              CONOCE MÁS SOBRE NOSOTROS Y SOBRE LA HISTORIA DEL CLUB
+              HALTEROFILIA BARCELONA
+            </h2>
+            <Link href="/online">
+              <a>
+                <img
+                  className="boton"
+                  src="/images/3nosotrosbtn.png"
+                  alt="logo"
+                />
+              </a>
+            </Link>
+          </div>
+        </div>
+      </div>
       {/* SECCION 4 CLASES PRESENCIALES */}
       <div className="clasespresenciales">
         <h1>CLASES PRESENCIALES</h1>
@@ -93,7 +115,7 @@ export default function Home() {
                 <a>
                   <img
                     className="boton"
-                    src="/images/programaboton.png"
+                    src="/images/4presencialesbtn.png"
                     alt="logo"
                   />
                 </a>
