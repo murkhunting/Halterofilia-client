@@ -21,13 +21,18 @@
     overflow: hidden;
 
     .scroll {
-      font-size: 45px;
-      margin: 0 40px;
-      display: block; /* Important to give the content a width */
+      display: flex; /* Important to give the content a width */
+      align-items: center;
+      justify-content: center;
       width: 100vw;
       transform: translateX(100%); /* Animation start out of the screen */
       /* infinite make reapeat the animation indefinitely */
       animation: move 8s linear infinite;
+      h2 {
+        font-size: 60px;
+        letter-spacing: 16px;
+        margin: 0;
+      }
     }
   }
 

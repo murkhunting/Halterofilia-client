@@ -3,6 +3,8 @@ import Link from "next/link";
 
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
+import { AiOutlineWhatsApp } from "react-icons/ai";
+import ReactWhatsapp from "react-whatsapp";
 
 const Navbar = () => {
   const router = useRouter();
@@ -75,7 +77,12 @@ const Navbar = () => {
             </a>
           </Link>
         </div>
-        <div className="perfil">IDIOMA</div>
+        <div className="perfil">
+          ESP▾
+          <ReactWhatsapp className="whats" number="+34 616 956 279">
+            <AiOutlineWhatsApp />
+          </ReactWhatsapp>
+        </div>
       </div>
     </div>
   );

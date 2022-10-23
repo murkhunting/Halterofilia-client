@@ -3,6 +3,8 @@
 // import logo from "../public/images/logo.png";
 import Fichas from "../components/fichas/Fichas";
 import { MdDoubleArrow } from "react-icons/md";
+import { AiFillInstagram, AiFillYoutube } from "react-icons/ai";
+import { FaFacebook } from "react-icons/fa";
 
 import Link from "next/link";
 
@@ -16,6 +18,17 @@ export default function Home() {
           <h1>CLUB</h1>
           <h1>HALTEROFILIA</h1>
           <h1>BARCELONA</h1>
+        </div>
+        <div className="social">
+          <h5>
+            <AiFillInstagram />
+          </h5>
+          <h5>
+            <FaFacebook />
+          </h5>
+          <h5>
+            <AiFillYoutube />
+          </h5>
         </div>
         <div className="baner">
           <div className="scroll">
@@ -90,10 +103,10 @@ export default function Home() {
         <div className="de">
           <div className="wrap">
             <h2>
-              CONOCE MÁS SOBRE NOSOTROS Y SOBRE LA HISTORIA DEL CLUB
+              CONOCE MÁS SOBRE NOSOTROS Y SOBRE LA HISTORIA DEL <br /> CLUB
               HALTEROFILIA BARCELONA
             </h2>
-            <Link href="/online">
+            <Link href="/nosotros">
               <a>
                 <img
                   className="boton"
@@ -111,7 +124,7 @@ export default function Home() {
         <div className="cont">
           <div className="iz">
             <div className="wrap">
-              <Link href="/online">
+              <Link href="/presencial">
                 <a>
                   <img
                     className="boton"

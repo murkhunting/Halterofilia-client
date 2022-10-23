@@ -1,7 +1,7 @@
 import React from "react";
 
 const Formaciones = () => {
-  return <div>Formaciones</div>;
+  return <div className="formaciones">Formaciones</div>;
 };
 
 export default Formaciones;

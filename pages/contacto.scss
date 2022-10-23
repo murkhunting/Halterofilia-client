@@ -23,17 +23,6 @@
         margin-bottom: -10px;
       }
     }
-    img {
-      width: 250px;
-
-      margin: 20px 0 0 0;
-    }
-  }
-
-  h5 {
-    font-size: 18px;
-    font-weight: 800;
-    margin: 10px 0 100px 0;
   }
 
   h1 {
@@ -50,21 +39,35 @@
       border: none;
       color: $second;
       background-color: $main;
-      margin: 0 50px;
+      margin: 0 20px 60px;
       transition: transform 0.5s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       cursor: pointer;
       transition: scale 0.2s ease-in-out;
 
-      .iconos {
-        font-size: 100px;
-        transition: transform 0.2s;
+      .boton {
+        height: 140px;
+        transition: transform 0.4s ease-in-out;
       }
-      h5 {
-        font-size: 23px;
+
+      .iconos {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-size: 26px;
+        margin-top: 20px;
+        h5 {
+          font-family: "Oswald", sans-serif;
+          margin: 0;
+        }
       }
     }
-    .separador:hover .iconos {
-      transform: rotate(20deg);
+    .separador:hover .boton {
+      transform: rotate(-360deg);
     }
     .separador:hover {
       scale: 1.02;

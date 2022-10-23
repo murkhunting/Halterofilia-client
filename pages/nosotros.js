@@ -1,7 +1,7 @@
 import React from "react";
 
 const Nosotros = () => {
-  return <div>Nosotros</div>;
+  return <div className="nosotros">Nosotros</div>;
 };
 
 export default Nosotros;
