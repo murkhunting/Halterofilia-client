@@ -19,7 +19,6 @@ const Presencial = () => {
             CORREGIR LOS ERRORES Y, DE ESTA MANERA, TENER UNA EXPERIENCIA MUCHO
             MÁS PERSONALIZADA.
           </h2>
-          <h2></h2>
         </div>
         <div className="botones">
           <Link href="/presencial/fuerza">
