@@ -9,7 +9,6 @@ import ReactWhatsapp from "react-whatsapp";
 const Contacto = () => {
   return (
     <div className="contacto">
-      {" "}
       <div className="container">
         <div className="name">
           <h1>SI NECESITAS MÁS INFORMACIÓN</h1>

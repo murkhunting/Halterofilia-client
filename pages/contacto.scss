@@ -6,7 +6,7 @@
   text-align: center;
   color: $second;
   background-color: $main;
-  height: 100vh;
+
   // background-image: url("../../assets/images/fondo.jpg");
 
   .container {
@@ -14,13 +14,13 @@
     flex-direction: row;
     justify-content: center;
     .name {
-      margin: 80px 0 0 0;
+      margin: 50px 0 0 0;
       z-index: 200;
-
+      margin-bottom: 60px;
       h1 {
         font-size: 60px;
         font-weight: 800;
-        margin-bottom: -10px;
+        margin-bottom: -40px;
       }
     }
   }
