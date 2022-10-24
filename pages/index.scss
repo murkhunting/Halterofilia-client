@@ -69,7 +69,7 @@
       justify-content: center;
       background-color: $detalles;
       width: 100%;
-      height: 80px;
+      height: auto;
       overflow: hidden;
 
       .scroll {
@@ -81,7 +81,7 @@
         /* infinite make reapeat the animation indefinitely */
         animation: move 8s linear infinite;
         h2 {
-          font-size: 60px;
+          font-size: 50px;
           letter-spacing: 16px;
           margin: 0;
         }

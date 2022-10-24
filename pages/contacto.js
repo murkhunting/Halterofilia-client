@@ -11,10 +11,11 @@ const Contacto = () => {
     <div className="contacto">
       <div className="container">
         <div className="name">
-          <h1>SI NECESITAS MÁS INFORMACIÓN</h1>
-          <h1>SOBRE EL PROGRAMA ONLINE O LAS FORMACIONES,</h1>
-          <h1>O QUIERES APUNTARTE Y TIENES DUDAS,</h1>
-          <h1>PONTE EN CONTACTO CON NOSOTROS</h1>
+          <h1>CONTACTA CON NOSOTROS</h1>
+          <h2>SI NECESITAS MÁS INFORMACIÓN</h2>
+          <h2>SOBRE EL PROGRAMA ONLINE O LAS FORMACIONES,</h2>
+          <h2>O QUIERES APUNTARTE Y TIENES DUDAS,</h2>
+          <h2>NO DUDES EN PREGUNTARNOS!</h2>
         </div>
       </div>
       <div className="contactinfo">
