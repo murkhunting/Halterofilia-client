@@ -25,6 +25,12 @@ const Contacto = () => {
             <h5>+34 616 956 279</h5>
           </div>
         </div>
+        <ReactWhatsapp className="separador" number="+34 616 956 279">
+          <img className="boton" src="/images/11whatsappbtn.png" alt="logo" />
+          <div className="iconos">
+            <h5>Whatsapp Chat</h5>
+          </div>
+        </ReactWhatsapp>
         <div className="separador">
           <img className="boton" src="/images/9instagrambtn.png" alt="logo" />
           <div className="iconos">
@@ -34,15 +40,9 @@ const Contacto = () => {
         <div className="separador">
           <img className="boton" src="/images/10mailbtn.png" alt="logo" />
           <div className="iconos">
-            <h5>HalterofiliaBarcelona@gmail.com</h5>
+            <h5>Envía un correo</h5>
           </div>
         </div>
-        <ReactWhatsapp className="separador" number="+34 616 956 279">
-          <img className="boton" src="/images/11whatsappbtn.png" alt="logo" />
-          <div className="iconos">
-            <h5>Whatsapp 616 956 279</h5>
-          </div>
-        </ReactWhatsapp>
         <div className="separador">
           <img className="boton" src="/images/12mapsbtn.png" alt="logo" />
           <div className="iconos">

@@ -1,3 +1,52 @@
 .presencial {
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $second;
+
+  .clases {
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    .titulo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 30px;
+      text-align: center;
+      h1 {
+        font-size: 70px;
+        margin-bottom: 0px;
+      }
+      h2 {
+        font-size: 20px;
+        margin: 17px 70px;
+      }
+    }
+    .botones {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      width: 60vw;
+      .boton {
+        height: 250px;
+        transition: transform 0.4s ease-in-out;
+      }
+      .boton:hover {
+        scale: 1.1;
+        transform: rotate(-360deg);
+      }
+    }
+  }
+
+  .tarifas {
+  }
+  .funcionamiento {
+  }
 }
