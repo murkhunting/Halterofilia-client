@@ -9,15 +9,16 @@ import ReactWhatsapp from "react-whatsapp";
 const Contacto = () => {
   return (
     <div className="contacto">
-      <div className="container">
-        <div className="name">
-          <h1>CONTACTA CON NOSOTROS</h1>
-          <h2>SI NECESITAS MÁS INFORMACIÓN</h2>
-          <h2>SOBRE EL PROGRAMA ONLINE O LAS FORMACIONES,</h2>
-          <h2>O QUIERES APUNTARTE Y TIENES DUDAS,</h2>
-          <h2>NO DUDES EN PREGUNTARNOS!</h2>
-        </div>
+      <div className="name">
+        <h1>CONTACTA CON NOSOTROS</h1>
       </div>
+      <div className="masinfo">
+        <h2>SI NECESITAS MÁS INFORMACIÓN</h2>
+        <h2>SOBRE EL PROGRAMA ONLINE O LAS FORMACIONES,</h2>
+        <h2>O QUIERES APUNTARTE Y TIENES DUDAS,</h2>
+        <h2>NO DUDES EN PREGUNTARNOS!</h2>
+      </div>
+
       <div className="contactinfo">
         <div className="separador">
           <img className="boton" src="/images/8phonebtn.png" alt="logo" />

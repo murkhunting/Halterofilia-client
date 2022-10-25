@@ -20,18 +20,19 @@
     height: 80px;
     overflow: hidden;
 
+    white-space: nowrap;
+
     .scroll {
-      display: flex; /* Important to give the content a width */
+      display: flex;
       align-items: center;
       justify-content: center;
-      width: 100vw;
-      transform: translateX(100%); /* Animation start out of the screen */
-      /* infinite make reapeat the animation indefinitely */
-      animation: move 8s linear infinite;
-      h2 {
-        font-size: 60px;
-        letter-spacing: 16px;
-        margin: 0;
+      position: relative;
+      .marquee {
+        h2 {
+          font-size: 60px;
+          letter-spacing: 16px;
+          margin: 0;
+        }
       }
     }
   }
@@ -71,11 +72,5 @@
   .diseño {
     display: flex;
     margin: 50px 0 10px 0;
-  }
-}
-
-@keyframes move {
-  to {
-    transform: translateX(-100%);
   }
 }

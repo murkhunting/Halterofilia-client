@@ -9,7 +9,21 @@ const Footer = () => {
     <div className="footer">
       <div className="baner">
         <div className="scroll">
-          <h2>· THINK DIFFERENT - TRAIN DIFFERENT ·</h2>
+          <marquee
+            className="marquee"
+            direction="left"
+            behavior="scroll"
+            scrollamount="35"
+          >
+            <h2>
+              · THINK DIFFERENT - TRAIN DIFFERENT · THINK DIFFERENT - TRAIN
+              DIFFERENT · THINK DIFFERENT - TRAIN DIFFERENT · THINK DIFFERENT -
+              TRAIN DIFFERENT · THINK DIFFERENT - TRAIN DIFFERENT · THINK
+              DIFFERENT - TRAIN DIFFERENT · THINK DIFFERENT - TRAIN DIFFERENT ·
+              THINK DIFFERENT - TRAIN DIFFERENT · THINK DIFFERENT - TRAIN
+              DIFFERENT · THINK DIFFERENT - TRAIN DIFFERENT ·
+            </h2>
+          </marquee>
         </div>
       </div>
 
