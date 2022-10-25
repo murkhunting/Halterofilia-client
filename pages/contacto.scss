@@ -6,6 +6,7 @@
   text-align: center;
   color: $second;
   background-color: $main;
+  min-height: 100vh;
 
   // background-image: url("../../assets/images/fondo.jpg");
 
@@ -23,7 +24,7 @@
         margin-bottom: -30px;
       }
       h2 {
-        font-size: 35px;
+        font-size: 40px;
         margin-bottom: -30px;
       }
     }
