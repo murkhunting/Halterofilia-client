@@ -1,8 +1,4 @@
 .admin {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   min-height: 100vh;
   color: $second;
   .login {
@@ -37,8 +33,6 @@
           border: 1px solid $third;
           background-color: $second;
         }
-        .panel {
-        }
       }
       .loginbtn {
         margin: 20px;
@@ -58,6 +52,77 @@
         color: $second;
         border: 1px solid $detalles;
       }
+    }
+  }
+  .panel {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 70px 0 100px;
+
+    //LISTA DE PROYECTOS
+    .list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 60%;
+      .formaciones {
+        .wrap {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          border-top: 1px solid $detalles;
+          border-bottom: 1px solid $detalles;
+          width: 100%;
+          h2 {
+          }
+          .icons {
+            display: flex;
+            flex-direction: row;
+            margin-left: 60px;
+            a {
+              text-decoration: none;
+              margin-right: 30px;
+            }
+            .icon {
+              color: $main;
+              background-color: $second;
+              font-size: 20px;
+              cursor: pointer;
+              padding: 10px;
+              border-radius: 5px;
+            }
+            .icon:hover {
+              background-color: $detalles;
+              color: $second;
+            }
+          }
+        }
+      }
+    }
+    .loginbtn {
+      text-decoration: none;
+      text-align: center;
+      background-color: $second;
+      margin: 40px 0 20px;
+      padding: 10px 20px;
+      border: 1px solid $second;
+      color: $main;
+      font-size: 20px;
+      font-weight: 500;
+      width: 300px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-family: "Oswald", sans-serif;
+    }
+    .loginbtn:hover {
+      background-color: $detalles;
+      color: $second;
+      border: 1px solid $detalles;
     }
   }
 }

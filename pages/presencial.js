@@ -26,13 +26,9 @@ const Presencial = () => {
               <img className="boton" src="/images/5fuerzabtn.png" alt="logo" />
             </a>
           </Link>
-          <Link href="/presencial/tecnica">
+          <Link href="/presencial/halterofilia">
             <a>
-              <img
-                className="boton"
-                src="/images/6halterobotn.png"
-                alt="logo"
-              />
+              <img className="boton" src="/images/6halterobtn.png" alt="logo" />
             </a>
           </Link>
         </div>
