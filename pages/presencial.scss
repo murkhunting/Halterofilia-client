@@ -6,8 +6,8 @@
   color: $second;
 
   .clases {
-    width: 80vw;
-    height: 100vh;
+    width: 70%;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,11 +21,11 @@
       text-align: center;
       h1 {
         font-size: 70px;
-        margin-bottom: 0px;
+        margin-bottom: 40px;
       }
       h2 {
         font-size: 20px;
-        margin: 17px 70px;
+        margin: 0 70px 10px;
       }
     }
     .botones {
@@ -34,20 +34,77 @@
       align-items: center;
       justify-content: space-around;
       width: 60vw;
-      margin-top: 100px;
-      .boton {
-        height: 250px;
-        transition: transform 0.4s ease-in-out;
-      }
-      .boton:hover {
-        scale: 1.1;
-        transform: rotate(-360deg);
+      margin: 40px 0 60px;
+      .conjunto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h2 {
+          font-size: 30px;
+        }
+        .boton {
+          height: 250px;
+          transition: transform 0.4s ease-in-out;
+        }
+        .boton:hover {
+          scale: 1.1;
+          transform: rotate(-360deg);
+        }
       }
     }
   }
+  .infoclub {
+    width: 70%;
+    margin-bottom: 100px;
+    cursor: pointer;
+    h1 {
+      text-align: center;
+      margin: 15px;
+      font-size: 55px;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 
-  .tarifas {
-  }
-  .funcionamiento {
+    .tarifas {
+      width: 100%;
+      .box {
+        padding: 10px 50px;
+        margin-bottom: 10px;
+        background-color: $third;
+        h2 {
+          font-size: 30px;
+        }
+        h3 {
+          font-size: 20px;
+        }
+        .tabla {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 20px;
+          .columniz {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-right: 80px;
+          }
+          .columnde {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-left: 80px;
+          }
+        }
+      }
+      .nobox {
+        display: none;
+      }
+    }
   }
 }

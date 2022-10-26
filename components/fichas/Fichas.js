@@ -8,7 +8,7 @@ const Ficha = () => {
   console.log(isHovered);
   //   const { titulo, type, byn, gif, _id } = project.project;
 
-  const agotado = false;
+  const agotado = true;
   const oferta = true;
 
   return (
@@ -30,7 +30,7 @@ const Ficha = () => {
             <h3 className={oferta ? "oferta" : "noferta"}>OFERTA: 250€</h3>
           </div>
 
-          <Link href="/">
+          <Link href="/formaciones/bedjwbd">
             <a>
               <img
                 onMouseEnter={() => setIsHovered(true)}
@@ -59,7 +59,7 @@ const Ficha = () => {
               <h3 className={oferta ? "oferta" : "noferta"}>OFERTA: 250€</h3>
             </div>
 
-            <Link href="/">
+            <Link href="/formaciones/bedjwbd">
               <a>
                 <img
                   onMouseEnter={() => setIsHovered(true)}
