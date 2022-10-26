@@ -7,8 +7,13 @@ const Ficha = () => {
   const [isHovered, setIsHovered] = useState(false);
   console.log(isHovered);
   //   const { titulo, type, byn, gif, _id } = project.project;
+
+  const agotado = false;
+  const oferta = true;
+
   return (
     <div className="ficha">
+      <h1 className={agotado ? "agotado" : "noagotado"}>AGOTADO</h1>
       {isHovered ? (
         <div className="fichaconthover">
           <div className="spacehover">
@@ -21,8 +26,8 @@ const Ficha = () => {
               ESPECIALISTA EN LEVANTAMIENTOS OLÍMPICOS
             </h3>
             <h3 className="titulo">17/12/2022</h3>
-            <h3 className="precio">350€</h3>
-            <h3 className="oferta">OFERTA: 250€</h3>
+            <h3 className={oferta ? "noprecio" : "precio"}>350€</h3>
+            <h3 className={oferta ? "oferta" : "noferta"}>OFERTA: 250€</h3>
           </div>
 
           <Link href="/">
@@ -50,8 +55,8 @@ const Ficha = () => {
                 ESPECIALISTA EN LEVANTAMIENTOS OLÍMPICOS
               </h3>
               <h3 className="titulo">17/12/2022</h3>
-              <h3 className="precio">350€</h3>
-              <h3 className="oferta">OFERTA: 250€</h3>
+              <h3 className={oferta ? "noprecio" : "precio"}>350€</h3>
+              <h3 className={oferta ? "oferta" : "noferta"}>OFERTA: 250€</h3>
             </div>
 
             <Link href="/">

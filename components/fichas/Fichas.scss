@@ -11,6 +11,19 @@
   width: 420px;
   height: 600px;
 
+  .agotado {
+    font-size: 50px;
+    position: absolute;
+    margin-top: -200px;
+    padding: 10px 120px;
+    z-index: 1000;
+    background-color: $main;
+  }
+
+  .noagotado {
+    display: none;
+  }
+
   .fichacont {
     width: 420px;
     height: 600px;
@@ -28,7 +41,7 @@
       align-items: center;
       justify-content: center;
       h2 {
-        font-size: 30px;
+        font-size: 35px;
         color: $third;
         margin: 10px 5px 10px 5px;
       }
@@ -45,9 +58,19 @@
       .precio {
         margin: 2px;
       }
+      .noprecio {
+        text-decoration: line-through;
+        text-decoration-color: $second;
+        text-decoration-thickness: 3px;
+        margin: 2px;
+      }
       .oferta {
         margin: 2px;
-        color: $third;
+        color: $second;
+      }
+      .noferta {
+        margin: 2px;
+        display: none;
       }
     }
 
@@ -82,13 +105,12 @@
       align-items: center;
       justify-content: center;
       h2 {
-        font-size: 30px;
+        font-size: 35px;
         color: $detalles;
         margin: 10px 5px 10px 5px;
       }
 
       img {
-        border: 4px solid $detalles;
         height: 200px;
         width: 350px;
         filter: grayscale(60%);
@@ -98,6 +120,9 @@
         margin: 2px;
       }
       .precio {
+        margin: 2px;
+      }
+      .noprecio {
         text-decoration: line-through;
         text-decoration-color: $detalles;
         text-decoration-thickness: 3px;
@@ -106,6 +131,10 @@
       .oferta {
         margin: 2px;
         color: $detalles;
+      }
+      .noferta {
+        margin: 2px;
+        display: none;
       }
     }
 
@@ -120,15 +149,6 @@
       scale: 1.05;
     }
   }
-  //   .fichaconthover:before {
-  //     content: "";
-  //     position: absolute;
-  //     top: 0px;
-  //     right: 0px;
-  //     bottom: 0px;
-  //     left: 0px;
-  //     background-color: #1f1f1fc5;
-  //   }
 }
 .ficha:hover {
   scale: 1.02;

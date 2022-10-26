@@ -39,6 +39,13 @@ const Edit = () => {
         />
       </div>
       <div className="grupo">
+        <h4>AGOTADO:</h4>
+        <select name="oferta" id="type">
+          <option value="true">Sí</option>
+          <option value="false">No</option>
+        </select>
+      </div>
+      <div className="grupo">
         <h4>FECHA INICIO:</h4>
         <input
           type="text"
