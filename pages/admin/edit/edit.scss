@@ -1,0 +1,42 @@
+.edit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $second;
+  margin: 70px 0 100px;
+  .grupo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h4 {
+      margin-bottom: 5px;
+    }
+    input,
+    select {
+      width: 450px;
+      height: 30px;
+      text-align: center;
+      background-color: $second;
+    }
+  }
+  .loginbtn {
+    margin: 40px 0 20px;
+    padding: 10px 20px;
+    border: 1px solid $second;
+    color: $main;
+    font-size: 20px;
+    font-weight: 500;
+    width: 300px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "Oswald", sans-serif;
+  }
+  .loginbtn:hover {
+    background-color: $detalles;
+    color: $second;
+    border: 1px solid $detalles;
+  }
+}
