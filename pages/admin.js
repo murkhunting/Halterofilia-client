@@ -12,7 +12,7 @@ const Admin = () => {
   const formaciones = [
     {
       _id: "jsbdosdon",
-      titulo: "III CURSO ESPECIALISTA EN LEVANTAMIENTOS OLÍMPICOS ",
+      titulo: "III CURSO ESPECIALISTA EN LEVANTAMIENTOS OLÍMPICOS",
       precio: "100€",
       oferta: false,
       preciooferta: "",
