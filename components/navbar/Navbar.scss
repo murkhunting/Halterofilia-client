@@ -29,6 +29,9 @@
     align-items: center;
     justify-content: center;
     font-weight: 800;
+    h2 {
+      font-size: 16px;
+    }
 
     .menuinactive {
       text-decoration: none;
@@ -55,7 +58,15 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    transition: 0.2s ease-in-out;
     cursor: pointer;
+    .lang {
+      transition: 0.2s ease-in-out;
+    }
+    .lang:hover {
+      scale: 1.05;
+      color: white;
+    }
     .show {
       display: flex;
       flex-direction: column;
