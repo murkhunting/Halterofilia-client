@@ -3,8 +3,14 @@ import React from "react";
 const Online = () => {
   return (
     <div className="online">
-      <div className="contenedor">
-        <h1>Online</h1>
+      <div className="programas">
+        <h1>PROGRAMA PERSONALIZADO</h1>
+      </div>
+      <div className="programas">
+        <h1>PROGRAMAS TIPO</h1>
+      </div>
+      <div className="programas">
+        <h1>CLASES POR ZOOM</h1>
       </div>
     </div>
   );

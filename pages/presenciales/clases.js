@@ -34,8 +34,18 @@ const Presencial = () => {
         </div>
         <div className="botones">
           <div className="conjunto">
+            {/* <h2>CLASES DE HALTEROFILIA:</h2> */}
+            <Link href="/presenciales/clases/halterofilia">
+              <a>
+                <img
+                  className="boton"
+                  src="/images/6halterobtn.png"
+                  alt="logo"
+                />
+              </a>
+            </Link>
             {/* <h2>CLASES DE FUERZA:</h2> */}
-            <Link href="/presencial/fuerza">
+            <Link href="/presenciales/clases/fuerza">
               <a>
                 <img
                   className="boton"
@@ -45,18 +55,7 @@ const Presencial = () => {
               </a>
             </Link>
           </div>
-          <div className="conjunto">
-            {/* <h2>CLASES DE HALTEROFILIA:</h2> */}
-            <Link href="/presencial/halterofilia">
-              <a>
-                <img
-                  className="boton"
-                  src="/images/6halterobtn.png"
-                  alt="logo"
-                />
-              </a>
-            </Link>
-          </div>
+          <div className="conjunto"></div>
         </div>
       </div>
       <div className="infoclub">

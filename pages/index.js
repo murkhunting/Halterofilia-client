@@ -36,7 +36,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* SECCION 1 PROGRAMA ONLINE */}
+      {/* PROGRAMA ONLINE */}
       <div className="programaonline">
         <div className="iz">
           <h1>PREFIERES ENTRENAR DESDE CUALQUIER LUGAR DEL MUNDO?</h1>
@@ -53,7 +53,7 @@ export default function Home() {
         </div>
         <div className="de">
           <div className="wrap">
-            <Link href="/online">
+            <Link href="/online/personalizado">
               <a>
                 <img
                   className="boton"
@@ -65,10 +65,10 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* SECCION 2 FORMACIONES */}
-      <div className="formacionestecnicas">
+      {/* PROGRAMAS TIPO */}
+      <div className="programastipo">
         <div className="texto">
-          <h1>FORMACIONES TÉCNICAS</h1>
+          <h1>PROGRAMAS DE ENTRENO</h1>
         </div>
 
         <div className="container">
@@ -78,7 +78,7 @@ export default function Home() {
               QUIERES APRENDER AL ÁXIMO NIVEL NO TE PIERDAS NUESTROS SEMINARIOS
               Y CURSOS DE MEJORA TÉCNICA.
             </h2>
-            <Link href="/formaciones">
+            <Link href="/presenciales/formaciones">
               <a>
                 <img
                   className="boton"
@@ -94,7 +94,71 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* SECCION 3 NOSOTROS */}
+      {/* STREAMING */}
+      <div className="streaming">
+        <h1>CLASES POR STREAMING</h1>
+        <div className="cont">
+          <div className="de">
+            <div className="flecha">
+              <div className="hor">
+                <h2>
+                  SI TIENES QUE ENTRENAR DESDE CASA Y DISPONES DEL MATERIAL
+                  NECESARIO DESCUBRE NUESTRAS CLASES DIRIGIDAS A TRAVÉS DE ZOOM
+                </h2>
+                {/* <h2> TÉCNICA, FUERZA Y POTENCIA ·</h2>
+                <h2> 2 MOVIMIENTOS OLÍMPICOS ·</h2>
+                <h2> 100% HALTEOFILIA ·</h2> */}
+              </div>
+              <div className="ico">
+                <MdDoubleArrow />
+              </div>
+            </div>
+          </div>
+          <div className="iz">
+            <div className="wrap">
+              <Link href="/online/streaming">
+                <a>
+                  <img
+                    className="boton"
+                    src="/images/4presencialesbtn.png"
+                    alt="logo"
+                  />
+                </a>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* FORMACIONES */}
+      <div className="formacionestecnicas">
+        <div className="texto">
+          <h1>FORMACIONES PRESENCIALES</h1>
+        </div>
+
+        <div className="container">
+          <div className="formacionlink">
+            <h2>
+              SI ERES UN ATLETA PROFESIONAL, UN ENTRENADOR O PREPARADOR FÍSICO O
+              QUIERES APRENDER AL ÁXIMO NIVEL NO TE PIERDAS NUESTROS SEMINARIOS
+              Y CURSOS DE MEJORA TÉCNICA.
+            </h2>
+            <Link href="/presenciales/formaciones">
+              <a>
+                <img
+                  className="boton"
+                  src="/images/2formacionesbtn.png"
+                  alt="logo"
+                />
+              </a>
+            </Link>
+          </div>
+          <div className="nextformacion">
+            <h2>PRÓXIMO CURSO DISPONIBLE:</h2>
+            <Fichas />
+          </div>
+        </div>
+      </div>
+      {/* NOSOTROS */}
       <div className="sobrenosotros">
         <div className="iz">
           <h1>NUESTRO EQUIPO</h1>
@@ -118,13 +182,13 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* SECCION 4 CLASES PRESENCIALES */}
+      {/* CLASES PRESENCIALES */}
       <div className="clasespresenciales">
         <h1>CLASES PRESENCIALES</h1>
         <div className="cont">
           <div className="iz">
             <div className="wrap">
-              <Link href="/presencial">
+              <Link href="/presenciales/clases">
                 <a>
                   <img
                     className="boton"

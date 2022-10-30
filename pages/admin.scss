@@ -56,49 +56,52 @@
   }
   .panel {
     display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    margin: 70px 0 100px;
-
-    //LISTA DE PROYECTOS
-    .list {
+    flex-direction: row;
+    justify-content: center;
+    .lista {
       display: flex;
+      width: 100%;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      width: 60%;
-      .formaciones {
-        .wrap {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-between;
-          border-top: 1px solid $detalles;
-          border-bottom: 1px solid $detalles;
-          width: 100%;
-          h2 {
-          }
-          .icons {
+      justify-content: space-around;
+      margin: 70px 0 100px;
+      .list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        .formaciones {
+          .wrap {
             display: flex;
             flex-direction: row;
-            margin-left: 60px;
-            a {
-              text-decoration: none;
-              margin-right: 30px;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid $detalles;
+            border-bottom: 1px solid $detalles;
+            width: 100%;
+            h2 {
             }
-            .icon {
-              color: $main;
-              background-color: $second;
-              font-size: 20px;
-              cursor: pointer;
-              padding: 10px;
-              border-radius: 5px;
-            }
-            .icon:hover {
-              background-color: $detalles;
-              color: $second;
+            .icons {
+              display: flex;
+              flex-direction: row;
+              margin-left: 60px;
+              a {
+                text-decoration: none;
+                margin-right: 30px;
+              }
+              .icon {
+                color: $main;
+                background-color: $second;
+                font-size: 20px;
+                cursor: pointer;
+                padding: 10px;
+                border-radius: 5px;
+              }
+              .icon:hover {
+                background-color: $detalles;
+                color: $second;
+              }
             }
           }
         }

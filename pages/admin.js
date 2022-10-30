@@ -102,33 +102,63 @@ const Admin = () => {
         </div>
       ) : (
         <div className="panel">
-          {/* LISTA DE PROYECTOS */}
-          <div className="list">
-            <h1>LISTA DE FORMACIONES:</h1>
-            <div className="formaciones">
-              {formaciones.map((formacion) => (
-                <div className="wrap" key={formacion._id}>
-                  <h2>{formacion.titulo}</h2>
-                  <div className="icons">
-                    <Link href={`/admin/edit/${formacion._id}`}>
-                      <a>
-                        <FaRegEdit className="icon" />
-                      </a>
-                    </Link>
-                    <div>
-                      <FiTrash2
-                        className="icon"
-                        // onClick={() => handleDelete(formacion._id)}
-                      />
+          {/* LISTA DE formaciones */}
+          <div className="lista">
+            <div className="list">
+              <h1>LISTA DE FORMACIONES:</h1>
+              <div className="formaciones">
+                {formaciones.map((formacion) => (
+                  <div className="wrap" key={formacion._id}>
+                    <h2>{formacion.titulo}</h2>
+                    <div className="icons">
+                      <Link href={`/admin/editformacion/${formacion._id}`}>
+                        <a>
+                          <FaRegEdit className="icon" />
+                        </a>
+                      </Link>
+                      <div>
+                        <FiTrash2
+                          className="icon"
+                          // onClick={() => handleDelete(formacion._id)}
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
+            <Link href="/admin/creaformacion">
+              <a className="loginbtn">CREA UNA NUEVA FORMACIÓN</a>
+            </Link>
           </div>
-          <Link href="/admin/crea">
-            <a className="loginbtn">CREA UNA NUEVA FORMACIÓN</a>
-          </Link>
+          <div className="lista">
+            <div className="list">
+              <h1>LISTA DE PROGRAMAS:</h1>
+              <div className="formaciones">
+                {formaciones.map((formacion) => (
+                  <div className="wrap" key={formacion._id}>
+                    <h2>{formacion.titulo}</h2>
+                    <div className="icons">
+                      <Link href={`/admin/editprograma/${formacion._id}`}>
+                        <a>
+                          <FaRegEdit className="icon" />
+                        </a>
+                      </Link>
+                      <div>
+                        <FiTrash2
+                          className="icon"
+                          // onClick={() => handleDelete(formacion._id)}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <Link href="/admin/creaprograma">
+              <a className="loginbtn">CREA UNA NUEVO PROGRAMA</a>
+            </Link>
+          </div>
         </div>
       )}
     </div>

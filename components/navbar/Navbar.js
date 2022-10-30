@@ -20,6 +20,13 @@ const Navbar = () => {
   });
   console.log(windowHeight);
 
+  //LANGUAGE TOGGLE
+  const [show, setShow] = useState(false);
+  const onClick = () => setShow(!show);
+
+  const [lang, setLang] = useState("esp");
+  console.log(lang);
+
   return (
     <div className="navbar">
       <div className="container">
@@ -35,29 +42,21 @@ const Navbar = () => {
                 router.pathname == "/online" ? "menuactive" : "menuinactive"
               }
             >
-              ONLINE
+              PROGRAMAS ONLINE
             </a>
           </Link>
-          <Link href="/formaciones">
+          <Link href="/presenciales">
             <a
               className={
-                router.pathname == "/formaciones"
+                router.pathname == "/presenciales"
                   ? "menuactive"
                   : "menuinactive"
               }
             >
-              FORMACIONES
+              CLASES PRESENCIALES
             </a>
           </Link>
-          <Link href="/presencial">
-            <a
-              className={
-                router.pathname == "/presencial" ? "menuactive" : "menuinactive"
-              }
-            >
-              PRESENCIAL
-            </a>
-          </Link>
+
           <Link href="/nosotros">
             <a
               className={
@@ -78,7 +77,13 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="perfil">
-          ESP▾
+          <div>
+            <div onClick={onClick}>ESP▾</div>
+            <div className={show ? "show" : "noshow"}>
+              <div onClick={() => setLang("eng")}>ENG</div>
+              <div onClick={() => setLang("por")}>POR</div>
+            </div>
+          </div>
           <ReactWhatsapp className="whats" number="+34 616 956 279">
             <AiOutlineWhatsApp />
           </ReactWhatsapp>

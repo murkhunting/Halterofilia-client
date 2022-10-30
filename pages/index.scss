@@ -98,7 +98,7 @@
     background-color: #1f1f1f81;
   }
 
-  //SECCION 1 PROGRAMA ONLINE
+  // PROGRAMA ONLINE
   .programaonline {
     display: flex;
     flex-direction: row;
@@ -111,7 +111,7 @@
       height: 100;
       display: flex;
       flex-direction: column;
-      padding: 60px 20px 60px 160px;
+      padding: 60px 20px 60px 180px;
       align-items: center;
       justify-content: center;
       h1 {
@@ -149,8 +149,143 @@
       }
     }
   }
+  //PROGRAMAS TIPO
+  .programastipo {
+    border-top: 3px solid $opacity;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    min-height: 100vh;
+    width: 100%;
+    .texto {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      h1 {
+        font-size: 5vw;
+        margin: 10px 0 5px 0;
+      }
+    }
+    .container {
+      width: auto;
+      height: 700px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      .nextformacion {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        h2 {
+          margin-left: 30px;
+        }
+      }
+      .formacionlink {
+        text-align: left;
+        width: 900px;
+        margin-right: 40px;
+        height: 700px;
+        z-index: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding-bottom: 60px;
 
-  //SECCION 2 FORMACIONES
+        h2 {
+          font-size: 1.8vw;
+          margin: 20px 40px;
+        }
+        .boton {
+          height: 250px;
+
+          transition: transform 0.4s ease-in-out;
+        }
+        .boton:hover {
+          scale: 1.1;
+          transform: rotate(-360deg);
+        }
+      }
+    }
+  }
+
+  //STREAMING
+  .streaming {
+    border-top: 3px solid $opacity;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 80vh;
+    width: 100%;
+    h1 {
+      font-size: 5vw;
+      margin: 0 0 30px 180px;
+    }
+    .cont {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      .iz {
+        width: 45%;
+        .wrap {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .boton {
+            height: 250px;
+            transition: transform 0.4s ease-in-out;
+          }
+          .boton:hover {
+            scale: 1.1;
+            transform: rotate(-360deg);
+          }
+        }
+      }
+      .de {
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0 0 0px 180px;
+
+        h2 {
+          font-size: 1.8vw;
+          margin: 10px 0;
+        }
+        .flecha {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          .ico {
+            margin-left: 30px;
+            font-size: 150px;
+            color: $detalles;
+          }
+          .hor {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            h2 {
+              text-align: left;
+              font-size: 1.8vw;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //FORMACIONES PRESENCIALES
   .formacionestecnicas {
     border-top: 3px solid $opacity;
     display: flex;
@@ -215,7 +350,7 @@
     }
   }
 
-  //SECCION 3 NOSOTROS
+  //NOSOTROS
   .sobrenosotros {
     border-top: 3px solid $opacity;
     display: flex;
@@ -229,7 +364,7 @@
       height: 100;
       display: flex;
       flex-direction: column;
-      padding: 10px 20px 60px 160px;
+      padding: 10px 20px 60px 180px;
       align-items: flex-start;
       justify-content: center;
       h1 {
@@ -264,7 +399,7 @@
     }
   }
 
-  //SECCION 4 CLASES PRESENCIALES
+  //CLASES PRESENCIALES
   .clasespresenciales {
     border-top: 3px solid $opacity;
     display: flex;

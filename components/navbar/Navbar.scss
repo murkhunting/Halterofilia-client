@@ -55,6 +55,15 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    .show {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+    }
+    .noshow {
+      display: none;
+    }
     .whats {
       background-color: rgba(0, 0, 0, 0);
       color: $second;

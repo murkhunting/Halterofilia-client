@@ -1,6 +1,6 @@
 import React from "react";
 
-import Fichas from "../components/fichas/Fichas";
+import Fichas from "../../components/fichas/Fichas";
 
 const Formaciones = () => {
   return (

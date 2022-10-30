@@ -30,7 +30,7 @@ const Ficha = () => {
             <h3 className={oferta ? "oferta" : "noferta"}>OFERTA: 250€</h3>
           </div>
 
-          <Link href="/formaciones/bedjwbd">
+          <Link href="/presenciales/formaciones/bedjwbd">
             <a>
               <img
                 onMouseEnter={() => setIsHovered(true)}
@@ -59,7 +59,7 @@ const Ficha = () => {
               <h3 className={oferta ? "oferta" : "noferta"}>OFERTA: 250€</h3>
             </div>
 
-            <Link href="/formaciones/bedjwbd">
+            <Link href="/presenciales/formaciones/bedjwbd">
               <a>
                 <img
                   onMouseEnter={() => setIsHovered(true)}
