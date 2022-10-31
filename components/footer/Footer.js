@@ -26,25 +26,46 @@ const Footer = () => {
           </marquee>
         </div>
       </div>
+      <div className="infofooter">
+        <div className="ayunta">
+          <Link href="https://www.barcelona.cat/ca/">
+            <a>
+              <img
+                className="logoayunta"
+                src="/images/ajuntament.png"
+                alt="logo"
+              />
+            </a>
+          </Link>
+        </div>
+        <div className="center">
+          <Link href="/contacto">
+            <a className="contacta">
+              <h5>SI QUIERES SABER MÁS NO DUDES EN CONTACTAR CON NOSOTROS</h5>
+            </a>
+          </Link>
+          <div className="social">
+            <h5>
+              <AiFillInstagram />
+            </h5>
+            <h5>
+              <FaFacebook />
+            </h5>
+            <h5>
+              <AiFillYoutube />
+            </h5>
+          </div>
 
-      <Link href="/contacto">
-        <a className="contacta">
-          <h5>SI QUIERES SABER MÁS NO DUDES EN CONTACTAR CON NOSOTROS</h5>
-        </a>
-      </Link>
-      <div className="social">
-        <h5>
-          <AiFillInstagram />
-        </h5>
-        <h5>
-          <FaFacebook />
-        </h5>
-        <h5>
-          <AiFillYoutube />
-        </h5>
+          <h5 className="diseño">DESIGN & CODE BY @MURKHUNTING</h5>
+        </div>
+        <div className="logopage">
+          <Link href="/">
+            <a>
+              <img className="logo" src="/images/logo.png" alt="logo" />
+            </a>
+          </Link>
+        </div>
       </div>
-
-      <h5 className="diseño">DESIGN & CODE BY @MURKHUNTING</h5>
     </div>
   );
 };
