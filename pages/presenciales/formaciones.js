@@ -18,6 +18,7 @@ const Formaciones = () => {
         <Fichas />
         <Fichas />
         <Fichas />
+        <Fichas />
       </div>
     </div>
   );

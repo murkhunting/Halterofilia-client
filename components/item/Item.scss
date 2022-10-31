@@ -1,0 +1,106 @@
+.item {
+  margin: 20px 20px 40px;
+  text-decoration: none;
+  color: $second;
+  box-shadow: 4px 10px 20px black;
+  transition: transform 0.4s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 420px;
+  height: 500px;
+  background-color: $third;
+  .space {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h2 {
+      font-size: 35px;
+      color: $third;
+      margin: 10px 5px 10px 5px;
+    }
+    img {
+      height: 200px;
+      width: 350px;
+      filter: grayscale(100%);
+      object-fit: cover;
+    }
+    .titulo {
+      margin: 2px;
+      font-size: 22px;
+    }
+    .precio {
+      margin: 2px;
+      font-size: 22px;
+    }
+  }
+  .fichaboton {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 15px;
+    transition: transform 0.4s ease-in-out;
+  }
+  .fichaboton:hover {
+    transform: rotate(-360deg);
+    scale: 1.05;
+  }
+}
+.item:hover {
+  scale: 1.02;
+}
+
+.itemhover {
+  margin: 20px 20px 40px;
+  text-decoration: none;
+  color: $second;
+  box-shadow: 4px 10px 20px black;
+  transition: transform 0.4s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 420px;
+  height: 500px;
+  background-image: url("/images/giphy.gif");
+  background-size: cover;
+  .space {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h2 {
+      font-size: 35px;
+      color: $detalles;
+      margin: 10px 5px 10px 5px;
+    }
+    img {
+      height: 200px;
+      width: 350px;
+      filter: grayscale(100%);
+      object-fit: cover;
+    }
+    .titulo {
+      margin: 2px;
+      font-size: 22px;
+    }
+    .precio {
+      margin: 2px;
+      font-size: 22px;
+    }
+  }
+  .fichaboton {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 15px;
+    transition: transform 0.4s ease-in-out;
+  }
+  .fichaboton:hover {
+    transform: rotate(-360deg);
+    scale: 1.05;
+  }
+}
+.itemhover:hover {
+  scale: 1.02;
+}
