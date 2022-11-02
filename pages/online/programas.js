@@ -8,7 +8,7 @@ const Programas = () => {
       <div className="titulo">
         <h1>PROGRAMAS DE ENTRENAMIENTO</h1>
         <h2>
-          · ENTRENAMIENTTOS PREPARADOS PARA QUE CONSIGAS TUS OBJETIVOS DESDE
+          · ENTRENAMIENTOS PREPARADOS PARA QUE CONSIGAS TUS OBJETIVOS DESDE
           CUALQUIER LUGAR DEL MUNDO ·
         </h2>
       </div>

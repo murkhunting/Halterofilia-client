@@ -34,7 +34,7 @@
       align-items: center;
       justify-content: center;
       width: 60vw;
-      margin: 40px 0;
+
       .conjunto {
         display: flex;
         flex-direction: row;
@@ -72,7 +72,7 @@
       .box {
         padding: 10px 50px;
         margin-bottom: 10px;
-        background-color: $third;
+        background-color: $detalles;
         h2 {
           font-size: 30px;
         }

@@ -66,7 +66,7 @@ const Presencial = () => {
               <h2>TARIFAS MENSUALES</h2>
               <h3>
                 PARA PODER EMPEZAR A ENTRENAR EL EN EL CLUB DE HALTEROFILIA DEL
-                BARCELONA SE DEBE REALIZAR EL PAGO ÚNICO DE LA MATRÍCULA DE 49€
+                BARCELONA SE DEBE REALIZAR EL PAGO ÚNICO DE LA MATRÍCULA DE 65€
                 (NO REEMBOLSABLE).
               </h3>
               <h3>
@@ -79,13 +79,11 @@ const Presencial = () => {
                   <h3>1 HORA/SEMANA - 45€/MES </h3>
                   <h3>2 HORAS/SEMANA - 65€/MES</h3>
                   <h3>3 HORAS/SEMANA - 85€/MES</h3>
-                  <h3>4 HORAS/SEMANA - 95€/MES</h3>
                 </div>
                 <div className="columnde">
-                  <h3>6 HORAS/SEMANA - 105€/MES</h3>
-                  <h3>8 HORAS/SEMANA - 125€/MES</h3>
-                  <h3>10 HORAS/SEMANA - 145€/MES</h3>
-                  <h3>12 HORAS/SEMANA - 165€/MES</h3>
+                  <h3>4 HORAS/SEMANA - 105€/MES</h3>
+                  <h3>6 HORAS/SEMANA - 125€/MES</h3>
+                  <h3>8 HORAS/SEMANA - 145€/MES</h3>
                 </div>
               </div>
             </div>

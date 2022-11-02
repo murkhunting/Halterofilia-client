@@ -2,6 +2,8 @@
 
 // import logo from "../public/images/logo.png";
 import Fichas from "../components/fichas/Fichas";
+import Item from "../components/item/Item";
+
 import { MdDoubleArrow } from "react-icons/md";
 import { AiFillInstagram, AiFillYoutube } from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa";
@@ -73,12 +75,7 @@ export default function Home() {
 
         <div className="container">
           <div className="formacionlink">
-            <h2>
-              SI ERES UN ATLETA PROFESIONAL, UN ENTRENADOR O PREPARADOR FÍSICO O
-              QUIERES APRENDER AL ÁXIMO NIVEL NO TE PIERDAS NUESTROS SEMINARIOS
-              Y CURSOS DE MEJORA TÉCNICA.
-            </h2>
-            <Link href="/presenciales/formaciones">
+            <Link href="/online/programas">
               <a>
                 <img
                   className="boton"
@@ -87,10 +84,22 @@ export default function Home() {
                 />
               </a>
             </Link>
+            <div className="ico">
+              <MdDoubleArrow />
+            </div>
+            <h2>
+              SI ERES UN ATLETA PROFESIONAL, UN ENTRENADOR O PREPARADOR FÍSICO O
+              QUIERES APRENDER AL ÁXIMO NIVEL NO TE PIERDAS NUESTROS SEMINARIOS
+              Y CURSOS DE MEJORA TÉCNICA.
+            </h2>
           </div>
           <div className="nextformacion">
-            <h2>PRÓXIMO CURSO DISPONIBLE:</h2>
-            <Fichas />
+            <h2>ÚLTIMOS PROGRAMAS:</h2>
+            <div className="items">
+              <Item />
+              <Item />
+              <Item />
+            </div>
           </div>
         </div>
       </div>

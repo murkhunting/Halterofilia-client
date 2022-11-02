@@ -32,23 +32,27 @@ const Halterofilia = () => {
         <div className="horas">
           <div className="hora">
             <h2>LUNES</h2>
-            <h2>17:00 - 22:00</h2>
+            <h2>17:00 - 21:00</h2>
           </div>
           <div className="hora">
             <h2>MARTES</h2>
-            <h2>17:00 - 22:00</h2>
+            <h2>17:00 - 21:00</h2>
           </div>
           <div className="hora">
             <h2>MIÉRCOLES</h2>
-            <h2>17:00 - 22:00</h2>
+            <h2>17:00 - 21:00</h2>
           </div>
           <div className="hora">
             <h2>JUEVES</h2>
-            <h2>17:00 - 22:00</h2>
+            <h2>17:00 - 21:00</h2>
           </div>
           <div className="hora">
             <h2>VIERNES</h2>
-            <h2>17:00 - 22:00</h2>
+            <h2>17:00 - 21:00</h2>
+          </div>
+          <div className="hora">
+            <h2>SÁBADO</h2>
+            <h2>17:00 - 21:00</h2>
           </div>
         </div>
       </div>
