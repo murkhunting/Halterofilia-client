@@ -10,7 +10,7 @@ const Presenciales = () => {
       <div className="formaciones">
         <Link href="/presenciales/formaciones">
           <a>
-            <h1 class="animate__animated animate__slideInRight">
+            <h1 class="animate__animated animate__fadeInLeft">
               FORMACIONES PRESENCIALES
             </h1>
           </a>
@@ -19,7 +19,7 @@ const Presenciales = () => {
       <div className="formaciones">
         <Link href="/presenciales/clases">
           <a>
-            <h1 class="animate__animated animate__slideInRight">
+            <h1 class="animate__animated animate__fadeInLeft">
               CLASES PRESENCIALES
             </h1>
           </a>

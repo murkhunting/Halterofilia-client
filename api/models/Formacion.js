@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const ProgramaSchema = new mongoose.Schema({
+const FormacionSchema = new mongoose.Schema({
   titulo: { type: String, required: true },
   precio: { type: String, required: true, unique: true },
   oferta: { type: Boolean },
@@ -15,4 +15,4 @@ const ProgramaSchema = new mongoose.Schema({
   img: { type: String, required: true },
 });
 
-module.exports = mongoose.model("Programa", ProgramaSchema);
+module.exports = mongoose.model("Formacion", FormacionSchema);
