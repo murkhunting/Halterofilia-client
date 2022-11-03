@@ -40,6 +40,18 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
+// //GET RANDOM 3 FORMACIONES - get
+router.get("/random", async (req, res) => {
+  let formaciones = [];
+
+  try {
+    formaciones = await Formacion.aggregate([{ $sample: { size: 1 } }]);
+    res.status(200).json(formaciones);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 //GET ALL FORMACION - get
 router.get("/all", async (req, res) => {
   try {
@@ -61,15 +73,3 @@ router.get("/:id", async (req, res) => {
 });
 
 module.exports = router;
-
-// //GET RANDOM 9 PROJECTS - get
-// router.get("/random", async (req, res) => {
-//   let projects = [];
-
-//   try {
-//     projects = await Project.aggregate([{ $sample: { size: 12 } }]);
-//     res.status(200).json(projects);
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });

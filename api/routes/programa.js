@@ -33,10 +33,22 @@ router.put("/:id", async (req, res) => {
 router.delete("/:id", async (req, res) => {
   try {
     await Programa.findByIdAndDelete(req.params.id);
-    res.status(200).json("El Programa ha sido borrada");
+    res.status(200).json("El Programa ha sido borrado");
   } catch (err) {
     res.status(500).json(err);
     console.log(err);
+  }
+});
+
+// //GET RANDOM 3 PROGRAMAS - get
+router.get("/random", async (req, res) => {
+  let programas = [];
+
+  try {
+    programas = await Programa.aggregate([{ $sample: { size: 3 } }]);
+    res.status(200).json(programas);
+  } catch (err) {
+    res.status(500).json(err);
   }
 });
 
@@ -61,15 +73,3 @@ router.get("/:id", async (req, res) => {
 });
 
 module.exports = router;
-
-// //GET RANDOM 9 PROJECTS - get
-// router.get("/random", async (req, res) => {
-//   let projects = [];
-
-//   try {
-//     projects = await Project.aggregate([{ $sample: { size: 12 } }]);
-//     res.status(200).json(projects);
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
