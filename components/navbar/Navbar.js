@@ -8,17 +8,16 @@ import ReactWhatsapp from "react-whatsapp";
 
 const Navbar = () => {
   const router = useRouter();
-  const [windowHeight, setWindowHeight] = useState("0");
+  // const [windowHeight, setWindowHeight] = useState("0");
 
-  const handleScroll = () => {
-    setWindowHeight(window.scrollY);
-  };
+  // const handleScroll = () => {
+  //   setWindowHeight(window.scrollY);
+  // };
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  });
-  console.log(windowHeight);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // });
 
   //LANGUAGE TOGGLE
   const [show, setShow] = useState(false);

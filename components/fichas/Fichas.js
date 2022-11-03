@@ -2,11 +2,9 @@ import React from "react";
 import { useState } from "react";
 
 import Link from "next/link";
-import Formaciones from "../../pages/presenciales/formaciones";
 
 const Ficha = (formacion) => {
   const [isHovered, setIsHovered] = useState(false);
-  console.log(isHovered);
 
   const { titulo, precio, oferta, precioferta, agotado, inicio, img, _id } =
     formacion.formacion;
