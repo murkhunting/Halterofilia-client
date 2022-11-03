@@ -24,20 +24,20 @@ const Creaprograma = () => {
           />
         </div>
         <div className="grupo">
+          <h4>MOTIVACIÓN:</h4>
+          <input
+            type="text"
+            placeholder="Frase de motivación..."
+            name="objetivo"
+            // onChange={handleChange}
+          />
+        </div>
+        <div className="grupo">
           <h4>DIRIGIDO A:</h4>
           <input
             type="text"
             placeholder="A quien va dirigido el programa..."
             name="dirigido"
-            // onChange={handleChange}
-          />
-        </div>
-        <div className="grupo">
-          <h4>OBJETIVO:</h4>
-          <input
-            type="text"
-            placeholder="Objetivo del programa..."
-            name="objetivo"
             // onChange={handleChange}
           />
         </div>

@@ -42,9 +42,13 @@ router.delete("/:id", async (req, res) => {
 
 // //GET NEXT FORMACION - get
 router.get("/next", async (req, res) => {
+  let formaciones = [];
   try {
-    formacion = await Formacion.findOne({ agotado: undefined });
-    res.status(200).json(formacion);
+    formaciones = await Formacion.aggregate([
+      { $match: { agotado: undefined } },
+      { $sample: { size: 1 } },
+    ]);
+    res.status(200).json(formaciones);
   } catch (err) {
     res.status(500).json(err);
   }

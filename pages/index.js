@@ -12,32 +12,24 @@ import Link from "next/link";
 
 export default function Home() {
   const [items, setItems] = useState([]);
-  const [formacion, setFormacion] = useState();
+  const [fichas, setFichas] = useState([]);
 
   useEffect(() => {
     const getRandomProgramas = async () => {
       try {
-        const res = await axios.get(
+        const res1 = await axios.get(
           "http://localhost:8800/api/programa/random"
         );
-        setItems(res.data);
+        const res2 = await axios.get(
+          "http://localhost:8800/api/formacion/next"
+        );
+        setItems(res1.data);
+        setFichas(res2.data);
       } catch (err) {
         console.log(err);
       }
     };
     getRandomProgramas();
-  }, []);
-
-  useEffect(() => {
-    const getFormacion = async () => {
-      try {
-        const res = await axios.get("http://localhost:8800/api/formacion/next");
-        setFormacion(res.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    getFormacion();
   }, []);
 
   return (
@@ -192,7 +184,13 @@ export default function Home() {
           </div>
           <div className="nextformacion">
             <h2>PRÓXIMO CURSO DISPONIBLE:</h2>
-            <Fichas formacion={formacion} />
+            {fichas.map((formacion) => (
+              <Fichas
+                className="list"
+                key={formacion._id}
+                formacion={formacion}
+              />
+            ))}
           </div>
         </div>
       </div>
