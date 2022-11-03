@@ -7,11 +7,11 @@ import { AuthContextProvider } from "../auth/AuthContext";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <AuthContextProvider>
       <Navbar />
       <Component {...pageProps} />
       <Footer />
-    </>
+    </AuthContextProvider>
   );
 }
 
