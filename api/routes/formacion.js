@@ -40,13 +40,11 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-// //GET RANDOM 3 FORMACIONES - get
-router.get("/random", async (req, res) => {
-  let formaciones = [];
-
+// //GET NEXT FORMACION - get
+router.get("/next", async (req, res) => {
   try {
-    formaciones = await Formacion.aggregate([{ $sample: { size: 1 } }]);
-    res.status(200).json(formaciones);
+    formacion = await Formacion.findOne({ agotado: undefined });
+    res.status(200).json(formacion);
   } catch (err) {
     res.status(500).json(err);
   }

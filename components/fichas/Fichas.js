@@ -2,14 +2,14 @@ import React from "react";
 import { useState } from "react";
 
 import Link from "next/link";
+import Formaciones from "../../pages/presenciales/formaciones";
 
-const Ficha = () => {
+const Ficha = (formacion) => {
   const [isHovered, setIsHovered] = useState(false);
   console.log(isHovered);
-  //   const { titulo, type, byn, gif, _id } = project.project;
 
-  const agotado = true;
-  const oferta = true;
+  const { titulo, precio, oferta, precioferta, agotado, inicio, img, _id } =
+    formacion.formacion;
 
   return (
     <div className="ficha">
@@ -19,17 +19,17 @@ const Ficha = () => {
           <div className="spacehover">
             <h2>APÚNTATE!!</h2>
             <div className="img">
-              <img src="/images/fondo.png" alt="cross" />
+              <img src={img} alt="cross" />
             </div>
-            <h3 className="titulo">
-              III CURSO ESPECIALISTA EN LEVANTAMIENTOS OLÍMPICOS
+            <h3 className="titulo">{titulo}</h3>
+            <h3 className="titulo">{inicio}</h3>
+            <h3 className={oferta ? "noprecio" : "precio"}>{precio}</h3>
+            <h3 className={oferta ? "oferta" : "noferta"}>
+              {"OFERTA: " + precioferta}
             </h3>
-            <h3 className="titulo">17/12/2022</h3>
-            <h3 className={oferta ? "noprecio" : "precio"}>350€</h3>
-            <h3 className={oferta ? "oferta" : "noferta"}>OFERTA: 250€</h3>
           </div>
 
-          <Link href="/presenciales/formaciones/bedjwbd">
+          <Link href={`/presenciales/formaciones/${_id}`}>
             <a>
               <img
                 onMouseEnter={() => setIsHovered(true)}
@@ -47,17 +47,17 @@ const Ficha = () => {
             <div className="space">
               <h2>APÚNTATE!!</h2>
               <div className="img">
-                <img src="/images/fondo.png" alt="cross" />
+                <img src={img} alt="cross" />
               </div>
-              <h3 className="titulo">
-                III CURSO ESPECIALISTA EN LEVANTAMIENTOS OLÍMPICOS
+              <h3 className="titulo">{titulo}</h3>
+              <h3 className="titulo">{inicio}</h3>
+              <h3 className={oferta ? "noprecio" : "precio"}>{precio}</h3>
+              <h3 className={oferta ? "oferta" : "noferta"}>
+                {"OFERTA: " + precioferta}
               </h3>
-              <h3 className="titulo">17/12/2022</h3>
-              <h3 className={oferta ? "noprecio" : "precio"}>350€</h3>
-              <h3 className={oferta ? "oferta" : "noferta"}>OFERTA: 250€</h3>
             </div>
 
-            <Link href="/presenciales/formaciones/bedjwbd">
+            <Link href={`/presenciales/formaciones/${_id}`}>
               <a>
                 <img
                   onMouseEnter={() => setIsHovered(true)}

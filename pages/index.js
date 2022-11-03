@@ -1,6 +1,6 @@
-// import Layout from "../layouts/Layout";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-// import logo from "../public/images/logo.png";
 import Fichas from "../components/fichas/Fichas";
 import Item from "../components/item/Item";
 
@@ -11,6 +11,35 @@ import { FaFacebook } from "react-icons/fa";
 import Link from "next/link";
 
 export default function Home() {
+  const [items, setItems] = useState([]);
+  const [formacion, setFormacion] = useState();
+
+  useEffect(() => {
+    const getRandomProgramas = async () => {
+      try {
+        const res = await axios.get(
+          "http://localhost:8800/api/programa/random"
+        );
+        setItems(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getRandomProgramas();
+  }, []);
+
+  useEffect(() => {
+    const getFormacion = async () => {
+      try {
+        const res = await axios.get("http://localhost:8800/api/formacion/next");
+        setFormacion(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getFormacion();
+  }, []);
+
   return (
     <div className="home">
       {/* PANTALLA PRINCIPAL */}
@@ -96,9 +125,9 @@ export default function Home() {
           <div className="nextformacion">
             <h2>ÚLTIMOS PROGRAMAS:</h2>
             <div className="items">
-              <Item />
-              <Item />
-              <Item />
+              {items.map((programa) => (
+                <Item className="list" key={programa._id} programa={programa} />
+              ))}
             </div>
           </div>
         </div>
@@ -163,7 +192,7 @@ export default function Home() {
           </div>
           <div className="nextformacion">
             <h2>PRÓXIMO CURSO DISPONIBLE:</h2>
-            <Fichas />
+            <Fichas formacion={formacion} />
           </div>
         </div>
       </div>

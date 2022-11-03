@@ -6,7 +6,6 @@ import Item from "../../components/item/Item";
 
 const Programas = () => {
   const [programas, setProgramas] = useState([]);
-  console.log(programas);
 
   useEffect(() => {
     const getAllPrograms = async () => {
@@ -30,12 +29,9 @@ const Programas = () => {
         </h2>
       </div>
       <div className="wrapper">
-        <Item />
-        <Item />
-        <Item />
-        <Item />
-        <Item />
-        <Item />
+        {programas.map((programa) => (
+          <Item key={programa._id} programa={programa} />
+        ))}
       </div>
     </div>
   );

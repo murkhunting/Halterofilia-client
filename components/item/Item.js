@@ -3,21 +3,23 @@ import { useState } from "react";
 
 import Link from "next/link";
 
-const Item = () => {
+const Item = (programa) => {
   const [isHovered, setIsHovered] = useState(false);
+
+  const { titulo, precio, img, _id } = programa.programa;
 
   return (
     <div className={isHovered ? "itemhover" : "item"}>
       <div className="space">
         <h2>ADQUIÉRELO!!</h2>
         <div className="img">
-          <img src="/images/fondo.png" alt="cross" />
+          <img src={img} alt="cross" />
         </div>
-        <h3 className="titulo">PROGRAMA DE MEJORA EN CORSSFIT</h3>
-        <h3 className="precio">50€</h3>
+        <h3 className="titulo">{titulo}</h3>
+        <h3 className="precio">{precio}</h3>
       </div>
 
-      <Link href="/online/programas/bedjwbd">
+      <Link href={`/online/programas/${_id}`}>
         <a>
           <img
             onMouseEnter={() => setIsHovered(true)}
