@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const FormacionSchema = new mongoose.Schema({
   titulo: { type: String, required: true },
-  precio: { type: String, required: true, unique: true },
+  precio: { type: String, required: true },
   oferta: { type: Boolean },
   precioferta: { type: String },
   agotado: { type: Boolean },
@@ -12,7 +12,7 @@ const FormacionSchema = new mongoose.Schema({
   dirigido: { type: String, required: true },
   objetivo: { type: String, required: true },
   descripcion: { type: String, required: true },
-  img: { type: String, required: true },
+  img: { type: String },
 });
 
 module.exports = mongoose.model("Formacion", FormacionSchema);

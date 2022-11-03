@@ -26,8 +26,17 @@ const Editprograma = () => {
         <h4>DIRIGIDO A:</h4>
         <input
           type="text"
-          placeholder="A quien va dirigido la formación..."
+          placeholder="A quien va dirigido el programa..."
           name="dirigido"
+          // onChange={handleChange}
+        />
+      </div>
+      <div className="grupo">
+        <h4>OBJETIVO:</h4>
+        <input
+          type="text"
+          placeholder="Objetivo del programa..."
+          name="objetivo"
           // onChange={handleChange}
         />
       </div>
@@ -35,7 +44,7 @@ const Editprograma = () => {
         <h4>DESCRIPCIÓN:</h4>
         <input
           type="text"
-          placeholder="Objetivo y descripción de la formación..."
+          placeholder="Descripción de el programa..."
           name="objetivo"
           // onChange={handleChange}
         />

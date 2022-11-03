@@ -40,7 +40,7 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-//GET ALL PROGRAMA - get
+//GET ALL PROGRAMAS - get
 router.get("/all", async (req, res) => {
   try {
     const programas = await Programa.find();

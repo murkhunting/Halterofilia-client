@@ -1,8 +1,25 @@
 import React from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 import Item from "../../components/item/Item";
 
 const Programas = () => {
+  const [programas, setProgramas] = useState([]);
+  console.log(programas);
+
+  useEffect(() => {
+    const getAllPrograms = async () => {
+      try {
+        const res = await axios.get("http://localhost:8800/api/programa/all");
+        setProgramas(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getAllPrograms();
+  }, []);
+
   return (
     <div className="programas">
       <div className="titulo">
