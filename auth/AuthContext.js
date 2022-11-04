@@ -1,6 +1,13 @@
 import AuthReducer from "./AuthReducer";
 import { createContext, useReducer, useEffect } from "react";
 
+// const [user, setUser] = useState();
+// useEffect(() => {
+//   const data = localStorage.getItem("user");
+//   console.log(data);
+//   // setUser(data);
+// }, []);
+
 const INITIAL_STATE = {
   user: null,
   isFetching: false,

@@ -1,6 +1,9 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import axios from "axios";
+
+import { login } from "../auth/apiCall";
+import { AuthContext } from "../auth/AuthContext";
 
 import Link from "next/link";
 
@@ -8,8 +11,24 @@ import { FaRegEdit } from "react-icons/fa";
 import { FiTrash2 } from "react-icons/fi";
 
 const Admin = () => {
-  const [login, setLogin] = useState(false);
+  const loged = true;
 
+  //LOGGIN
+  const [user, setUser] = useState("");
+  const { isFetching, dispatch } = useContext(AuthContext);
+  //1.coger datos de los inputs
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setUser({ ...user, [e.target.name]: value });
+  };
+
+  //2.funcion que realiza el login
+  const handleLogin = (e) => {
+    e.preventDefault();
+    login(user, dispatch);
+  };
+
+  //LLAMADAS A LA BASE DE DATOS
   const [programas, setProgramas] = useState([]);
   const [formaciones, setFormaciones] = useState([]);
 
@@ -37,9 +56,12 @@ const Admin = () => {
     getAllFormaciones();
   }, []);
 
+  //COMPROBAR SI HAY USER EN EL LOCAL STORAGE
+  const userExist = useContext(AuthContext).user;
+
   return (
     <div className="admin">
-      {login ? (
+      {!userExist ? (
         <div className="login">
           <form className="container">
             <div className="cover">
@@ -48,7 +70,7 @@ const Admin = () => {
                 type="text"
                 placeholder="..."
                 name="username"
-                // onChange={handleChange}
+                onChange={handleChange}
               />
             </div>
             <div className="cover">
@@ -57,13 +79,13 @@ const Admin = () => {
                 type="text"
                 placeholder="*****"
                 name="password"
-                // onChange={handleChange}
+                onChange={handleChange}
               />
             </div>
             <button
               className="loginbtn"
-              //   onClick={handleLogin}
-              //   disabled={isFetching}
+              onClick={handleLogin}
+              disabled={isFetching}
             >
               LOGIN
             </button>
