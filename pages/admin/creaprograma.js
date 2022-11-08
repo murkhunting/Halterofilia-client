@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 
-import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Creaprograma = () => {
   const [programa, setPrograma] = useState({});
@@ -15,7 +15,6 @@ const Creaprograma = () => {
 
   //create programa
   const createPrograma = async (programa) => {
-    console.log(programa);
     try {
       const res = await axios.post(
         "http://localhost:8800/api/programa",
@@ -27,9 +26,12 @@ const Creaprograma = () => {
     }
   };
 
-  const handleCreate = (e) => {
+  const router = useRouter();
+
+  const handleCreatePrograma = (e) => {
     e.preventDefault();
     createPrograma(programa);
+    router.push("/admin");
   };
 
   return (
@@ -101,13 +103,9 @@ const Creaprograma = () => {
             onChange={handleChange}
           />
         </div>
-        <Link href="/admin">
-          <a>
-            <button className="loginbtn" onClick={handleCreate}>
-              CREAR PROGRAMA
-            </button>
-          </a>
-        </Link>
+        <button className="loginbtn" onClick={handleCreatePrograma}>
+          CREAR PROGRAMA
+        </button>
       </div>
     </div>
   );

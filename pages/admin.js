@@ -68,6 +68,34 @@ const Admin = () => {
     getAllFormaciones();
   }, []);
 
+  //borrar prgrama
+  const deletePrograma = async (id) => {
+    try {
+      await axios.delete(`http://localhost:8800/api/programa/${id}`);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleDeletePrograma = (id) => {
+    deletePrograma(id);
+    window.location.reload(false);
+  };
+
+  //borrar formacion
+  const deleteFormacion = async (id) => {
+    try {
+      await axios.delete(`http://localhost:8800/api/formacion/${id}`);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleDeleteFormacion = (id) => {
+    deleteFormacion(id);
+    window.location.reload(false);
+  };
+
   //COMPROBAR SI HAY USER EN EL LOCAL STORAGE
   const userExist = useContext(AuthContext).user;
 
@@ -122,7 +150,7 @@ const Admin = () => {
                       <div>
                         <FiTrash2
                           className="icon"
-                          // onClick={() => handleDelete(formacion._id)}
+                          onClick={() => handleDeleteFormacion(formacion._id)}
                         />
                       </div>
                     </div>
@@ -150,7 +178,7 @@ const Admin = () => {
                       <div>
                         <FiTrash2
                           className="icon"
-                          // onClick={() => handleDelete(formacion._id)}
+                          onClick={() => handleDeletePrograma(programa._id)}
                         />
                       </div>
                     </div>

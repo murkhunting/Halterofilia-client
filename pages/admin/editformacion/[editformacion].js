@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 const Edit = () => {
+  //GRT FORMACION ORIGINAL
   const router = useRouter();
   const id = router.query.editformacion;
   const [formacion, setFormacion] = useState({});
@@ -34,6 +35,32 @@ const Edit = () => {
     img,
   } = formacion;
 
+  //FORMACION EDITADA
+  const [formacionEditada, setFormacionEditada] = useState({});
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setFormacionEditada({ ...formacion, [e.target.name]: value });
+  };
+
+  //subir formacion editada
+  const updateFormacion = async (formacion) => {
+    try {
+      const res = await axios.put(
+        `http://localhost:8800/api/formacion/${id}`,
+        formacion
+      );
+      const data = res.data;
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleUpdate = (e) => {
+    e.preventDefault();
+    updateFormacion(formacionEditada);
+  };
+
   return (
     <div className="edit">
       <h1>EDITA LA FORMACIÓN:</h1>
@@ -44,7 +71,7 @@ const Edit = () => {
           placeholder="Escribe el título..."
           name="titulo"
           defaultValue={titulo}
-          // onChange={handleChange}
+          onChange={handleChange}
         />
       </div>
       <div className="grupo">
@@ -54,7 +81,7 @@ const Edit = () => {
           placeholder="100€..."
           name="precio"
           defaultValue={precio}
-          // onChange={handleChange}
+          onChange={handleChange}
         />
       </div>
       <div className="grupo">
@@ -73,7 +100,7 @@ const Edit = () => {
           placeholder="90€..."
           name="precioferta"
           defaultValue={precioferta}
-          // onChange={handleChange}
+          onChange={handleChange}
         />
       </div>
       <div className="grupo">
@@ -92,7 +119,7 @@ const Edit = () => {
           placeholder="12/08/2023..."
           name="inicio"
           defaultValue={inicio}
-          // onChange={handleChange}
+          onChange={handleChange}
         />
       </div>
       <div className="grupo">
@@ -102,7 +129,7 @@ const Edit = () => {
           placeholder="4 meses..."
           name="duracion"
           defaultValue={duracion}
-          // onChange={handleChange}
+          onChange={handleChange}
         />
       </div>
       <div className="grupo">
@@ -112,7 +139,7 @@ const Edit = () => {
           placeholder="Sábados de 9:00 a 14:00..."
           name="horario"
           defaultValue={horario}
-          // onChange={handleChange}
+          onChange={handleChange}
         />
       </div>
 
@@ -123,7 +150,7 @@ const Edit = () => {
           placeholder="A quien va dirigido la formación..."
           name="dirigido"
           defaultValue={dirigido}
-          // onChange={handleChange}
+          onChange={handleChange}
         />
       </div>
       <div className="grupo">
@@ -133,25 +160,21 @@ const Edit = () => {
           placeholder="Objetivo y descripción de la formación..."
           name="objetivo"
           defaultValue={objetivo}
-          // onChange={handleChange}
+          onChange={handleChange}
         />
       </div>
       <div className="grupo">
-        <h4>IMAGEN DEL PROGRAMA:</h4>
+        <h4>IMAGEN DE LA FORMACIÓN:</h4>
         <input
           className="archivo"
           type="file"
           placeholder="Sube una imagen..."
           name="img"
           defaultValue={img}
-          // onChange={handleChange}
+          onChange={handleChange}
         />
       </div>
-      <button
-        className="loginbtn"
-        //   onClick={handleLogin}
-        //   disabled={isFetching}
-      >
+      <button className="loginbtn" onClick={handleUpdate}>
         GUARDA LOS CAMBIOS
       </button>
     </div>

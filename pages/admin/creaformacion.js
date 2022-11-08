@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 
-import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Crea = () => {
   const [formacion, setFormacion] = useState({});
@@ -15,22 +15,23 @@ const Crea = () => {
 
   //create formacion
   const createFormacion = async (formacion) => {
-    console.log(formacion);
     try {
       const res = await axios.post(
         "http://localhost:8800/api/formacion",
         formacion
       );
       const data = res.data;
-      console.log(data);
     } catch (err) {
       console.log(err);
     }
   };
 
-  const handleCreate = (e) => {
+  const router = useRouter();
+
+  const handleCreateFormacion = (e) => {
     e.preventDefault();
     createFormacion(formacion);
+    router.push("/admin");
   };
 
   return (
@@ -56,7 +57,7 @@ const Crea = () => {
       </div>
       <div className="grupo">
         <h4>OFERTA:</h4>
-        <select name="oferta" id="type">
+        <select name="oferta" id="type" defaultValue="false">
           <option value="true">Sí</option>
           <option value="false">No</option>
         </select>
@@ -66,14 +67,13 @@ const Crea = () => {
         <input
           type="text"
           placeholder="90€..."
-          name="preciooferta"
-          defaultValue={""}
+          name="precioferta"
           onChange={handleChange}
         />
       </div>
       <div className="grupo">
         <h4>AGOTADO:</h4>
-        <select name="agotado" id="type">
+        <select name="agotado" id="type" defaultValue="false">
           <option value="true">Sí</option>
           <option value="false">No</option>
         </select>
@@ -83,7 +83,7 @@ const Crea = () => {
         <input
           type="text"
           placeholder="12/08/2023..."
-          name="fecha"
+          name="inicio"
           onChange={handleChange}
         />
       </div>
@@ -134,13 +134,9 @@ const Crea = () => {
           onChange={handleChange}
         />
       </div>
-      <Link href="/admin">
-        <a>
-          <button className="loginbtn" onClick={handleCreate}>
-            CREAR FORMACIÓN
-          </button>
-        </a>
-      </Link>
+      <button className="loginbtn" onClick={handleCreateFormacion}>
+        CREAR FORMACIÓN
+      </button>
     </div>
   );
 };

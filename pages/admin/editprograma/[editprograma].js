@@ -3,8 +3,6 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-import Link from "next/link";
-
 const Editprograma = () => {
   //GET PROGRAMA ORIGINAL
   const router = useRouter();
@@ -36,7 +34,6 @@ const Editprograma = () => {
 
   //subir programa editado
   const updatePrograma = async (programa) => {
-    console.log(programa);
     try {
       const res = await axios.put(
         `http://localhost:8800/api/programa/${id}`,
@@ -51,6 +48,7 @@ const Editprograma = () => {
   const handleUpdate = (e) => {
     e.preventDefault();
     updatePrograma(programaEditado);
+    router.push("/admin");
   };
 
   return (
@@ -127,13 +125,9 @@ const Editprograma = () => {
           onChange={handleChange}
         />
       </div>
-      <Link href="/admin">
-        <a>
-          <button className="loginbtn" onClick={handleUpdate}>
-            GUARDA LOS CAMBIOS
-          </button>
-        </a>
-      </Link>
+      <button className="loginbtn" onClick={handleUpdate}>
+        GUARDA LOS CAMBIOS
+      </button>
     </div>
   );
 };
