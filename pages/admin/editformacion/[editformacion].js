@@ -59,6 +59,7 @@ const Edit = () => {
   const handleUpdate = (e) => {
     e.preventDefault();
     updateFormacion(formacionEditada);
+    router.push("/admin");
   };
 
   return (
@@ -86,11 +87,14 @@ const Edit = () => {
       </div>
       <div className="grupo">
         <h4>OFERTA:</h4>
-        <select name="oferta" id="type">
+        <select
+          name="oferta"
+          id="type"
+          defaultValue="false"
+          onChange={handleChange}
+        >
           <option value="true">Sí</option>
-          <option value="false" selected="selected">
-            No
-          </option>
+          <option value="false">No</option>
         </select>
       </div>
       <div className="grupo">
@@ -105,11 +109,14 @@ const Edit = () => {
       </div>
       <div className="grupo">
         <h4>AGOTADO:</h4>
-        <select name="oferta" id="type">
+        <select
+          name="oferta"
+          id="type"
+          defaultValue="false"
+          onChange={handleChange}
+        >
           <option value="true">Sí</option>
-          <option value="false" selected="selected">
-            No
-          </option>
+          <option value="false">No</option>
         </select>
       </div>
       <div className="grupo">

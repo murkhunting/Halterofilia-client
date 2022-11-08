@@ -57,7 +57,12 @@ const Crea = () => {
       </div>
       <div className="grupo">
         <h4>OFERTA:</h4>
-        <select name="oferta" id="type" defaultValue="false">
+        <select
+          name="oferta"
+          id="type"
+          defaultValue="false"
+          onChange={handleChange}
+        >
           <option value="true">Sí</option>
           <option value="false">No</option>
         </select>
@@ -73,7 +78,12 @@ const Crea = () => {
       </div>
       <div className="grupo">
         <h4>AGOTADO:</h4>
-        <select name="agotado" id="type" defaultValue="false">
+        <select
+          name="agotado"
+          id="type"
+          defaultValue="false"
+          onChange={handleChange}
+        >
           <option value="true">Sí</option>
           <option value="false">No</option>
         </select>

@@ -68,7 +68,7 @@ const Admin = () => {
     getAllFormaciones();
   }, []);
 
-  //borrar prgrama
+  //delete programa
   const deletePrograma = async (id) => {
     try {
       await axios.delete(`http://localhost:8800/api/programa/${id}`);
@@ -82,7 +82,7 @@ const Admin = () => {
     window.location.reload(false);
   };
 
-  //borrar formacion
+  //delete formacion
   const deleteFormacion = async (id) => {
     try {
       await axios.delete(`http://localhost:8800/api/formacion/${id}`);
