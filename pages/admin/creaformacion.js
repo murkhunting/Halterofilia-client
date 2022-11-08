@@ -1,6 +1,38 @@
 import React from "react";
+import { useState } from "react";
+import axios from "axios";
+
+import Link from "next/link";
 
 const Crea = () => {
+  const [formacion, setFormacion] = useState({});
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setFormacion({ ...formacion, [e.target.name]: value });
+  };
+  console.log(formacion);
+
+  //create formacion
+  const createFormacion = async (formacion) => {
+    console.log(formacion);
+    try {
+      const res = await axios.post(
+        "http://localhost:8800/api/formacion",
+        formacion
+      );
+      const data = res.data;
+      console.log(data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleCreate = (e) => {
+    e.preventDefault();
+    createFormacion(formacion);
+  };
+
   return (
     <div className="crea">
       <h1>CREAR UNA NUEVA FORMACIÓN:</h1>
@@ -10,7 +42,7 @@ const Crea = () => {
           type="text"
           placeholder="Escribe el título..."
           name="titulo"
-          // onChange={handleChange}
+          onChange={handleChange}
         />
       </div>
       <div className="grupo">
@@ -19,7 +51,7 @@ const Crea = () => {
           type="text"
           placeholder="100€..."
           name="precio"
-          // onChange={handleChange}
+          onChange={handleChange}
         />
       </div>
       <div className="grupo">
@@ -35,12 +67,13 @@ const Crea = () => {
           type="text"
           placeholder="90€..."
           name="preciooferta"
-          // onChange={handleChange}
+          defaultValue={""}
+          onChange={handleChange}
         />
       </div>
       <div className="grupo">
         <h4>AGOTADO:</h4>
-        <select name="oferta" id="type">
+        <select name="agotado" id="type">
           <option value="true">Sí</option>
           <option value="false">No</option>
         </select>
@@ -51,7 +84,7 @@ const Crea = () => {
           type="text"
           placeholder="12/08/2023..."
           name="fecha"
-          // onChange={handleChange}
+          onChange={handleChange}
         />
       </div>
       <div className="grupo">
@@ -59,8 +92,8 @@ const Crea = () => {
         <input
           type="text"
           placeholder="4 meses..."
-          name="uracion"
-          // onChange={handleChange}
+          name="duracion"
+          onChange={handleChange}
         />
       </div>
       <div className="grupo">
@@ -69,7 +102,7 @@ const Crea = () => {
           type="text"
           placeholder="Sábados de 9:00 a 14:00..."
           name="horario"
-          // onChange={handleChange}
+          onChange={handleChange}
         />
       </div>
 
@@ -79,7 +112,7 @@ const Crea = () => {
           type="text"
           placeholder="A quien va dirigido la formación..."
           name="dirigido"
-          // onChange={handleChange}
+          onChange={handleChange}
         />
       </div>
       <div className="grupo">
@@ -88,16 +121,26 @@ const Crea = () => {
           type="text"
           placeholder="Objetivo y descripción de la formación..."
           name="objetivo"
-          // onChange={handleChange}
+          onChange={handleChange}
         />
       </div>
-      <button
-        className="loginbtn"
-        //   onClick={handleLogin}
-        //   disabled={isFetching}
-      >
-        CREAR FORMACIÓN
-      </button>
+      <div className="grupo">
+        <h4>IMAGEN DEL PROGRAMA:</h4>
+        <input
+          className="archivo"
+          type="file"
+          placeholder="Sube una imagen..."
+          name="img"
+          onChange={handleChange}
+        />
+      </div>
+      <Link href="/admin">
+        <a>
+          <button className="loginbtn" onClick={handleCreate}>
+            CREAR FORMACIÓN
+          </button>
+        </a>
+      </Link>
     </div>
   );
 };

@@ -28,8 +28,17 @@ const Curso = () => {
     getFormacion();
   }, [id]);
 
-  const { titulo, precio, oferta, precioferta, inicio, dirigido, objetivo } =
-    formacion;
+  const {
+    titulo,
+    precio,
+    oferta,
+    precioferta,
+    inicio,
+    duracion,
+    horario,
+    dirigido,
+    objetivo,
+  } = formacion;
 
   return (
     <div className="curso">
@@ -39,25 +48,25 @@ const Curso = () => {
           <span>
             <MdDateRange />
           </span>
-          INICIO: 12/02/2023
+          INICIO: {inicio}
         </h2>
         <h2>
           <span>
             <IoPricetagsOutline />
           </span>
-          PRECIO: 348€
+          PRECIO: {precio}
         </h2>
         <h2>
           <span>
             <CgTimelapse />
           </span>
-          DURACIÓN: 100 HORAS
+          DURACIÓN: {duracion}
         </h2>
         <h2>
           <span>
             <AiOutlineSchedule />
           </span>
-          SÁBADOS 9:00-14:00
+          {horario}
         </h2>
       </div>
       <div className="dirigido">

@@ -1,7 +1,3 @@
-export const initialState = (user) => ({
-  type: "INITIAL_STATE",
-  payload: user,
-});
 export const loginStart = () => ({
   type: "LOGIN_START",
 });

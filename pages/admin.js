@@ -10,10 +10,22 @@ import Link from "next/link";
 import { FaRegEdit } from "react-icons/fa";
 import { FiTrash2 } from "react-icons/fi";
 
+import {
+  loginFailure,
+  loginStart,
+  loginSuccess,
+  initialState,
+} from "../auth/AuthActions";
+// import { useCookies } from "react-cookie";
+// import { parseCookies } from "../helpers/index";
+
 const Admin = () => {
   const loged = true;
 
+  // const [cookie, setCookie] = useCookies(["user"]);
+
   //LOGGIN
+
   const [user, setUser] = useState("");
   const { isFetching, dispatch } = useContext(AuthContext);
   //1.coger datos de los inputs
@@ -76,7 +88,7 @@ const Admin = () => {
             <div className="cover">
               <h2>PASSWORD:</h2>
               <input
-                type="text"
+                type="password"
                 placeholder="*****"
                 name="password"
                 onChange={handleChange}

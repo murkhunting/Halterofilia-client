@@ -1,6 +1,37 @@
 import React from "react";
+import { useState } from "react";
+import axios from "axios";
+
+import Link from "next/link";
 
 const Creaprograma = () => {
+  const [programa, setPrograma] = useState({});
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setPrograma({ ...programa, [e.target.name]: value });
+  };
+  console.log(programa);
+
+  //create programa
+  const createPrograma = async (programa) => {
+    console.log(programa);
+    try {
+      const res = await axios.post(
+        "http://localhost:8800/api/programa",
+        programa
+      );
+      const data = res.data;
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleCreate = (e) => {
+    e.preventDefault();
+    createPrograma(programa);
+  };
+
   return (
     <div>
       <div className="crea">
@@ -11,7 +42,7 @@ const Creaprograma = () => {
             type="text"
             placeholder="Escribe el título..."
             name="titulo"
-            // onChange={handleChange}
+            onChange={handleChange}
           />
         </div>
         <div className="grupo">
@@ -20,7 +51,7 @@ const Creaprograma = () => {
             type="text"
             placeholder="100€..."
             name="precio"
-            // onChange={handleChange}
+            onChange={handleChange}
           />
         </div>
         <div className="grupo">
@@ -29,7 +60,7 @@ const Creaprograma = () => {
             type="text"
             placeholder="Frase de motivación..."
             name="objetivo"
-            // onChange={handleChange}
+            onChange={handleChange}
           />
         </div>
         <div className="grupo">
@@ -38,7 +69,7 @@ const Creaprograma = () => {
             type="text"
             placeholder="A quien va dirigido el programa..."
             name="dirigido"
-            // onChange={handleChange}
+            onChange={handleChange}
           />
         </div>
         <div className="grupo">
@@ -46,17 +77,37 @@ const Creaprograma = () => {
           <input
             type="text"
             placeholder="Descripción de el programa..."
-            name="objetivo"
-            // onChange={handleChange}
+            name="descripcion"
+            onChange={handleChange}
           />
         </div>
-        <button
-          className="loginbtn"
-          //   onClick={handleLogin}
-          //   disabled={isFetching}
-        >
-          CREAR PROGRAMA
-        </button>
+        <div className="grupo">
+          <h4>IMAGEN DEL PROGRAMA:</h4>
+          <input
+            className="archivo"
+            type="file"
+            placeholder="Sube una imagen..."
+            name="img"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="grupo">
+          <h4>PDF DEL PROGRAMA:</h4>
+          <input
+            className="archivo"
+            type="file"
+            placeholder="Sube el pdf..."
+            name="pdf"
+            onChange={handleChange}
+          />
+        </div>
+        <Link href="/admin">
+          <a>
+            <button className="loginbtn" onClick={handleCreate}>
+              CREAR PROGRAMA
+            </button>
+          </a>
+        </Link>
       </div>
     </div>
   );

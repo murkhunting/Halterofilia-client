@@ -41,7 +41,7 @@ const Programa = () => {
           <span>
             <IoPricetagsOutline />
           </span>
-          PRECIO: 348€
+          PRECIO: {precio}
         </h2>
       </div>
       <div className="dirigido">

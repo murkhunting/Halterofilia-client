@@ -1,6 +1,39 @@
 import React from "react";
+import { useRouter } from "next/router";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 const Edit = () => {
+  const router = useRouter();
+  const id = router.query.editformacion;
+  const [formacion, setFormacion] = useState({});
+
+  useEffect(() => {
+    const getFormacion = async () => {
+      try {
+        const res = await axios.get(
+          `http://localhost:8800/api/formacion/${id}`
+        );
+        setFormacion(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getFormacion();
+  }, [id]);
+
+  const {
+    titulo,
+    precio,
+    precioferta,
+    inicio,
+    duracion,
+    horario,
+    dirigido,
+    objetivo,
+    img,
+  } = formacion;
+
   return (
     <div className="edit">
       <h1>EDITA LA FORMACIÓN:</h1>
@@ -10,6 +43,7 @@ const Edit = () => {
           type="text"
           placeholder="Escribe el título..."
           name="titulo"
+          defaultValue={titulo}
           // onChange={handleChange}
         />
       </div>
@@ -19,6 +53,7 @@ const Edit = () => {
           type="text"
           placeholder="100€..."
           name="precio"
+          defaultValue={precio}
           // onChange={handleChange}
         />
       </div>
@@ -26,7 +61,9 @@ const Edit = () => {
         <h4>OFERTA:</h4>
         <select name="oferta" id="type">
           <option value="true">Sí</option>
-          <option value="false">No</option>
+          <option value="false" selected="selected">
+            No
+          </option>
         </select>
       </div>
       <div className="grupo">
@@ -34,7 +71,8 @@ const Edit = () => {
         <input
           type="text"
           placeholder="90€..."
-          name="preciooferta"
+          name="precioferta"
+          defaultValue={precioferta}
           // onChange={handleChange}
         />
       </div>
@@ -42,7 +80,9 @@ const Edit = () => {
         <h4>AGOTADO:</h4>
         <select name="oferta" id="type">
           <option value="true">Sí</option>
-          <option value="false">No</option>
+          <option value="false" selected="selected">
+            No
+          </option>
         </select>
       </div>
       <div className="grupo">
@@ -50,7 +90,8 @@ const Edit = () => {
         <input
           type="text"
           placeholder="12/08/2023..."
-          name="fecha"
+          name="inicio"
+          defaultValue={inicio}
           // onChange={handleChange}
         />
       </div>
@@ -59,7 +100,8 @@ const Edit = () => {
         <input
           type="text"
           placeholder="4 meses..."
-          name="uracion"
+          name="duracion"
+          defaultValue={duracion}
           // onChange={handleChange}
         />
       </div>
@@ -69,6 +111,7 @@ const Edit = () => {
           type="text"
           placeholder="Sábados de 9:00 a 14:00..."
           name="horario"
+          defaultValue={horario}
           // onChange={handleChange}
         />
       </div>
@@ -79,6 +122,7 @@ const Edit = () => {
           type="text"
           placeholder="A quien va dirigido la formación..."
           name="dirigido"
+          defaultValue={dirigido}
           // onChange={handleChange}
         />
       </div>
@@ -88,6 +132,18 @@ const Edit = () => {
           type="text"
           placeholder="Objetivo y descripción de la formación..."
           name="objetivo"
+          defaultValue={objetivo}
+          // onChange={handleChange}
+        />
+      </div>
+      <div className="grupo">
+        <h4>IMAGEN DEL PROGRAMA:</h4>
+        <input
+          className="archivo"
+          type="file"
+          placeholder="Sube una imagen..."
+          name="img"
+          defaultValue={img}
           // onChange={handleChange}
         />
       </div>

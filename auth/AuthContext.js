@@ -1,13 +1,13 @@
 import AuthReducer from "./AuthReducer";
-import { createContext, useReducer, useEffect } from "react";
 
-// const [user, setUser] = useState();
-// useEffect(() => {
-//   const data = localStorage.getItem("user");
-//   console.log(data);
-//   // setUser(data);
-// }, []);
+import { createContext, useReducer, useEffect, useState } from "react";
 
+// const serveron = typeof window === "undefined";
+// const INITIAL_STATE = {
+//   user: (!serveron && JSON.parse(localStorage.getItem("user"))) || null,
+//   isFetching: false,
+//   error: false,
+// };
 const INITIAL_STATE = {
   user: null,
   isFetching: false,
@@ -18,12 +18,10 @@ export const AuthContext = createContext(INITIAL_STATE);
 
 export const AuthContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AuthReducer, INITIAL_STATE);
-
+  console.log(state.isFetching);
   useEffect(() => {
     localStorage.setItem("user", JSON.stringify(state.user));
   }, [state.user]);
-
-  console.log(state.user);
 
   return (
     <AuthContext.Provider
