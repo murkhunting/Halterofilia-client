@@ -7,11 +7,40 @@ import { useRouter } from "next/router";
 const Creaprograma = () => {
   const [programa, setPrograma] = useState({});
 
+  const handleImg = (e) => {
+    const file = e.target.files[0];
+
+    TransformFileImg(file);
+  };
+  const TransformFileImg = (file) => {
+    const reader = new FileReader();
+    if (file) {
+      reader.readAsDataURL(file);
+      reader.onloadend = () => {
+        setPrograma({ ...programa, img: reader.result });
+      };
+    }
+  };
+
+  const handlePdf = (e) => {
+    const file = e.target.files[0];
+
+    TransformFilePdf(file);
+  };
+  const TransformFilePdf = (file) => {
+    const reader = new FileReader();
+    if (file) {
+      reader.readAsDataURL(file);
+      reader.onloadend = () => {
+        setPrograma({ ...programa, pdf: reader.result });
+      };
+    }
+  };
+
   const handleChange = (e) => {
     const value = e.target.value;
     setPrograma({ ...programa, [e.target.name]: value });
   };
-  console.log(programa);
 
   //create programa
   const createPrograma = async (programa) => {
@@ -90,7 +119,7 @@ const Creaprograma = () => {
             type="file"
             placeholder="Sube una imagen..."
             name="img"
-            onChange={handleChange}
+            onChange={handleImg}
           />
         </div>
         <div className="grupo">
@@ -100,7 +129,7 @@ const Creaprograma = () => {
             type="file"
             placeholder="Sube el pdf..."
             name="pdf"
-            onChange={handleChange}
+            onChange={handlePdf}
           />
         </div>
         <button className="loginbtn" onClick={handleCreatePrograma}>

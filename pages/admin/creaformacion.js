@@ -7,6 +7,21 @@ import { useRouter } from "next/router";
 const Crea = () => {
   const [formacion, setFormacion] = useState({});
 
+  const handleImg = (e) => {
+    const file = e.target.files[0];
+
+    TransformFileImg(file);
+  };
+  const TransformFileImg = (file) => {
+    const reader = new FileReader();
+    if (file) {
+      reader.readAsDataURL(file);
+      reader.onloadend = () => {
+        setPrograma({ ...programa, img: reader.result });
+      };
+    }
+  };
+
   const handleChange = (e) => {
     const value = e.target.value;
     setFormacion({ ...formacion, [e.target.name]: value });
@@ -141,7 +156,7 @@ const Crea = () => {
           type="file"
           placeholder="Sube una imagen..."
           name="img"
-          onChange={handleChange}
+          onChange={handleImg}
         />
       </div>
       <button className="loginbtn" onClick={handleCreateFormacion}>

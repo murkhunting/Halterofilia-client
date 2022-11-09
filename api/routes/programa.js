@@ -1,15 +1,35 @@
 const router = require("express").Router();
 const Programa = require("../models/Programa");
+const cloudinary = require("../../sevices/cloudinary");
+// const upload = require("../../sevices/multer");
 
 //CREATE PROGRAMA
 router.post("/", async (req, res) => {
-  const newPrograma = new Programa(req.body);
+  const uploadImg = req.body.img;
+  const uploadPdf = req.body.pdf;
 
   try {
+    const imgUploaded = await cloudinary.uploader.upload(uploadImg, {
+      upload_preset: "halterofilia",
+    });
+    const pdfUploaded = await cloudinary.uploader.upload(uploadPdf, {
+      upload_preset: "halterofilia",
+    });
+
+    const programa = {
+      titulo: req.body.titulo,
+      precio: req.body.precio,
+      dirigido: req.body.dirigido,
+      objetivo: req.body.objetivo,
+      descripcion: req.body.descripcion,
+      img: imgUploaded.secure_url,
+      pdf: pdfUploaded.secure_url,
+    };
+    const newPrograma = new Programa(programa);
     const savedPrograma = await newPrograma.save();
     res.status(201).json(savedPrograma);
-  } catch (err) {
-    res.status(500).json(err);
+  } catch (error) {
+    console.log(error);
   }
 });
 

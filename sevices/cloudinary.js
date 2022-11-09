@@ -1,25 +1,22 @@
-const cloudinary = require("cloudinary");
+const cloudinary = require("cloudinary").v2;
+const dotenv = require("dotenv");
+
+dotenv.config();
+
+const cloud_name = process.env.CLOUD_NAME;
+const api_key = process.env.API_KEY;
+const api_secret = process.env.API_SECRET;
+
 cloudinary.config({
-  cloud_name: process.env.CLOUD_NAME,
-  api_key: process.env.API_KEY,
-  api_secret: process.env.API_SECRET,
+  cloud_name: cloud_name,
+  api_key: api_key,
+  api_secret: api_secret,
 });
 
-uploadToCloudinary = (path, folder) => {
-  return cloudinary.v2.uploader
-    .upload(path, {
-      folder,
-    })
-    .then((data) => {
-      return { url: data.url, _id: data.public_id };
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-};
+module.exports = cloudinary;
 
-removeFromCloudinary = async (public_id) => {
-  await cloudinary.v2.uploader.destroy(public_id, function (error, result) {
-    console.log(result, error);
-  });
-};
+// removeFromCloudinary = async (public_id) => {
+//     await cloudinary.uploader.destroy(public_id, function (error, result) {
+//       console.log(result, error);
+//     });
+//   };

@@ -3,9 +3,27 @@ const Formacion = require("../models/Formacion");
 
 //CREATE FORMACION
 router.post("/", async (req, res) => {
-  const newFormacion = new Formacion(req.body);
+  const uploadImg = req.body.img;
 
   try {
+    const imgUploaded = await cloudinary.uploader.upload(uploadImg, {
+      upload_preset: "halterofilia",
+    });
+
+    const formacion = {
+      titulo: req.body.titulo,
+      precio: req.body.precio,
+      oferta: req.body.oferta,
+      precioferta: req.body.precioferta,
+      agotado: req.body.agotado,
+      inicio: req.body.inicio,
+      duracion: req.body.duracion,
+      horario: req.body.horario,
+      dirigido: req.body.dirigido,
+      objetivo: req.body.objetivo,
+      img: imgUploaded.secure_url,
+    };
+    const newFormacion = new Formacion(formacion);
     const savedFormacion = await newFormacion.save();
     res.status(201).json(savedFormacion);
   } catch (err) {
