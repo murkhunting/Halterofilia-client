@@ -17,7 +17,7 @@ const Crea = () => {
     if (file) {
       reader.readAsDataURL(file);
       reader.onloadend = () => {
-        setPrograma({ ...programa, img: reader.result });
+        setFormacion({ ...formacion, img: reader.result });
       };
     }
   };

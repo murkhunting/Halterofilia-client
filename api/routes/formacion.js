@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const Formacion = require("../models/Formacion");
+const cloudinary = require("../../sevices/cloudinary");
 
 //CREATE FORMACION
 router.post("/", async (req, res) => {
