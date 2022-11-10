@@ -79,12 +79,10 @@ const Presencial = () => {
                   <h3>1 HORA/SEMANA - 45€/MES </h3>
                   <h3>2 HORAS/SEMANA - 65€/MES</h3>
                   <h3>3 HORAS/SEMANA - 85€/MES</h3>
-                </div>
-                <div className="columnde">
                   <h3>4 HORAS/SEMANA - 105€/MES</h3>
                   <h3>6 HORAS/SEMANA - 125€/MES</h3>
-                  <h3>8 HORAS/SEMANA - 145€/MES</h3>
                 </div>
+                <div className="columnde"></div>
               </div>
             </div>
 
@@ -98,10 +96,9 @@ const Presencial = () => {
               <div className="tabla">
                 <div className="columniz">
                   <h3>BONO 40€ - 3 HORAS EXTRA</h3>
-                </div>
-                <div className="columnde">
                   <h3>BONO 60€ - 5 HORAS EXTRA</h3>
                 </div>
+                <div className="columnde"></div>
               </div>
             </div>
             <div className="box">

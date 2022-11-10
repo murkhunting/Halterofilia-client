@@ -121,9 +121,9 @@ export default function Home() {
               <MdDoubleArrow />
             </div>
             <h2>
-              SI ERES UN ATLETA PROFESIONAL, UN ENTRENADOR O PREPARADOR FÍSICO O
-              QUIERES APRENDER AL MÁXIMO NIVEL NO TE PIERDAS NUESTROS SEMINARIOS
-              Y CURSOS DE MEJORA TÉCNICA.
+              DESCUBRE NUESTROS PROGRAMAS DE ENTRENAMIENTO GUIADOS Y ADQUIERE EL
+              QUE MEJOR SE AJUSTE A TUS NECESIDADES Y ENTRENA EN CUALQUIER
+              SITIO.
             </h2>
           </div>
           <div className="nextformacion">
