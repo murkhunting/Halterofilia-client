@@ -11,23 +11,26 @@
     }
   }
   .fundador {
+    width: 70vw;
     display: flex;
     flex-direction: column;
+    margin-bottom: 60px;
 
     h1 {
       font-size: 55px;
-      margin: 30px 0 0px;
+      margin: 30px 0 80px;
+      text-align: center;
     }
     .grup {
-      border-bottom: 3px solid $opacity;
+      // border-bottom: 3px solid $opacity;
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-around;
       height: 500px;
       margin: 0 0 40px;
       .man {
-        height: 400px;
+        height: 500px;
       }
       .sideIz {
         display: flex;
@@ -35,7 +38,7 @@
         align-items: flex-start;
         justify-content: flex-start;
         height: 400px;
-        width: 40vw;
+        width: 35vw;
         margin-right: 50px;
         text-align: justify;
 
@@ -59,7 +62,7 @@
         justify-content: flex-start;
         text-align: left;
         height: 400px;
-        width: 40vw;
+        width: 35vw;
         margin-left: 50px;
         h2 {
           margin: 0 0 20px;

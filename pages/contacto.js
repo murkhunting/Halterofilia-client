@@ -15,8 +15,8 @@ const Contacto = () => {
       <div className="masinfo">
         <h2>SI NECESITAS MÁS INFORMACIÓN</h2>
         <h2>SOBRE EL PROGRAMA ONLINE O LAS FORMACIONES,</h2>
-        <h2>O QUIERES APUNTARTE Y TIENES DUDAS,</h2>
-        <h2>NO DUDES EN PREGUNTARNOS!</h2>
+        <h2>O QUIERES APUNTARTE A NUESTRO CLUB,</h2>
+        <h2>NO DUDES EN CONTACTAR!</h2>
       </div>
 
       <div className="contactinfo">

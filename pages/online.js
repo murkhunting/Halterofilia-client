@@ -7,33 +7,54 @@ import "animate.css";
 const Online = () => {
   return (
     <div className="online">
-      <div className="programas">
-        <Link href="/online/personalizado">
-          <a>
-            <h1 class="animate__animated animate__fadeInLeft">
-              PROGRAMA PERSONALIZADO
-            </h1>
-          </a>
-        </Link>
-      </div>
-      <div className="programas">
-        <Link href="/online/programas">
-          <a>
-            <h1 class="animate__animated animate__fadeInLeft">
-              PROGRAMAS TIPO
-            </h1>
-          </a>
-        </Link>
-      </div>
-      <div className="programas">
-        <Link href="/online/streaming">
-          <a>
-            <h1 class="animate__animated animate__fadeInLeft">
-              CLASES POR ZOOM
-            </h1>
-          </a>
-        </Link>
-      </div>
+      <Link href="/online/personalizado">
+        <a>
+          <div className="programas animate__animated animate__fadeInLeft">
+            <img
+              className="boton"
+              src="/images/1PERSONALIZADO.png"
+              alt="logo"
+            />
+            <div className="enlace">
+              <h1>PROGRAMA PERSONALIZADO</h1>
+              <h2>
+                NOS ADAPTAMOS A TI Y A TUS OBJETIVOS CON RESULTADOS
+                GARANTIZADOS, 100% PERSONALIZADO
+              </h2>
+            </div>
+          </div>
+        </a>
+      </Link>
+      <Link href="/online/programas">
+        <a>
+          <div className="programas animate__animated animate__fadeInLeft">
+            <img className="boton" src="/images/2PROGRAMAS.png" alt="logo" />
+
+            <div className="enlace">
+              <h1>PROGRAMAS DE ENTRENAMIENTO</h1>
+              <h2>
+                ADQUIERE EL PROGRAMA DE ENTRENO GUIADO QUE MEJOR SE AJUSTE A TUS
+                NECESIDADES
+              </h2>
+            </div>
+          </div>
+        </a>
+      </Link>
+      <Link href="/online/streaming">
+        <a>
+          <div className="programas animate__animated animate__fadeInLeft">
+            <img className="boton" src="/images/13STREAMING.png" alt="logo" />
+
+            <div className="enlace">
+              <h1>CLASES DIRIGIDAS POR ZOOM</h1>
+              <h2>
+                ENTENA CON NUESTRAS CLASES DIRIGIDAS POR ZOOM SI DISPONES DEL
+                MATERIAL NECESARIO
+              </h2>
+            </div>
+          </div>
+        </a>
+      </Link>
     </div>
   );
 };

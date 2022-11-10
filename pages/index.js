@@ -80,7 +80,7 @@ export default function Home() {
               <a>
                 <img
                   className="boton"
-                  src="/images/1onlinebtn.png"
+                  src="/images/1PERSONALIZADO.png"
                   alt="logo"
                 />
               </a>
@@ -91,7 +91,7 @@ export default function Home() {
       {/* PROGRAMAS TIPO */}
       <div className="programastipo">
         <div className="texto">
-          <h1>PROGRAMAS DE ENTRENO</h1>
+          <h1>PROGRAMAS DE ENTRENAMIENTO</h1>
         </div>
 
         <div className="container">
@@ -100,7 +100,7 @@ export default function Home() {
               <a>
                 <img
                   className="boton"
-                  src="/images/2formacionesbtn.png"
+                  src="/images/2PROGRAMAS.png"
                   alt="logo"
                 />
               </a>
@@ -110,12 +110,12 @@ export default function Home() {
             </div>
             <h2>
               SI ERES UN ATLETA PROFESIONAL, UN ENTRENADOR O PREPARADOR FÍSICO O
-              QUIERES APRENDER AL ÁXIMO NIVEL NO TE PIERDAS NUESTROS SEMINARIOS
+              QUIERES APRENDER AL MÁXIMO NIVEL NO TE PIERDAS NUESTROS SEMINARIOS
               Y CURSOS DE MEJORA TÉCNICA.
             </h2>
           </div>
           <div className="nextformacion">
-            <h2>ÚLTIMOS PROGRAMAS:</h2>
+            <h2>PROGRAMAS DISPONIBLES:</h2>
             <div className="items">
               {items.map((programa) => (
                 <Item className="list" key={programa._id} programa={programa} />
@@ -126,7 +126,7 @@ export default function Home() {
       </div>
       {/* STREAMING */}
       <div className="streaming">
-        <h1>CLASES POR STREAMING</h1>
+        <h1>CLASES POR ZOOM</h1>
         <div className="cont">
           <div className="de">
             <div className="flecha">
@@ -150,7 +150,7 @@ export default function Home() {
                 <a>
                   <img
                     className="boton"
-                    src="/images/4presencialesbtn.png"
+                    src="/images/13STREAMING.png"
                     alt="logo"
                   />
                 </a>
@@ -176,7 +176,7 @@ export default function Home() {
               <a>
                 <img
                   className="boton"
-                  src="/images/2formacionesbtn.png"
+                  src="/images/4FORMACIONES.png"
                   alt="logo"
                 />
               </a>
@@ -228,7 +228,7 @@ export default function Home() {
                 <a>
                   <img
                     className="boton"
-                    src="/images/4presencialesbtn.png"
+                    src="/images/14CLASES.png"
                     alt="logo"
                   />
                 </a>
