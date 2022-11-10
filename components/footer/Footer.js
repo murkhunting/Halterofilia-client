@@ -9,21 +9,7 @@ const Footer = () => {
     <div className="footer">
       <div className="baner">
         <div className="scroll">
-          <marquee
-            className="marquee"
-            direction="left"
-            behavior="scroll"
-            scrollamount="35"
-          >
-            <h2>
-              · THINK DIFFERENT - TRAIN DIFFERENT · THINK DIFFERENT - TRAIN
-              DIFFERENT · THINK DIFFERENT - TRAIN DIFFERENT · THINK DIFFERENT -
-              TRAIN DIFFERENT · THINK DIFFERENT - TRAIN DIFFERENT · THINK
-              DIFFERENT - TRAIN DIFFERENT · THINK DIFFERENT - TRAIN DIFFERENT ·
-              THINK DIFFERENT - TRAIN DIFFERENT · THINK DIFFERENT - TRAIN
-              DIFFERENT · THINK DIFFERENT - TRAIN DIFFERENT ·
-            </h2>
-          </marquee>
+          <h2>· THINK DIFFERENT - TRAIN DIFFERENT ·</h2>
         </div>
       </div>
       <div className="infofooter">
@@ -45,15 +31,27 @@ const Footer = () => {
             </a>
           </Link>
           <div className="social">
-            <h5>
-              <AiFillInstagram />
-            </h5>
-            <h5>
-              <FaFacebook />
-            </h5>
-            <h5>
-              <AiFillYoutube />
-            </h5>
+            <Link href="https://www.instagram.com/halterofiliabarcelona/?hl=es">
+              <a>
+                <h5>
+                  <AiFillInstagram />
+                </h5>
+              </a>
+            </Link>
+            <Link href="https://www.facebook.com/barcelonahalterofilia">
+              <a>
+                <h5>
+                  <FaFacebook />
+                </h5>
+              </a>
+            </Link>
+            <Link href="https://www.youtube.com/channel/UCW1qpR8BAfllKR98i50_gxQ?view_as=subscriber">
+              <a>
+                <h5>
+                  <AiFillYoutube />
+                </h5>
+              </a>
+            </Link>
           </div>
 
           <h5 className="diseño">DESIGN & CODE BY @MURKHUNTING</h5>

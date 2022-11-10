@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 import { VscMail } from "react-icons/vsc";
 import { BsPhone } from "react-icons/bs";
@@ -14,9 +15,9 @@ const Contacto = () => {
       </div>
       <div className="masinfo">
         <h2>SI NECESITAS MÁS INFORMACIÓN</h2>
-        <h2>SOBRE EL PROGRAMA ONLINE O LAS FORMACIONES,</h2>
+        <h2>SOBRE LOS PROGRAMAS ONLINE O LAS FORMACIONES,</h2>
         <h2>O QUIERES APUNTARTE A NUESTRO CLUB,</h2>
-        <h2>NO DUDES EN CONTACTAR!</h2>
+        <h2>NO DUDES EN PONERTE EN CONTACTO!</h2>
       </div>
 
       <div className="contactinfo">
@@ -42,17 +43,25 @@ const Contacto = () => {
             </h5>
           </div>
         </ReactWhatsapp>
-        <div className="separador">
-          <img className="boton" src="/images/9instagrambtn.png" alt="logo" />
-          <div className="iconos">
-            <h5>
-              <span>
-                <SlSocialInstagram />
-              </span>
-              @halterofiliabarcelona
-            </h5>
-          </div>
-        </div>
+        <Link href="https://www.instagram.com/halterofiliabarcelona/?hl=es">
+          <a>
+            <div className="separador">
+              <img
+                className="boton"
+                src="/images/9instagrambtn.png"
+                alt="logo"
+              />
+              <div className="iconos">
+                <h5>
+                  <span>
+                    <SlSocialInstagram />
+                  </span>
+                  @halterofiliabarcelona
+                </h5>
+              </div>
+            </div>
+          </a>
+        </Link>
         <div className="separador">
           <img className="boton" src="/images/10mailbtn.png" alt="logo" />
           <div className="iconos">
@@ -64,17 +73,21 @@ const Contacto = () => {
             </h5>
           </div>
         </div>
-        <div className="separador">
-          <img className="boton" src="/images/12mapsbtn.png" alt="logo" />
-          <div className="iconos">
-            <h5>
-              <span>
-                <IoLocationOutline />
-              </span>
-              Google Maps
-            </h5>
-          </div>
-        </div>
+        <Link href="https://www.google.es/maps/place/Av.+del+Estadio,+14,+08038+Barcelona/@41.3648015,2.1470196,18z/data=!3m1!4b1!4m5!3m4!1s0x12a4a275b5dc39d1:0x1774402e3219a715!8m2!3d41.3648015!4d2.1470196?hl=es&authuser=0">
+          <a>
+            <div className="separador">
+              <img className="boton" src="/images/12mapsbtn.png" alt="logo" />
+              <div className="iconos">
+                <h5>
+                  <span>
+                    <IoLocationOutline />
+                  </span>
+                  VEN A VISITARNOS
+                </h5>
+              </div>
+            </div>
+          </a>
+        </Link>
       </div>
     </div>
   );

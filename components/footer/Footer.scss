@@ -23,16 +23,19 @@
     white-space: nowrap;
 
     .scroll {
-      display: flex;
+      display: flex; /* Important to give the content a width */
       align-items: center;
       justify-content: center;
-      position: relative;
-      .marquee {
-        h2 {
-          font-size: 60px;
-          letter-spacing: 16px;
-          margin: 0;
-        }
+
+      transform: translateX(100%); /* Animation start out of the screen */
+      /* infinite make reapeat the animation indefinitely */
+      animation: move 8s linear infinite;
+      h2 {
+        display: block;
+        width: 1400px;
+        font-size: 50px;
+        letter-spacing: 16px;
+        margin: 0;
       }
     }
   }
@@ -111,5 +114,11 @@
         scale: 1.1;
       }
     }
+  }
+}
+
+@keyframes move {
+  to {
+    transform: translateX(-100%);
   }
 }

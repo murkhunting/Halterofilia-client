@@ -43,15 +43,27 @@ export default function Home() {
           <h1>BARCELONA</h1>
         </div>
         <div className="social">
-          <h5>
-            <AiFillInstagram />
-          </h5>
-          <h5>
-            <FaFacebook />
-          </h5>
-          <h5>
-            <AiFillYoutube />
-          </h5>
+          <Link href="https://www.instagram.com/halterofiliabarcelona/?hl=es">
+            <a>
+              <h5>
+                <AiFillInstagram />
+              </h5>
+            </a>
+          </Link>
+          <Link href="https://www.facebook.com/barcelonahalterofilia">
+            <a>
+              <h5>
+                <FaFacebook />
+              </h5>
+            </a>
+          </Link>
+          <Link href="https://www.youtube.com/channel/UCW1qpR8BAfllKR98i50_gxQ?view_as=subscriber">
+            <a>
+              <h5>
+                <AiFillYoutube />
+              </h5>
+            </a>
+          </Link>
         </div>
         <div className="baner">
           <div className="scroll">
