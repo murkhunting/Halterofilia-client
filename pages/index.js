@@ -210,14 +210,11 @@ export default function Home() {
       <div className="sobrenosotros">
         <div className="iz">
           <h1>NUESTRO EQUIPO</h1>
-          <img className="team" src="/images/team.png" alt="team" />
+          <img className="team" src="/images/equipo.png" alt="team" />
         </div>
         <div className="de">
           <div className="wrap">
-            <h2>
-              CONOCE MÁS SOBRE NOSOTROS Y SOBRE LA HISTORIA DEL <br /> CLUB
-              HALTEROFILIA BARCELONA
-            </h2>
+            <h2>CONOCE MÁS SOBRE EL EQUIPO Y EL CLUB HALTEROFILIA BARCELONA</h2>
             <Link href="/nosotros">
               <a>
                 <img

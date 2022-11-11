@@ -9,7 +9,7 @@ const Online = () => {
     <div className="online">
       <Link href="/online/personalizado">
         <a>
-          <div className="programas animate__animated animate__fadeInLeft">
+          <div className="programas animate__animated animate__zoomIn">
             <img
               className="boton"
               src="/images/1PERSONALIZADO.png"
@@ -27,7 +27,7 @@ const Online = () => {
       </Link>
       <Link href="/online/programas">
         <a>
-          <div className="programas animate__animated animate__fadeInLeft">
+          <div className="programas animate__animated animate__zoomIn">
             <img className="boton" src="/images/2PROGRAMAS.png" alt="logo" />
 
             <div className="enlace">
@@ -42,7 +42,7 @@ const Online = () => {
       </Link>
       <Link href="/online/streaming">
         <a>
-          <div className="programas animate__animated animate__fadeInLeft">
+          <div className="programas animate__animated animate__zoomIn">
             <img className="boton" src="/images/13STREAMING.png" alt="logo" />
 
             <div className="enlace">

@@ -13,7 +13,7 @@ const Personalizado = () => {
           <span>
             <FiBarChart2 />
           </span>
-          NOS ADAPTAMOS A TI
+          ADAPTAMOS EL NIVEL PARA TI
         </h2>
         <h2>
           <span>
