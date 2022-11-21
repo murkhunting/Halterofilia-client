@@ -1,4 +1,5 @@
 import React from "react";
+import { AiFillInstagram } from "react-icons/ai";
 
 const Nosotros = () => {
   return (
@@ -10,7 +11,12 @@ const Nosotros = () => {
         <h1>EL FUNDADOR:</h1>
         <div className="grup">
           <div className="sideIz">
-            <h2>RONALD PAZ</h2>
+            <h2>
+              RONALD PAZ
+              <span>
+                <AiFillInstagram />
+              </span>
+            </h2>
             <h3>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
@@ -28,16 +34,21 @@ const Nosotros = () => {
         <div className="grup">
           <img className="man" src="/images/coach2.png" alt="man" />
           <div className="sideDe">
-            <h2>JORDI GARCÍA</h2>
+            <h2>
+              JORDI GARCÍA
+              <span>
+                <AiFillInstagram />
+              </span>
+            </h2>
             <h3>
-              Mi trayectoria en el mundo del acondicionamiento físico empieza 11
+              {/* Mi trayectoria en el mundo del acondicionamiento físico empieza 11
               años atrás practicando disciplinas como calistenia y
               powerbuilding. absorviendo lo mejor de cada sistema de
               entrenamiento para ir puliendo mis conocimientos y habilidades a
-              la hora de entrenarme a mi y a mis clientes. He trabajado durante
-              5 años en distintos centros aprendiendo nuevas metodologías de
-              trabajo y formándome como entrenador. Mis conocimientos vienen de
-              la lectura y sobre todo la formación.
+              la hora de entrenarme a mi y a mis clientes. */}
+              He trabajado durante 5 años en distintos centros aprendiendo
+              nuevas metodologías de trabajo y formándome como entrenador. Mis
+              conocimientos vienen de la lectura y sobre todo la formación.
               <br />
               <br /> - CFGS acondicionamiento físico (CAR Sant Cugat) <br />-
               Máster en fisioterapia (Grupo ESNECA) <br />- Máster en
@@ -49,7 +60,12 @@ const Nosotros = () => {
         </div>
         <div className="grup">
           <div className="sideIz">
-            <h2>HERNAN GARCÍA, 26 años</h2>
+            <h2>
+              HERNAN GARCÍA, 26 años
+              <span>
+                <AiFillInstagram />
+              </span>
+            </h2>
             <h3>
               ex levantador internacional integrante del equipo nacional y
               becado en el Centro de Alto Rendimiento durante 8 años. <br />

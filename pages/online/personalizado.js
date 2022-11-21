@@ -81,12 +81,7 @@ const Personalizado = () => {
             // onChange={handleChange}
           />
         </div>
-        <button
-          className="loginbtn"
-          //  onClick={handleCreatePrograma}
-        >
-          ENVIA TU INFORMACIÓN
-        </button>
+        <button className="loginbtn">ENVIA TU INFORMACIÓN</button>
       </div>
     </div>
   );

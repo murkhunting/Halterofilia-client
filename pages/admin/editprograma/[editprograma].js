@@ -3,23 +3,23 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const Editprograma = () => {
+const Editprograma = ({ programa }) => {
   //GET PROGRAMA ORIGINAL
-  const router = useRouter();
-  const id = router.query.editprograma;
-  const [programa, setPrograma] = useState({});
+  // const router = useRouter();
+  // const id = router.query.editprograma;
+  // const [programa, setPrograma] = useState({});
 
-  useEffect(() => {
-    const getPrograma = async () => {
-      try {
-        const res = await axios.get(`http://localhost:8800/api/programa/${id}`);
-        setPrograma(res.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    getPrograma();
-  }, [id]);
+  // useEffect(() => {
+  //   const getPrograma = async () => {
+  //     try {
+  //       const res = await axios.get(`http://localhost:8800/api/programa/${id}`);
+  //       setPrograma(res.data);
+  //     } catch (err) {
+  //       console.log(err);
+  //     }
+  //   };
+  //   getPrograma();
+  // }, [id]);
 
   const { titulo, precio, dirigido, objetivo, descripcion, img, pdf } =
     programa;
@@ -133,3 +133,13 @@ const Editprograma = () => {
 };
 
 export default Editprograma;
+
+export const getServerSideProps = async ({ params }) => {
+  const id = params.editprograma;
+  const res = await axios.get(`http://localhost:3000/api/programa/id/${id}`);
+  return {
+    props: {
+      programa: res.data,
+    },
+  };
+};

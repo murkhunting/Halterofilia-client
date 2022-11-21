@@ -12,13 +12,15 @@
     align-items: center;
     justify-content: flex-start;
     transition: scale 0.2s ease-in-out;
+    margin: 10px 0;
     .enlace {
       margin: 30px 0 30px 50px;
       h1 {
-        font-size: 70px;
+        font-size: 50px;
         margin: 0;
       }
       h2 {
+        font-size: 20px;
         color: $main;
         margin: 0 0 5px;
       }

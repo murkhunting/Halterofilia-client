@@ -65,7 +65,7 @@ router.get("/next", async (req, res) => {
   try {
     formaciones = await Formacion.aggregate([
       { $match: { agotado: undefined } },
-      { $sample: { size: 1 } },
+      { $limit: 1 },
     ]);
     res.status(200).json(formaciones);
   } catch (err) {

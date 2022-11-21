@@ -1,24 +1,9 @@
 import React from "react";
-import { useState, useEffect } from "react";
 import axios from "axios";
 
 import Fichas from "../../components/fichas/Fichas";
 
-const Formaciones = () => {
-  const [formaciones, setFormaciones] = useState([]);
-
-  useEffect(() => {
-    const getAllFormaciones = async () => {
-      try {
-        const res = await axios.get("http://localhost:8800/api/formacion/all");
-        setFormaciones(res.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    getAllFormaciones();
-  }, []);
-
+const Formaciones = ({ formaciones }) => {
   return (
     <div className="formaciones">
       <div className="titulo">
@@ -38,3 +23,12 @@ const Formaciones = () => {
 };
 
 export default Formaciones;
+
+export const getServerSideProps = async () => {
+  const res = await axios.get("http://localhost:3000/api/formacion");
+  return {
+    props: {
+      formaciones: res.data,
+    },
+  };
+};

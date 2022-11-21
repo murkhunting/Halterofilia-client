@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect, useContext } from "react";
+import { useState, useContext } from "react";
 import axios from "axios";
 
 import { login } from "../auth/apiCall";
@@ -10,94 +10,52 @@ import Link from "next/link";
 import { FaRegEdit } from "react-icons/fa";
 import { FiTrash2 } from "react-icons/fi";
 
-import {
-  loginFailure,
-  loginStart,
-  loginSuccess,
-  initialState,
-} from "../auth/AuthActions";
-// import { useCookies } from "react-cookie";
-// import { parseCookies } from "../helpers/index";
-
-const Admin = () => {
-  const loged = true;
-
+const Admin = ({ formaciones, programas }) => {
   // const [cookie, setCookie] = useCookies(["user"]);
 
   //LOGGIN
 
-  const [user, setUser] = useState("");
-  const { isFetching, dispatch } = useContext(AuthContext);
-  //1.coger datos de los inputs
-  const handleChange = (e) => {
-    const value = e.target.value;
-    setUser({ ...user, [e.target.name]: value });
-  };
+  // const [user, setUser] = useState("");
+  // const { isFetching, dispatch } = useContext(AuthContext);
+  // //1.coger datos de los inputs
+  // const handleChange = (e) => {
+  //   const value = e.target.value;
+  //   setUser({ ...user, [e.target.name]: value });
+  // };
 
-  //2.funcion que realiza el login
-  const handleLogin = (e) => {
-    e.preventDefault();
-    login(user, dispatch);
-  };
+  // //2.funcion que realiza el login
+  // const handleLogin = (e) => {
+  //   e.preventDefault();
+  //   login(user, dispatch);
+  // };
 
-  //LLAMADAS A LA BASE DE DATOS
-  const [programas, setProgramas] = useState([]);
-  const [formaciones, setFormaciones] = useState([]);
-
-  useEffect(() => {
-    const getAllPrograms = async () => {
-      try {
-        const res = await axios.get("http://localhost:8800/api/programa/all");
-        setProgramas(res.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    getAllPrograms();
-  }, []);
-
-  useEffect(() => {
-    const getAllFormaciones = async () => {
-      try {
-        const res = await axios.get("http://localhost:8800/api/formacion/all");
-        setFormaciones(res.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    getAllFormaciones();
-  }, []);
-
+  const [programasList, setProgramasList] = useState(programas);
+  const [formacionesList, setFormacionesList] = useState(formaciones);
   //delete programa
   const deletePrograma = async (id) => {
     try {
-      await axios.delete(`http://localhost:8800/api/programa/${id}`);
+      await axios.delete(`http://localhost:3000/api/programa/id/${id}`);
+      setProgramasList(programasList.filter((programa) => programa._id !== id));
     } catch (err) {
       console.log(err);
     }
-  };
-
-  const handleDeletePrograma = (id) => {
-    deletePrograma(id);
-    window.location.reload(false);
   };
 
   //delete formacion
   const deleteFormacion = async (id) => {
     try {
-      await axios.delete(`http://localhost:8800/api/formacion/${id}`);
+      await axios.delete(`http://localhost:3000/api/formacion/id/${id}`);
+      setFormacionesList(
+        formacionesList.filter((formacion) => formacion._id !== id)
+      );
     } catch (err) {
       console.log(err);
     }
   };
 
-  const handleDeleteFormacion = (id) => {
-    deleteFormacion(id);
-    window.location.reload(false);
-  };
-
   //COMPROBAR SI HAY USER EN EL LOCAL STORAGE
-  const userExist = useContext(AuthContext).user;
+  // const userExist = useContext(AuthContext).user;
+  const userExist = true;
 
   return (
     <div className="admin">
@@ -138,7 +96,7 @@ const Admin = () => {
             <div className="list">
               <h1>LISTA DE FORMACIONES:</h1>
               <div className="formaciones">
-                {formaciones.map((formacion) => (
+                {formacionesList.map((formacion) => (
                   <div className="wrap" key={formacion._id}>
                     <h2>{formacion.titulo}</h2>
                     <div className="icons">
@@ -150,7 +108,7 @@ const Admin = () => {
                       <div>
                         <FiTrash2
                           className="icon"
-                          onClick={() => handleDeleteFormacion(formacion._id)}
+                          onClick={() => deleteFormacion(formacion._id)}
                         />
                       </div>
                     </div>
@@ -166,7 +124,7 @@ const Admin = () => {
             <div className="list">
               <h1>LISTA DE PROGRAMAS:</h1>
               <div className="formaciones">
-                {programas.map((programa) => (
+                {programasList.map((programa) => (
                   <div className="wrap" key={programa._id}>
                     <h2>{programa.titulo}</h2>
                     <div className="icons">
@@ -178,7 +136,7 @@ const Admin = () => {
                       <div>
                         <FiTrash2
                           className="icon"
-                          onClick={() => handleDeletePrograma(programa._id)}
+                          onClick={() => deletePrograma(programa._id)}
                         />
                       </div>
                     </div>
@@ -197,3 +155,14 @@ const Admin = () => {
 };
 
 export default Admin;
+
+export const getServerSideProps = async () => {
+  const res1 = await axios.get("http://localhost:3000/api/programa");
+  const res2 = await axios.get("http://localhost:3000/api/formacion");
+  return {
+    props: {
+      programas: res1.data,
+      formaciones: res2.data,
+    },
+  };
+};

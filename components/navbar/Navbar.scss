@@ -62,6 +62,9 @@
     cursor: pointer;
     .lang {
       transition: 0.2s ease-in-out;
+      h2 {
+        margin: 2px 0;
+      }
     }
     .lang:hover {
       scale: 1.05;

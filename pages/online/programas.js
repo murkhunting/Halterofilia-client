@@ -1,24 +1,9 @@
 import React from "react";
-import { useState, useEffect } from "react";
 import axios from "axios";
 
 import Item from "../../components/item/Item";
 
-const Programas = () => {
-  const [programas, setProgramas] = useState([]);
-
-  useEffect(() => {
-    const getAllPrograms = async () => {
-      try {
-        const res = await axios.get("http://localhost:8800/api/programa/all");
-        setProgramas(res.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    getAllPrograms();
-  }, []);
-
+const Programas = ({ programas }) => {
   return (
     <div className="programas">
       <div className="titulo">
@@ -38,3 +23,12 @@ const Programas = () => {
 };
 
 export default Programas;
+
+export const getServerSideProps = async () => {
+  const res = await axios.get("http://localhost:3000/api/programa");
+  return {
+    props: {
+      programas: res.data,
+    },
+  };
+};

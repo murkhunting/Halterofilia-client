@@ -14,9 +14,8 @@ const Contacto = () => {
         <h1>CONTACTA CON NOSOTROS</h1>
       </div>
       <div className="masinfo">
-        <h2>SI NECESITAS MÁS INFORMACIÓN</h2>
-        <h2>SOBRE LOS PROGRAMAS ONLINE O LAS FORMACIONES,</h2>
-        <h2>O QUIERES APUNTARTE A NUESTRO CLUB,</h2>
+        <h2>NECESITAS MÁS INFORMACIÓN?</h2>
+        <h2>QUIERES APUNTARTE A NUESTRO CLUB?</h2>
         <h2>NO DUDES EN PONERTE EN CONTACTO!</h2>
       </div>
 

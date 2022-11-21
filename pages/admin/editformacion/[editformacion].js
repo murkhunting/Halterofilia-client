@@ -3,26 +3,7 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const Edit = () => {
-  //GRT FORMACION ORIGINAL
-  const router = useRouter();
-  const id = router.query.editformacion;
-  const [formacion, setFormacion] = useState({});
-
-  useEffect(() => {
-    const getFormacion = async () => {
-      try {
-        const res = await axios.get(
-          `http://localhost:8800/api/formacion/${id}`
-        );
-        setFormacion(res.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    getFormacion();
-  }, [id]);
-
+const Edit = ({ formacion }) => {
   const {
     titulo,
     precio,
@@ -69,7 +50,6 @@ const Edit = () => {
         <h4>TÍTULO:</h4>
         <input
           type="text"
-          placeholder="Escribe el título..."
           name="titulo"
           defaultValue={titulo}
           onChange={handleChange}
@@ -79,7 +59,6 @@ const Edit = () => {
         <h4>PRECIO:</h4>
         <input
           type="text"
-          placeholder="100€..."
           name="precio"
           defaultValue={precio}
           onChange={handleChange}
@@ -101,7 +80,6 @@ const Edit = () => {
         <h4>PRECIO DE LA OFERTA:</h4>
         <input
           type="text"
-          placeholder="90€..."
           name="precioferta"
           defaultValue={precioferta}
           onChange={handleChange}
@@ -123,7 +101,6 @@ const Edit = () => {
         <h4>FECHA INICIO:</h4>
         <input
           type="text"
-          placeholder="12/08/2023..."
           name="inicio"
           defaultValue={inicio}
           onChange={handleChange}
@@ -133,7 +110,6 @@ const Edit = () => {
         <h4>DURACIÓN:</h4>
         <input
           type="text"
-          placeholder="4 meses..."
           name="duracion"
           defaultValue={duracion}
           onChange={handleChange}
@@ -143,7 +119,6 @@ const Edit = () => {
         <h4>HORARIO:</h4>
         <input
           type="text"
-          placeholder="Sábados de 9:00 a 14:00..."
           name="horario"
           defaultValue={horario}
           onChange={handleChange}
@@ -189,3 +164,14 @@ const Edit = () => {
 };
 
 export default Edit;
+
+export const getServerSideProps = async ({ params }) => {
+  const id = params.editformacion;
+  console.log(id);
+  const res = await axios.get(`http://localhost:3000/api/formacion/id/${id}`);
+  return {
+    props: {
+      formacion: res.data,
+    },
+  };
+};

@@ -17,10 +17,7 @@ const Online = () => {
             />
             <div className="enlace">
               <h1>PROGRAMA PERSONALIZADO</h1>
-              <h2>
-                NOS ADAPTAMOS A TI Y A TUS OBJETIVOS CON RESULTADOS
-                GARANTIZADOS, 100% PERSONALIZADO
-              </h2>
+              <h2>NOS ADAPTAMOS A TI Y A TUS OBJETIVOS, 100% PERSONALIZADO</h2>
             </div>
           </div>
         </a>

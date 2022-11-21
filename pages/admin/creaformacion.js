@@ -32,7 +32,7 @@ const Crea = () => {
   const createFormacion = async (formacion) => {
     try {
       const res = await axios.post(
-        "http://localhost:8800/api/formacion",
+        "http://localhost:3000/api/formacion",
         formacion
       );
       const data = res.data;

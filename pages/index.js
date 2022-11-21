@@ -10,28 +10,7 @@ import { FaFacebook } from "react-icons/fa";
 
 import Link from "next/link";
 
-export default function Home() {
-  const [items, setItems] = useState([]);
-  const [fichas, setFichas] = useState([]);
-
-  useEffect(() => {
-    const getRandomProgramas = async () => {
-      try {
-        const res1 = await axios.get(
-          "http://localhost:8800/api/programa/random"
-        );
-        const res2 = await axios.get(
-          "http://localhost:8800/api/formacion/next"
-        );
-        setItems(res1.data);
-        setFichas(res2.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    getRandomProgramas();
-  }, []);
-
+export default function Home({ programas, formaciones }) {
   return (
     <div className="home">
       {/* PANTALLA PRINCIPAL */}
@@ -129,7 +108,7 @@ export default function Home() {
           <div className="nextformacion">
             <h2>PROGRAMAS DISPONIBLES:</h2>
             <div className="items">
-              {items.map((programa) => (
+              {programas.map((programa) => (
                 <Item className="list" key={programa._id} programa={programa} />
               ))}
             </div>
@@ -144,8 +123,9 @@ export default function Home() {
             <div className="flecha">
               <div className="hor">
                 <h2>
-                  SI TIENES QUE ENTRENAR DESDE CASA Y DISPONES DEL MATERIAL
-                  NECESARIO DESCUBRE NUESTRAS CLASES DIRIGIDAS A TRAVÉS DE ZOOM
+                  SI QUIERES ENTRENAR DESDE CASA DE FORMA GUIADA Y DISPONES DEL
+                  MATERIAL NECESARIO DESCUBRE NUESTRAS CLASES DIRIGIDAS A TRAVÉS
+                  DE ZOOM
                 </h2>
                 {/* <h2> TÉCNICA, FUERZA Y POTENCIA ·</h2>
                 <h2> 2 MOVIMIENTOS OLÍMPICOS ·</h2>
@@ -196,7 +176,7 @@ export default function Home() {
           </div>
           <div className="nextformacion">
             <h2>PRÓXIMO CURSO DISPONIBLE:</h2>
-            {fichas.map((formacion) => (
+            {formaciones.map((formacion) => (
               <Fichas
                 className="list"
                 key={formacion._id}
@@ -254,9 +234,9 @@ export default function Home() {
                   DESCUBRE MÁS SOBRE NUESTRAS CLASES PRESENCIALES Y NO DUDES EN
                   APUNTARTE!
                 </h2>
-                <h2> TÉCNICA, FUERZA Y POTENCIA ·</h2>
-                <h2> 2 MOVIMIENTOS OLÍMPICOS ·</h2>
-                <h2> 100% HALTEOFILIA ·</h2>
+                <h2>- TÉCNICA, FUERZA Y CONSTANCIA</h2>
+                <h2>- 2 MOVIMIENTOS OLÍMPICOS </h2>
+                <h2>- 100% HALTEOFILIA </h2>
               </div>
             </div>
           </div>
@@ -265,3 +245,14 @@ export default function Home() {
     </div>
   );
 }
+
+export const getServerSideProps = async () => {
+  const res1 = await axios.get("http://localhost:3000/api/programa/last2");
+  const res2 = await axios.get("http://localhost:3000/api/formacion/next");
+  return {
+    props: {
+      programas: res1.data,
+      formaciones: res2.data,
+    },
+  };
+};

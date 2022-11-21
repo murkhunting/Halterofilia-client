@@ -8,25 +8,25 @@ import { MdDateRange } from "react-icons/md";
 import { CgTimelapse } from "react-icons/cg";
 import { AiOutlineSchedule } from "react-icons/ai";
 
-const Curso = () => {
-  const router = useRouter();
-  const id = router.query.formacion;
+const Curso = ({ formacion }) => {
+  // const router = useRouter();
+  // const id = router.query.formacion;
 
-  const [formacion, setFormacion] = useState({});
+  // const [formacion, setFormacion] = useState({});
 
-  useEffect(() => {
-    const getFormacion = async () => {
-      try {
-        const res = await axios.get(
-          `http://localhost:8800/api/formacion/${id}`
-        );
-        setFormacion(res.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    getFormacion();
-  }, [id]);
+  // useEffect(() => {
+  //   const getFormacion = async () => {
+  //     try {
+  //       const res = await axios.get(
+  //         `http://localhost:8800/api/formacion/${id}`
+  //       );
+  //       setFormacion(res.data);
+  //     } catch (err) {
+  //       console.log(err);
+  //     }
+  //   };
+  //   getFormacion();
+  // }, [id]);
 
   const {
     titulo,
@@ -81,3 +81,14 @@ const Curso = () => {
 };
 
 export default Curso;
+
+export const getServerSideProps = async ({ params }) => {
+  const id = params.formacion;
+  console.log(id);
+  const res = await axios.get(`http://localhost:3000/api/formacion/id/${id}`);
+  return {
+    props: {
+      formacion: res.data,
+    },
+  };
+};

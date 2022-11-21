@@ -22,7 +22,13 @@ const Streaming = () => {
         </h2>
       </div>
       <div className="descripcion">
-        <h2>CLASES TÉCNICAS DIRIGIDAS </h2>
+        <h2>
+          SI TE INTERESAN NUESTRAS CLASES DE HALTEROFILIA Y FUERZA DIRIGIDAS POR
+          NUESTROS COACHES VIA ZOOM, COMPRUEBA QUE TIENES EL MATERIAL NECESARIO
+          PARA REALIZAR LOS EJERCICIOS DESDE DÓNDE TE VAYAS A CONECTAR Y PONTE
+          EN CONTACTO CON NOSOTROS PARA APUNTARTE Y VER LA DISPONIBILIDAD Y LOS
+          HORARIOS!
+        </h2>
       </div>
       <div className="material">
         <h2>MATERIAL NECESARIO:</h2>
@@ -32,6 +38,7 @@ const Streaming = () => {
         <h3>- MANCUERNAS</h3>
         <h3>- MANCUERNAS</h3>
       </div>
+      <button className="loginbtn">PONTE EN CONTACTO</button>
     </div>
   );
 };

@@ -1,29 +1,29 @@
 import React from "react";
 import Link from "next/link";
+import Cookie from "js-cookie";
+import { parseCookies } from "../../lib/parseCookies";
+import Router from "next/router";
 
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import { AiOutlineWhatsApp } from "react-icons/ai";
+import { IoLanguage } from "react-icons/io5";
 import ReactWhatsapp from "react-whatsapp";
 
-const Navbar = () => {
+const Navbar = ({ initialLang }) => {
   const router = useRouter();
-  // const [windowHeight, setWindowHeight] = useState("0");
-
-  // const handleScroll = () => {
-  //   setWindowHeight(window.scrollY);
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // });
-
+  console.log(initialLang);
   //LANGUAGE TOGGLE
   const [show, setShow] = useState(false);
   const onClick = () => setShow(!show);
 
   const [lang, setLang] = useState("esp");
+  // () => JSON.parse(initialLang)
+
+  //save cookie
+  useEffect(() => {
+    Cookie.set("lang", lang);
+  }, [lang]);
 
   return (
     <div className="navbar">
@@ -41,7 +41,7 @@ const Navbar = () => {
               }
             >
               {lang === "esp" ? (
-                <h2>PROGRAMAS ONLINE</h2>
+                <h2>ONLINE</h2>
               ) : lang === "eng" ? (
                 <h2>ONLINE PROGRAMS</h2>
               ) : (
@@ -58,7 +58,7 @@ const Navbar = () => {
               }
             >
               {lang === "esp" ? (
-                <h2>CLASES PRESENCIALES</h2>
+                <h2>PRESENCIAL</h2>
               ) : lang === "eng" ? (
                 <h2>IN-CLASS</h2>
               ) : (
@@ -97,88 +97,61 @@ const Navbar = () => {
               )}
             </a>
           </Link>
+          <Link href="/info">
+            <a
+              className={
+                router.pathname == "/info" ? "menuactive" : "menuinactive"
+              }
+            >
+              {lang === "esp" ? (
+                <h2>INFO</h2>
+              ) : lang === "eng" ? (
+                <h2>INFO</h2>
+              ) : (
+                <h2>INFO</h2>
+              )}
+            </a>
+          </Link>
         </div>
         <div className="perfil">
           <div>
-            {lang === "esp" ? (
-              <>
-                <div className="lang" onClick={onClick}>
-                  ESP▾
-                </div>
-                <div className={show ? "show" : "noshow"}>
-                  <div
-                    className="lang"
-                    onClick={() => {
-                      setLang("eng");
-                      setShow(!show);
-                    }}
-                  >
-                    ENG
-                  </div>
-                  <div
-                    className="lang"
-                    onClick={() => {
-                      setLang("por");
-                      setShow(!show);
-                    }}
-                  >
-                    POR
-                  </div>
-                </div>
-              </>
-            ) : lang === "eng" ? (
-              <>
-                <div className="lang" onClick={onClick}>
-                  ENG▾
-                </div>
-                <div className={show ? "show" : "noshow"}>
-                  <div
-                    className="lang"
-                    onClick={() => {
-                      setLang("por");
-                      setShow(!show);
-                    }}
-                  >
-                    POR
-                  </div>
-                  <div
-                    className="lang"
-                    onClick={() => {
-                      setLang("esp");
-                      setShow(!show);
-                    }}
-                  >
-                    ESP
-                  </div>
-                </div>
-              </>
-            ) : (
-              <>
-                <div className="lang" onClick={onClick}>
-                  POR▾
-                </div>
-                <div className={show ? "show" : "noshow"}>
-                  <div
-                    className="lang"
-                    onClick={() => {
-                      setLang("esp");
-                      setShow(!show);
-                    }}
-                  >
-                    ESP
-                  </div>
-                  <div
-                    className="lang"
-                    onClick={() => {
-                      setLang("eng");
-                      setShow(!show);
-                    }}
-                  >
-                    ENG
-                  </div>
-                </div>
-              </>
-            )}
+            <div className="lang" onClick={onClick}>
+              <h2>
+                <IoLanguage />
+              </h2>
+            </div>
+            <div className={show ? "show" : "noshow"}>
+              <div
+                className="lang"
+                onClick={() => {
+                  setLang("esp");
+                  setShow(!show);
+                  Router.reload();
+                }}
+              >
+                ESP
+              </div>
+              <div
+                className="lang"
+                onClick={() => {
+                  setLang("eng");
+                  setShow(!show);
+                  Router.reload();
+                }}
+              >
+                ENG
+              </div>
+              <div
+                className="lang"
+                onClick={() => {
+                  setLang("por");
+                  setShow(!show);
+                  Router.reload();
+                }}
+              >
+                POR
+              </div>
+            </div>
           </div>
           <ReactWhatsapp className="whats" number="+34 616 956 279">
             <AiOutlineWhatsApp />

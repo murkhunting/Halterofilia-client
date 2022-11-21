@@ -46,7 +46,7 @@ const Creaprograma = () => {
   const createPrograma = async (programa) => {
     try {
       const res = await axios.post(
-        "http://localhost:8800/api/programa",
+        "http://localhost:3000/api/programa",
         programa
       );
       const data = res.data;
