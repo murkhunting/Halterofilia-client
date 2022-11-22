@@ -6,7 +6,7 @@ import Footer from "../components/footer/Footer";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Navbar {...initialLang} />
+      <Navbar />
       <Component {...pageProps} />
       <Footer />
     </>
