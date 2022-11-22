@@ -13,12 +13,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-// MyApp.getInitialProps = ({ req }) => {
-//   const cookies = parseCookies(req);
-
-//   return {
-//     initialLang: cookies.lang,
-//   };
-// };
-
 export default MyApp;
