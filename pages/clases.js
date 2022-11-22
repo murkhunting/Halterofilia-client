@@ -6,20 +6,19 @@ import Link from "next/link";
 
 import "animate.css";
 
-const Presenciales = ({ initialLang }) => {
+const Clases = ({ initialLang }) => {
   const lang = initialLang;
   console.log(lang);
 
   return (
-    <div className="presenciales">
-      <Link href="/presenciales/formaciones">
+    <div className="clases">
+      <Link href="/clases/cpresenciales">
         <a>
-          <div className="formaciones animate__animated animate__zoomIn">
-            <img className="boton" src="/images/4FORMACIONES.png" alt="logo" />
+          <div className="elemento animate__animated animate__zoomIn">
             <div className="enlace">
               {lang === "esp" ? (
                 <>
-                  <h1>FORMACIONES PRESENCIALES</h1>
+                  <h1>CLASES PRESENCIALES</h1>
                   <h2>CURSOS Y SEMINARIOS PARA PROFESIONALES DE ALTO NIVEL</h2>
                 </>
               ) : lang === "eng" ? (
@@ -34,19 +33,20 @@ const Presenciales = ({ initialLang }) => {
                 </>
               )}
             </div>
+            <img className="boton" src="/images/14CLASES.png" alt="logo" />
           </div>
         </a>
       </Link>
-      <Link href="/presenciales/clases">
+      <Link href="/clases/streaming">
         <a>
-          <div className="formaciones animate__animated animate__zoomIn">
-            <img className="boton" src="/images/14CLASES.png" alt="logo" />
+          <div className="elemento animate__animated animate__zoomIn">
             <div className="enlace">
-              <h1>CLASES PRESENCIALES</h1>
+              <h1>CLASES POR STREAMING</h1>
               <h2>
                 DESCUBRE COMO SON Y COMO FUNCIONAN NUESTRAS CLASES PRESENCIALES
               </h2>
             </div>
+            <img className="boton" src="/images/13STREAMING.png" alt="logo" />
           </div>
         </a>
       </Link>
@@ -54,7 +54,7 @@ const Presenciales = ({ initialLang }) => {
   );
 };
 
-Presenciales.getInitialProps = ({ req }) => {
+Clases.getInitialProps = ({ req }) => {
   const cookies = parseCookies(req);
 
   return {
@@ -62,4 +62,4 @@ Presenciales.getInitialProps = ({ req }) => {
   };
 };
 
-export default Presenciales;
+export default Clases;

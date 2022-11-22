@@ -3,31 +3,40 @@
 //colores para todos los archivos
 @import "./colors.scss";
 
-//pages
+//PAGES
 @import "../pages/404.scss";
 @import "../pages/index.scss";
 @import "../pages/info.scss";
 @import "../pages/nosotros.scss";
 @import "../pages/contacto.scss";
+@import "../pages/login.scss";
+//admin
 @import "../pages/admin.scss";
-@import "../pages/online.scss";
-@import "../pages/online/personalizado.scss";
-@import "../pages/online/streaming.scss";
-@import "../pages/online/programas.scss";
-@import "../pages/online/programas/programa.scss";
-@import "../pages/presenciales";
-@import "../pages/presenciales/clases.scss";
-@import "../pages/presenciales/clases/fuerza.scss";
-@import "../pages/presenciales/clases/halterofilia.scss";
-@import "../pages/presenciales/formaciones.scss";
-@import "../pages/presenciales/formaciones/formacion.scss";
 @import "../pages/admin/creaformacion.scss";
 @import "../pages/admin/editformacion/editformacion.scss";
 @import "../pages/admin/creaprograma.scss";
 @import "../pages/admin/editprograma/editprograma.scss";
+//clases
+@import "../pages/clases";
+@import "../pages/clases/cpresenciales.scss";
+@import "../pages/clases/cpresenciales/fuerza.scss";
+@import "../pages/clases/cpresenciales/halterofilia.scss";
+@import "../pages/clases/streaming.scss";
+//formaciones
+@import "../pages/formaciones.scss";
+@import "../pages/formaciones/fonline.scss";
+@import "../pages/formaciones/fonline/fonline.scss";
+@import "../pages/formaciones/fpresenciales.scss";
+@import "../pages/formaciones/fpresenciales/fpresencial.scss";
+//programas
+@import "../pages/programas.scss";
+@import "../pages/programas/personalizado.scss";
+@import "../pages/programas/programasonline.scss";
+@import "../pages/programas/programasonline/programa.scss";
 
 //components
 @import "../components/navbar/Navbar.scss";
 @import "../components/footer/Footer.scss";
 @import "../components/fichas/Fichas.scss";
 @import "../components/item/Item.scss";
+@import "../components/card/Card.scss";

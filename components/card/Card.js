@@ -1,38 +1,32 @@
 import React from "react";
 import { useState } from "react";
-
 import Link from "next/link";
 
-const Ficha = (formacion) => {
+const Card = (formacion) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  const { titulo, precio, oferta, precioferta, agotado, inicio, img, _id } =
-    formacion.formacion;
+  const { titulo, precio, img, _id } = formacion.formacion;
 
   return (
-    <div className="ficha">
-      <h1 className={agotado ? "agotado" : "noagotado"}>AGOTADO</h1>
+    <div className="card">
+      <h1 className="idioma">ESPAÑOL</h1>
       {isHovered ? (
-        <div className="fichaconthover">
+        <div className="cardconthover">
           <div className="spacehover">
-            <h2>APÚNTATE!!</h2>
+            <h2>ADQUIÉRELO!</h2>
             <div className="img">
               <img src={img} alt="cross" />
             </div>
             <h3 className="titulo">{titulo}</h3>
-            <h3 className="titulo">{inicio}</h3>
-            <h3 className={oferta ? "noprecio" : "precio"}>{precio}</h3>
-            <h3 className={oferta ? "oferta" : "noferta"}>
-              {"OFERTA: " + precioferta}
-            </h3>
+            <h3 className="precio">{precio}</h3>
           </div>
 
-          <Link href={`/formaciones/fpresenciales/${_id}`}>
+          <Link href={`/formaciones/fonline/${_id}`}>
             <a>
               <img
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
-                className="fichaboton"
+                className="cardboton"
                 src="/images/7masbtn.png"
                 alt="logo"
               />
@@ -41,26 +35,22 @@ const Ficha = (formacion) => {
         </div>
       ) : (
         <div>
-          <div className="fichacont">
+          <div className="cardcont">
             <div className="space">
-              <h2>APÚNTATE!!</h2>
+              <h2>ADQUIÉRELO!</h2>
               <div className="img">
                 <img src={img} alt="cross" />
               </div>
               <h3 className="titulo">{titulo}</h3>
-              <h3 className="titulo">{inicio}</h3>
-              <h3 className={oferta ? "noprecio" : "precio"}>{precio}</h3>
-              <h3 className={oferta ? "oferta" : "noferta"}>
-                {"OFERTA: " + precioferta}
-              </h3>
+              <h3 className="precio">{precio}</h3>
             </div>
 
-            <Link href={`/presenciales/formaciones/${_id}`}>
+            <Link href={`/formaciones/fonline/${_id}`}>
               <a>
                 <img
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
-                  className="fichaboton"
+                  className="cardboton"
                   src="/images/7masbtn.png"
                   alt="logo"
                 />
@@ -73,4 +63,4 @@ const Ficha = (formacion) => {
   );
 };
 
-export default Ficha;
+export default Card;

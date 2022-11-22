@@ -3,9 +3,9 @@ import axios from "axios";
 
 import Fichas from "../../components/fichas/Fichas";
 
-const Formaciones = ({ formaciones }) => {
+const Fpresenciales = ({ formaciones }) => {
   return (
-    <div className="formaciones">
+    <div className="fpresenciales">
       <div className="titulo">
         <h1>FORMACIONES TÉCNICAS</h1>
         <h2>
@@ -22,7 +22,7 @@ const Formaciones = ({ formaciones }) => {
   );
 };
 
-export default Formaciones;
+export default Fpresenciales;
 
 export const getServerSideProps = async () => {
   const res = await axios.get("http://localhost:3000/api/formacion");

@@ -34,7 +34,7 @@ const Presencial = () => {
         <div className="botones">
           <div className="conjunto">
             {/* <h2>CLASES DE HALTEROFILIA:</h2> */}
-            <Link href="/presenciales/clases/halterofilia">
+            <Link href="/clases/cpresenciales/halterofilia">
               <a>
                 <img
                   className="boton"
@@ -44,7 +44,7 @@ const Presencial = () => {
               </a>
             </Link>
             {/* <h2>CLASES DE FUERZA:</h2> */}
-            <Link href="/presenciales/clases/fuerza">
+            <Link href="/clases/cpresenciales/fuerza">
               <a>
                 <img
                   className="boton"

@@ -1,139 +1,78 @@
 .admin {
-  min-height: 100vh;
   color: $second;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  .login {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 80px 0 0;
+  min-height: 100vh;
+  .objetos {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    .container {
-      margin-top: 80px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 35px 35px;
-      border-radius: 15px;
-
-      .cover {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        h2 {
-          font-size: 18px;
-          font-weight: 400;
-          margin: 10px;
-        }
-        input {
-          border-radius: 5px;
-          width: 210px;
-          height: 35px;
-          margin-bottom: 15px;
-          text-align: center;
-          border: 1px solid $third;
-          background-color: $second;
-        }
-      }
-      .loginbtn {
-        margin: 20px;
-        padding: 10px 20px;
-        background-color: $second;
-        border: 1px solid $second;
-        color: $main;
-        font-size: 20px;
-        font-weight: 500;
-
-        border-radius: 10px;
-        cursor: pointer;
-        font-family: "Oswald", sans-serif;
-      }
-      .loginbtn:hover {
-        background-color: $detalles;
-        color: $second;
-        border: 1px solid $detalles;
-      }
+    width: 420px;
+    margin: 0 30px;
+    h1 {
+      font-size: 23px;
+      margin-bottom: 30px;
     }
-  }
-  .panel {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-    width: 90vw;
-    flex-wrap: wrap;
-    margin: 70px 0;
-    .lista {
-      display: flex;
+    .enumera {
       width: 100%;
+      display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
       justify-content: flex-start;
-      margin: 0 20px 30px;
-      width: 650px;
-      .list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+      width: 380px;
+      .linea {
         width: 100%;
-        .formaciones {
-          .wrap {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            border-top: 1px solid $detalles;
-            border-bottom: 1px solid $detalles;
-            width: 100%;
-            font-size: 12px;
-
-            .icons {
-              display: flex;
-              flex-direction: row;
-              margin-left: 60px;
-              a {
-                text-decoration: none;
-                margin-right: 30px;
-              }
-              .icon {
-                color: $main;
-                background-color: $second;
-                font-size: 20px;
-                cursor: pointer;
-                padding: 10px;
-                border-radius: 5px;
-              }
-              .icon:hover {
-                background-color: $detalles;
-                color: $second;
-              }
-            }
+        padding: 0 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid $detalles;
+        border-bottom: 1px solid $detalles;
+        h2 {
+          font-size: 15px;
+        }
+        .iconitos {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          .tamaño {
+            margin-left: 20px;
+            color: $main;
+            background-color: $second;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 6px;
+            border-radius: 5px;
+          }
+          .tamaño:hover {
+            background-color: $detalles;
+            color: $second;
           }
         }
       }
     }
-    .loginbtn {
+    .btn {
       text-decoration: none;
       text-align: center;
       background-color: $second;
       margin: 40px 0 20px;
-      padding: 10px 20px;
+      padding: 8px 15px;
       border: 1px solid $second;
       color: $main;
-      font-size: 20px;
+      font-size: 17px;
       font-weight: 500;
-      width: 300px;
+      width: 250px;
       border-radius: 10px;
-      cursor: pointer;
-      font-family: "Oswald", sans-serif;
     }
-    .loginbtn:hover {
+    .btn:hover {
       background-color: $detalles;
       color: $second;
       border: 1px solid $detalles;

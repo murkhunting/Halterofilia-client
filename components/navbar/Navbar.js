@@ -34,39 +34,53 @@ const Navbar = ({ initialLang }) => {
           </a>
         </Link>
         <div className="menu">
-          <Link href="/online">
+          <Link href="/formaciones">
             <a
               className={
-                router.pathname == "/online" ? "menuactive" : "menuinactive"
-              }
-            >
-              {lang === "esp" ? (
-                <h2>ONLINE</h2>
-              ) : lang === "eng" ? (
-                <h2>ONLINE PROGRAMS</h2>
-              ) : (
-                <h2>PROGRAMAS ONLINE</h2>
-              )}
-            </a>
-          </Link>
-          <Link href="/presenciales">
-            <a
-              className={
-                router.pathname == "/presenciales"
+                router.pathname == "/formaciones"
                   ? "menuactive"
                   : "menuinactive"
               }
             >
               {lang === "esp" ? (
-                <h2>PRESENCIAL</h2>
+                <h2>FORMACIONES</h2>
               ) : lang === "eng" ? (
-                <h2>IN-CLASS</h2>
+                <h2>FORMATIONS</h2>
               ) : (
-                <h2>AULAS PRESENCIAIS</h2>
+                <h2>FORMAÇÕES</h2>
               )}
             </a>
           </Link>
-
+          <Link href="/programas">
+            <a
+              className={
+                router.pathname == "/programas" ? "menuactive" : "menuinactive"
+              }
+            >
+              {lang === "esp" ? (
+                <h2>PROGRAMAS</h2>
+              ) : lang === "eng" ? (
+                <h2>PROGRAMS</h2>
+              ) : (
+                <h2>PROGRAMA</h2>
+              )}
+            </a>
+          </Link>
+          <Link href="/clases">
+            <a
+              className={
+                router.pathname == "/clases" ? "menuactive" : "menuinactive"
+              }
+            >
+              {lang === "esp" ? (
+                <h2>CLASES</h2>
+              ) : lang === "eng" ? (
+                <h2>CLASSES</h2>
+              ) : (
+                <h2>AULAS</h2>
+              )}
+            </a>
+          </Link>
           <Link href="/nosotros">
             <a
               className={

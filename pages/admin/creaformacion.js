@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
+import { parseCookies } from "../../lib/parseCookies";
 
 import { useRouter } from "next/router";
 
@@ -167,3 +168,22 @@ const Crea = () => {
 };
 
 export default Crea;
+
+export const getServerSideProps = async ({ req }) => {
+  const cookies = parseCookies(req);
+
+  if (cookies.token) {
+    const token = cookies.token;
+    return {
+      props: {
+        token: token || null,
+      },
+    };
+  } else {
+    return {
+      redirect: {
+        destination: "/login",
+      },
+    };
+  }
+};

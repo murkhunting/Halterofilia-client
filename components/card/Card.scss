@@ -1,0 +1,131 @@
+.card {
+  margin: 20px 20px 40px;
+  text-decoration: none;
+  color: $second;
+  box-shadow: 4px 10px 20px black;
+  transition: transform 0.4s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 420px;
+  height: 550px;
+
+  .idioma {
+    font-size: 18px;
+    position: absolute;
+    margin-top: -500px;
+    margin-right: 320px;
+    padding: 10px 20px;
+    z-index: 1000;
+    background-color: $detalles;
+    color: $second;
+  }
+
+  .cardcont {
+    width: 420px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    object-fit: auto;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    background-color: $third;
+
+    .space {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      h2 {
+        font-size: 35px;
+        color: $third;
+        margin: 10px 5px 10px 5px;
+      }
+
+      img {
+        height: 200px;
+        width: 350px;
+        filter: grayscale(100%);
+        object-fit: cover;
+      }
+      h3 {
+        font-size: 22px;
+      }
+      .titulo {
+        margin: 2px 8px;
+      }
+      .precio {
+        margin: 2px;
+      }
+    }
+
+    .cardboton {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 15px;
+      transition: transform 0.4s ease-in-out;
+    }
+    .cardboton:hover {
+      transform: rotate(-360deg);
+      scale: 1.05;
+    }
+  }
+
+  //HOVERED
+  .cardconthover {
+    width: 420px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    object-fit: auto;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    background-image: url("/images/gif1.gif");
+    background-size: cover;
+
+    .spacehover {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      h2 {
+        font-size: 35px;
+        color: $detalles;
+        margin: 10px 5px 10px 5px;
+      }
+
+      img {
+        height: 200px;
+        width: 350px;
+        filter: grayscale(40%);
+        object-fit: cover;
+      }
+      h3 {
+        font-size: 22px;
+      }
+      .titulo {
+        margin: 2px 8px;
+      }
+      .precio {
+        margin: 2px;
+      }
+    }
+
+    .cardboton {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 15px;
+      transition: transform 0.4s ease-in-out;
+    }
+    .cardboton:hover {
+      transform: rotate(-360deg);
+      scale: 1.05;
+    }
+  }
+}
+.card:hover {
+  scale: 1.02;
+}

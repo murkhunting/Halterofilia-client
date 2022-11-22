@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-const info = () => {
+const Info = () => {
   const [show1, setShow1] = useState(false);
   const onClick1 = () => setShow1(!show1);
 
@@ -10,6 +10,9 @@ const info = () => {
 
   const [show3, setShow3] = useState(false);
   const onClick3 = () => setShow3(!show3);
+
+  const [show4, setShow4] = useState(false);
+  const onClick4 = () => setShow4(!show4);
   return (
     <div className="infopage">
       <div className="tarifas">
@@ -36,22 +39,6 @@ const info = () => {
                 <h3>3 HORAS/SEMANA - 85€/MES</h3>
                 <h3>4 HORAS/SEMANA - 105€/MES</h3>
                 <h3>6 HORAS/SEMANA - 125€/MES</h3>
-              </div>
-              <div className="columnde"></div>
-            </div>
-          </div>
-
-          <div className="box">
-            <h2>BONOS</h2>
-            <h3>
-              PARA EL USO EXCLUSIVO DE LOS SOCIOS DEL CLUB HALTEROFILIA
-              BARCELONA QUE QUIEREN AMPLIAR LAS HORAS QUE LES CORRESPONEDEN POR
-              LA CUOTA MENSUAL QUE TIENEN CONTRATADA.
-            </h3>
-            <div className="tabla">
-              <div className="columniz">
-                <h3>BONO 40€ - 3 HORAS EXTRA</h3>
-                <h3>BONO 60€ - 5 HORAS EXTRA</h3>
               </div>
               <div className="columnde"></div>
             </div>
@@ -160,8 +147,53 @@ const info = () => {
           </h3>
         </div>
       </div>
+      <div className="tarifas">
+        <h1 onClick={onClick4}>GUIA DE MOVIMIENTOS HALTEROFILIA ▾</h1>
+        <div className={show4 ? "box" : "nobox"}>
+          <h3>
+            LA INSCRIPCIÓN COMO CLIENTE DE CLUB HALTEROFILIA BARCELONA OLÍMPICO
+            CUBRIRÁ EL PERIODO DURANTE EL QUE DICHO CLIENTE SATISFAGA LA
+            CORRESPONDIENTE CUOTA SEGÚN LO DISPUESTO EN EL PRESENTE DOCUMENTO.
+          </h3>
+          <h3>
+            Las bajas o modificaciones deberán comunicarse antes del día 15 del
+            mes anterior a la baja, así como cualquier cambio de tarifa. En caso
+            contrario la baja o modificación no podrá ser efectiva hasta el
+            siguiente mes y se cobrara la cuota de manera habitual. La no
+            asistencia del titular o del beneficiario a las instalaciones del
+            Club con independencia de su duración o de la causa que lo origine,
+            en ningún caso dará derecho a la devolución de cantidad alguna de
+            dinero.
+          </h3>
+          <h3>
+            El mes de Agosto se cobrara íntegramente ya que los periodos
+            vacaciones así como los días festivos están prorrateados a lo largo
+            de las cuotas mensuales. En caso de baja durante este periodo y
+            deseo por parte del socio de una nueva inscripción pasado el citado
+            periodo, se deberá abonar la matricula estipulada para estos casos.
+          </h3>
+          <h3>
+            Únicamente en caso de lesión (ocasionada en el devenir de un entteno
+            en el club única y exclusívamente), cabe la posibilidad de congelar
+            la cuota por un periodo máximo de un mes, en caso de tratarse de un
+            periodo superior el socio deberá considerarse la baja del Club y
+            realizar una nueva alta tras la recuperación con el pago de la
+            correspondiente matricula. Este procedimiento de congelación es
+            posible realizarlo únicamente 1 vez anualmente.
+          </h3>
+          <h3>
+            En caso de impago de una cuota los gastos de devolución correrán
+            íntegramente a cargo del socio, en caso de no abonar dicho importe
+            en los quince días próximos a su comunicación dará lugar a la baja
+            inmediata del socio. En el supuesto de estar interesado en continuar
+            con los servicios del Club en el futuro deberá abonar dicha cuota
+            más los gastos, a la vez que la matrícula y cuota estipulada en ese
+            momento.
+          </h3>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default info;
+export default Info;

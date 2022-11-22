@@ -4,6 +4,7 @@ import Link from "next/link";
 import { VscMail } from "react-icons/vsc";
 import { BsPhone } from "react-icons/bs";
 import { SlSocialInstagram } from "react-icons/sl";
+import { FaTelegramPlane } from "react-icons/fa";
 import { IoChatboxEllipsesOutline, IoLocationOutline } from "react-icons/io5";
 import ReactWhatsapp from "react-whatsapp";
 
@@ -42,6 +43,21 @@ const Contacto = () => {
             </h5>
           </div>
         </ReactWhatsapp>
+        <Link href="https://t.me/halterofiliabarcelona">
+          <a>
+            <div className="separador">
+              <img className="boton" src="/images/12mapsbtn.png" alt="logo" />
+              <div className="iconos">
+                <h5>
+                  <span>
+                    <FaTelegramPlane />
+                  </span>
+                  GRUPO DE TELEGRAM
+                </h5>
+              </div>
+            </div>
+          </a>
+        </Link>
         <Link href="https://www.instagram.com/halterofiliabarcelona/?hl=es">
           <a>
             <div className="separador">

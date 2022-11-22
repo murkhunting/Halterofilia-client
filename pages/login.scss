@@ -1,0 +1,56 @@
+.adminlogin {
+  min-height: 100vh;
+  color: $second;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  .container {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 35px;
+    border-radius: 15px;
+
+    .cover {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h2 {
+        font-size: 18px;
+        font-weight: 400;
+        margin: 10px;
+      }
+      input {
+        border-radius: 5px;
+        width: 210px;
+        height: 35px;
+        margin-bottom: 15px;
+        text-align: center;
+        border: 1px solid $third;
+        background-color: $second;
+      }
+    }
+    .loginbtn {
+      margin: 20px;
+      padding: 10px 20px;
+      background-color: $second;
+      border: 1px solid $second;
+      color: $main;
+      font-size: 20px;
+      font-weight: 500;
+
+      border-radius: 10px;
+      cursor: pointer;
+      font-family: "Oswald", sans-serif;
+    }
+    .loginbtn:hover {
+      background-color: $detalles;
+      color: $second;
+      border: 1px solid $detalles;
+    }
+  }
+}

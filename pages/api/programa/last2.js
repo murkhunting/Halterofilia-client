@@ -3,8 +3,6 @@ import dbConnect from "../../../lib/mongo";
 import Programa from "../../../models/Programa";
 
 export default async function handler(req, res) {
-  const { method } = req;
-
   dbConnect();
 
   try {

@@ -3,9 +3,9 @@ import axios from "axios";
 
 import Item from "../../components/item/Item";
 
-const Programas = ({ programas }) => {
+const Programasonline = ({ programas }) => {
   return (
-    <div className="programas">
+    <div className="programasonline">
       <div className="titulo">
         <h1>PROGRAMAS DE ENTRENAMIENTO</h1>
         <h2>
@@ -22,7 +22,7 @@ const Programas = ({ programas }) => {
   );
 };
 
-export default Programas;
+export default Programasonline;
 
 export const getServerSideProps = async () => {
   const res = await axios.get("http://localhost:3000/api/programa");

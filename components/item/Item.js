@@ -19,7 +19,7 @@ const Item = (programa) => {
         <h3 className="precio">{precio}</h3>
       </div>
 
-      <Link href={`/online/programas/${_id}`}>
+      <Link href={`/programas/programasonline/${_id}`}>
         <a>
           <img
             onMouseEnter={() => setIsHovered(true)}

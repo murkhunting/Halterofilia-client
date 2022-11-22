@@ -3,6 +3,7 @@ import axios from "axios";
 
 import Fichas from "../components/fichas/Fichas";
 import Item from "../components/item/Item";
+import Card from "../components/card/Card";
 
 import { MdDoubleArrow } from "react-icons/md";
 import { AiFillInstagram, AiFillYoutube } from "react-icons/ai";
@@ -50,6 +51,41 @@ export default function Home({ programas, formaciones }) {
           </div>
         </div>
       </div>
+      {/* FORMACIONES ONLINE */}
+      <div className="formacionestecnicas">
+        <div className="texto">
+          <h1>FORMACIONES ONLINE</h1>
+        </div>
+
+        <div className="container">
+          <div className="formacionlink">
+            <h2>
+              SI ERES UN ATLETA PROFESIONAL, UN ENTRENADOR O PREPARADOR FÍSICO O
+              QUIERES APRENDER AL ÁXIMO NIVEL, NO TE PIERDAS NUESTRAS
+              FORMACIONES ONLINE Y MEJORA DESDE CUALQUIER LUGAR DEL MUNDO.
+            </h2>
+            <Link href="/formaciones/fonline">
+              <a>
+                <img
+                  className="boton"
+                  src="/images/4FORMACIONES.png"
+                  alt="logo"
+                />
+              </a>
+            </Link>
+          </div>
+          <div className="nextformacion">
+            <h2>ÚLTIMA FORMACIÓN AGREGADA:</h2>
+            {formaciones.map((formacion) => (
+              <Card
+                className="list"
+                key={formacion._id}
+                formacion={formacion}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
       {/* PROGRAMA ONLINE */}
       <div className="programaonline">
         <div className="iz">
@@ -67,7 +103,7 @@ export default function Home({ programas, formaciones }) {
         </div>
         <div className="de">
           <div className="wrap">
-            <Link href="/online/personalizado">
+            <Link href="/programas/personalizado">
               <a>
                 <img
                   className="boton"
@@ -87,7 +123,7 @@ export default function Home({ programas, formaciones }) {
 
         <div className="container">
           <div className="formacionlink">
-            <Link href="/online/programas">
+            <Link href="/programas/programasonline">
               <a>
                 <img
                   className="boton"
@@ -106,7 +142,7 @@ export default function Home({ programas, formaciones }) {
             </h2>
           </div>
           <div className="nextformacion">
-            <h2>PROGRAMAS DISPONIBLES:</h2>
+            <h2>NUEVOS PROGRAMAS:</h2>
             <div className="items">
               {programas.map((programa) => (
                 <Item className="list" key={programa._id} programa={programa} />
@@ -138,7 +174,7 @@ export default function Home({ programas, formaciones }) {
           </div>
           <div className="iz">
             <div className="wrap">
-              <Link href="/online/streaming">
+              <Link href="/clases/streaming">
                 <a>
                   <img
                     className="boton"
@@ -151,7 +187,7 @@ export default function Home({ programas, formaciones }) {
           </div>
         </div>
       </div>
-      {/* FORMACIONES */}
+      {/* FORMACIONES PRESENCIALES */}
       <div className="formacionestecnicas">
         <div className="texto">
           <h1>FORMACIONES PRESENCIALES</h1>
@@ -164,7 +200,7 @@ export default function Home({ programas, formaciones }) {
               QUIERES APRENDER AL ÁXIMO NIVEL NO TE PIERDAS NUESTROS SEMINARIOS
               Y CURSOS DE MEJORA TÉCNICA.
             </h2>
-            <Link href="/presenciales/formaciones">
+            <Link href="/formaciones/fpresenciales">
               <a>
                 <img
                   className="boton"
@@ -213,7 +249,7 @@ export default function Home({ programas, formaciones }) {
         <div className="cont">
           <div className="iz">
             <div className="wrap">
-              <Link href="/presenciales/clases">
+              <Link href="/clases/cpresenciales">
                 <a>
                   <img
                     className="boton"
