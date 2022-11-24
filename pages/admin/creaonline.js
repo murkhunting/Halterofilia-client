@@ -3,10 +3,11 @@ import { useState } from "react";
 import axios from "axios";
 
 import { useRouter } from "next/router";
-import { parseCookies } from "../lib/parseCookies";
+import { parseCookies } from "../../lib/parseCookies";
 
-const Creaprograma = () => {
-  const [programa, setPrograma] = useState({});
+const Creaonline = () => {
+  const [online, setOnline] = useState({});
+  console.log(online);
 
   const handleImg = (e) => {
     const file = e.target.files[0];
@@ -18,7 +19,7 @@ const Creaprograma = () => {
     if (file) {
       reader.readAsDataURL(file);
       reader.onloadend = () => {
-        setPrograma({ ...programa, img: reader.result });
+        setOnline({ ...online, img: reader.result });
       };
     }
   };
@@ -33,23 +34,20 @@ const Creaprograma = () => {
     if (file) {
       reader.readAsDataURL(file);
       reader.onloadend = () => {
-        setPrograma({ ...programa, pdf: reader.result });
+        setOnline({ ...online, pdf: reader.result });
       };
     }
   };
 
   const handleChange = (e) => {
     const value = e.target.value;
-    setPrograma({ ...programa, [e.target.name]: value });
+    setOnline({ ...online, [e.target.name]: value });
   };
 
-  //create programa
-  const createPrograma = async (programa) => {
+  //create formación online
+  const createOnline = async (online) => {
     try {
-      const res = await axios.post(
-        "http://localhost:3000/api/programa",
-        programa
-      );
+      const res = await axios.post("http://localhost:3000/api/online", online);
       const data = res.data;
     } catch (err) {
       console.log(err);
@@ -58,16 +56,29 @@ const Creaprograma = () => {
 
   const router = useRouter();
 
-  const handleCreatePrograma = (e) => {
+  const handleCreateOnline = (e) => {
     e.preventDefault();
-    createPrograma(programa);
+    createOnline(online);
     router.push("/admin");
   };
 
   return (
     <div>
       <div className="crea">
-        <h1>CREA UN NUEVO PROGRAMA:</h1>
+        <h1>CREA UNA NUEVA FORMACIÓN ONLINE:</h1>
+        <div className="grupo">
+          <h4>IDIOMA:</h4>
+          <select
+            name="idioma"
+            id="type"
+            defaultValue="español"
+            onChange={handleChange}
+          >
+            <option value="español">Español</option>
+            <option value="inglés">Inglés</option>
+            <option value="portugués">Portugués</option>
+          </select>
+        </div>
         <div className="grupo">
           <h4>TÍTULO:</h4>
           <input
@@ -114,7 +125,7 @@ const Creaprograma = () => {
           />
         </div>
         <div className="grupo">
-          <h4>IMAGEN DEL PROGRAMA:</h4>
+          <h4>IMAGEN DE LA FORMACIÓN:</h4>
           <input
             className="archivo"
             type="file"
@@ -124,7 +135,7 @@ const Creaprograma = () => {
           />
         </div>
         <div className="grupo">
-          <h4>PDF DEL PROGRAMA:</h4>
+          <h4>PDF DE LA FORMACIÓN:</h4>
           <input
             className="archivo"
             type="file"
@@ -133,15 +144,15 @@ const Creaprograma = () => {
             onChange={handlePdf}
           />
         </div>
-        <button className="loginbtn" onClick={handleCreatePrograma}>
-          CREAR PROGRAMA
+        <button className="loginbtn" onClick={handleCreateOnline}>
+          CREAR FORMACIÓN ONLINE
         </button>
       </div>
     </div>
   );
 };
 
-export default Creaprograma;
+export default Creaonline;
 
 export const getServerSideProps = async ({ req }) => {
   const cookies = parseCookies(req);

@@ -1,23 +1,25 @@
 import React from "react";
 import Link from "next/link";
 import Cookie from "js-cookie";
-import { parseCookies } from "../../lib/parseCookies";
 import Router from "next/router";
 
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
+import { useCookies } from "react-cookie";
+
 import { AiOutlineWhatsApp } from "react-icons/ai";
 import { IoLanguage } from "react-icons/io5";
 import ReactWhatsapp from "react-whatsapp";
 
-const Navbar = ({ initialLang }) => {
+const Navbar = () => {
   const router = useRouter();
-  console.log(initialLang);
+  const [cookies, setCookie] = useCookies(["lang"]);
+  console.log(cookies.token);
   //LANGUAGE TOGGLE
   const [show, setShow] = useState(false);
   const onClick = () => setShow(!show);
 
-  const [lang, setLang] = useState("esp");
+  const [lang, setLang] = useState(cookies.lang);
   // () => JSON.parse(initialLang)
 
   //save cookie

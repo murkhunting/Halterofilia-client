@@ -1,6 +1,6 @@
-//GET ALL & CREATE PROGRAMA
+//GET ALL & CREATE ONLINES
 import dbConnect from "../../../lib/mongo";
-import Programa from "../../../models/Programa";
+import Online from "../../../models/Online";
 import cloudinary from "../../../lib/cloudinary";
 
 export const config = {
@@ -8,6 +8,7 @@ export const config = {
     responseLimit: false,
   },
 };
+
 export default async function handler(req, res) {
   const { method } = req;
 
@@ -19,8 +20,8 @@ export default async function handler(req, res) {
   //GET ALL
   if (method === "GET") {
     try {
-      const programas = await Programa.find();
-      res.status(200).json(programas.reverse());
+      const onlines = await Online.find();
+      res.status(200).json(onlines.reverse());
     } catch (err) {
       res.status(500).json(err);
     }
@@ -28,6 +29,9 @@ export default async function handler(req, res) {
 
   //CREATE
   if (method === "POST") {
+    const data = new FormData();
+    data.append("uploadImg", uploadImg);
+    data.append("upload_preset", "uploads");
     try {
       const imgUploaded = await cloudinary.uploader.upload(uploadImg, {
         upload_preset: "halterofilia",
@@ -36,7 +40,8 @@ export default async function handler(req, res) {
         upload_preset: "halterofilia",
       });
 
-      const programa = {
+      const online = {
+        idioma: req.body.idioma,
         titulo: req.body.titulo,
         precio: req.body.precio,
         dirigido: req.body.dirigido,
@@ -45,9 +50,9 @@ export default async function handler(req, res) {
         img: imgUploaded.secure_url,
         pdf: pdfUploaded.secure_url,
       };
-      const newPrograma = new Programa(programa);
-      const savedPrograma = await newPrograma.save();
-      res.status(201).json(savedPrograma);
+      const newOnline = new Online(online);
+      const savedOnline = await newOnline.save();
+      res.status(201).json(savedOnline);
     } catch (error) {
       console.log(error);
     }

@@ -1,0 +1,35 @@
+.fonlines {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 30px;
+    text-align: center;
+    color: $second;
+    h1 {
+      font-size: 70px;
+      margin-bottom: 0px;
+    }
+    h2 {
+      font-size: 20px;
+      margin: 17px 70px;
+    }
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 100vw;
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+  }
+}

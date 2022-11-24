@@ -3,12 +3,15 @@ import dbConnect from "../../../lib/mongo";
 import Formacion from "../../../models/Formacion";
 import cloudinary from "../../../lib/cloudinary";
 
+export const config = {
+  api: {
+    responseLimit: false,
+  },
+};
 export default async function handler(req, res) {
-  const { method, cookies } = req;
+  const { method } = req;
 
   const uploadImg = req.body.img;
-
-  const token = cookies.token;
 
   dbConnect();
 
@@ -24,9 +27,6 @@ export default async function handler(req, res) {
 
   //CREATE
   if (method === "POST") {
-    if (!token || token !== process.env.token) {
-      return res.status(401).json("Not authenticated!");
-    }
     try {
       const imgUploaded = await cloudinary.uploader.upload(uploadImg, {
         upload_preset: "halterofilia",

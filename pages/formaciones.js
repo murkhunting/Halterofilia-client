@@ -7,7 +7,7 @@ import "animate.css";
 const Formaciones = () => {
   return (
     <div className="formaciones">
-      <Link href="/formaciones/fonline">
+      <Link href="/formaciones/fonlines">
         <a>
           <div className="elemento animate__animated animate__zoomIn">
             <div className="enlace">

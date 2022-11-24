@@ -2,10 +2,10 @@ import React from "react";
 import { useState } from "react";
 import Link from "next/link";
 
-const Card = (formacion) => {
+const Card = ({ online }) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  const { titulo, precio, img, _id } = formacion.formacion;
+  const { titulo, precio, img, _id, idioma } = online;
 
   return (
     <div className="card">
@@ -21,7 +21,7 @@ const Card = (formacion) => {
             <h3 className="precio">{precio}</h3>
           </div>
 
-          <Link href={`/formaciones/fonline/${_id}`}>
+          <Link href={`/formaciones/fonlines/${_id}`}>
             <a>
               <img
                 onMouseEnter={() => setIsHovered(true)}

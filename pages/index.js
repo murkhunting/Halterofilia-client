@@ -11,7 +11,7 @@ import { FaFacebook } from "react-icons/fa";
 
 import Link from "next/link";
 
-export default function Home({ programas, formaciones }) {
+export default function Home({ programas, formaciones, online }) {
   return (
     <div className="home">
       {/* PANTALLA PRINCIPAL */}
@@ -64,7 +64,7 @@ export default function Home({ programas, formaciones }) {
               QUIERES APRENDER AL ÁXIMO NIVEL, NO TE PIERDAS NUESTRAS
               FORMACIONES ONLINE Y MEJORA DESDE CUALQUIER LUGAR DEL MUNDO.
             </h2>
-            <Link href="/formaciones/fonline">
+            <Link href="/formaciones/fonlines">
               <a>
                 <img
                   className="boton"
@@ -76,12 +76,8 @@ export default function Home({ programas, formaciones }) {
           </div>
           <div className="nextformacion">
             <h2>ÚLTIMA FORMACIÓN AGREGADA:</h2>
-            {formaciones.map((formacion) => (
-              <Card
-                className="list"
-                key={formacion._id}
-                formacion={formacion}
-              />
+            {online.map((online) => (
+              <Card className="list" key={online._id} online={online} />
             ))}
           </div>
         </div>
@@ -285,10 +281,12 @@ export default function Home({ programas, formaciones }) {
 export const getServerSideProps = async () => {
   const res1 = await axios.get("http://localhost:3000/api/programa/last2");
   const res2 = await axios.get("http://localhost:3000/api/formacion/next");
+  const res3 = await axios.get("http://localhost:3000/api/online/ultimo");
   return {
     props: {
       programas: res1.data,
       formaciones: res2.data,
+      online: res3.data,
     },
   };
 };

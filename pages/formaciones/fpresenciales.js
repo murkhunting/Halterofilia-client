@@ -7,7 +7,7 @@ const Fpresenciales = ({ formaciones }) => {
   return (
     <div className="fpresenciales">
       <div className="titulo">
-        <h1>FORMACIONES TÉCNICAS</h1>
+        <h1>FORMACIONES PRESENCIALES</h1>
         <h2>
           · SEMINARIOS Y CURSOS TÉCNICOS PARA ENTRENADORES, PREPARADORES
           FÍSICOS, ATLETAS DE ALTO NIVEL Y PROFESIONALES ·

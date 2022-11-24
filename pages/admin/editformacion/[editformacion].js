@@ -3,7 +3,28 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const Edit = ({ formacion }) => {
+import { parseCookies } from "../../../lib/parseCookies";
+
+const Edit = () => {
+  const router = useRouter();
+  const id = router.query.editformacion;
+
+  const [formacion, setFormacion] = useState({});
+  console.log(formacion);
+  useEffect(() => {
+    const getFormacion = async () => {
+      try {
+        const res = await axios.get(
+          `http://localhost:3000/api/formacion/id/${id}`
+        );
+        setFormacion(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getFormacion();
+  }, [id]);
+
   const {
     titulo,
     precio,
@@ -165,13 +186,21 @@ const Edit = ({ formacion }) => {
 
 export default Edit;
 
-export const getServerSideProps = async ({ params }) => {
-  const id = params.editformacion;
-  console.log(id);
-  const res = await axios.get(`http://localhost:3000/api/formacion/id/${id}`);
-  return {
-    props: {
-      formacion: res.data,
-    },
-  };
+export const getServerSideProps = async ({ req }) => {
+  const cookies = parseCookies(req);
+
+  if (cookies.token) {
+    const token = cookies.token;
+    return {
+      props: {
+        token: token || null,
+      },
+    };
+  } else {
+    return {
+      redirect: {
+        destination: "/login",
+      },
+    };
+  }
 };

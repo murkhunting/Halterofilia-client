@@ -5,42 +5,42 @@ import axios from "axios";
 
 import { parseCookies } from "../../../lib/parseCookies";
 
-const Editprograma = () => {
+const Editonline = () => {
   const router = useRouter();
-  const id = router.query.editprograma;
-  const [programa, setPrograma] = useState({});
+  const id = router.query.editonline;
+  const [online, setOnline] = useState({});
 
   useEffect(() => {
-    const getPrograma = async () => {
+    const getOnline = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:3000/api/programa/id/${id}`
+          `http://localhost:3000/api/online/id/${id}`
         );
-        setPrograma(res.data);
+        setOnline(res.data);
       } catch (err) {
         console.log(err);
       }
     };
-    getPrograma();
+    getOnline();
   }, [id]);
 
-  const { titulo, precio, dirigido, objetivo, descripcion, img, pdf } =
-    programa;
+  const { idioma, titulo, precio, dirigido, objetivo, descripcion, img, pdf } =
+    online;
 
-  //PROGRAMA EDITADO
-  const [programaEditado, setProgramaEditado] = useState({});
+  //ONLINE EDITADO
+  const [onlineEditado, setOnlineEditado] = useState({});
 
   const handleChange = (e) => {
     const value = e.target.value;
-    setProgramaEditado({ ...programa, [e.target.name]: value });
+    setOnlineEditado({ ...online, [e.target.name]: value });
   };
 
-  //subir programa editado
-  const updatePrograma = async (programa) => {
+  //subir online editado
+  const updateOnline = async (online) => {
     try {
       const res = await axios.put(
-        `http://localhost:8800/api/programa/${id}`,
-        programa
+        `http://localhost:8800/api/online/${id}`,
+        online
       );
       const data = res.data;
     } catch (err) {
@@ -50,13 +50,26 @@ const Editprograma = () => {
 
   const handleUpdate = (e) => {
     e.preventDefault();
-    updatePrograma(programaEditado);
+    updateOnline(onlineEditado);
     router.push("/admin");
   };
 
   return (
     <div className="edit">
-      <h1>EDITA EL PROGRAMA:</h1>
+      <h1>EDITA LA FORMACIÓN ONLINE:</h1>
+      <div className="grupo">
+        <h4>IDIOMA:</h4>
+        <select
+          name="idioma"
+          id="type"
+          defaultValue={idioma}
+          onChange={handleChange}
+        >
+          <option value="español">Español</option>
+          <option value="inglés">Inglés</option>
+          <option value="portugués">Portugués</option>
+        </select>
+      </div>
       <div className="grupo">
         <h4>TÍTULO:</h4>
         <input
@@ -107,7 +120,7 @@ const Editprograma = () => {
         />
       </div>
       <div className="grupo">
-        <h4>IMAGEN DEL PROGRAMA:</h4>
+        <h4>IMAGEN DE LA FORMACIÓN:</h4>
         <input
           className="archivo"
           type="file"
@@ -118,7 +131,7 @@ const Editprograma = () => {
         />
       </div>
       <div className="grupo">
-        <h4>PDF DEL PROGRAMA:</h4>
+        <h4>PDF DE LA FORMACIÓN:</h4>
         <input
           className="archivo"
           type="file"
@@ -135,7 +148,7 @@ const Editprograma = () => {
   );
 };
 
-export default Editprograma;
+export default Editonline;
 
 export const getServerSideProps = async ({ req }) => {
   const cookies = parseCookies(req);

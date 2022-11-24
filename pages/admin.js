@@ -10,10 +10,12 @@ import Link from "next/link";
 import { FaRegEdit } from "react-icons/fa";
 import { FiTrash2 } from "react-icons/fi";
 
-const Admin = ({ formaciones, programas, token }) => {
+const Admin = ({ formaciones, programas, onlines, token }) => {
   console.log(token);
   const [programasList, setProgramasList] = useState(programas);
   const [formacionesList, setFormacionesList] = useState(formaciones);
+  const [onlinesList, setOnlinesList] = useState(onlines);
+
   //delete programa
   const deletePrograma = async (id) => {
     try {
@@ -36,20 +38,26 @@ const Admin = ({ formaciones, programas, token }) => {
     }
   };
 
-  //COMPROBAR SI HAY USER EN EL LOCAL STORAGE
-  // const userExist = useContext(AuthContext).user;
-  const userExist = true;
+  //delete online
+  const deleteOnline = async (id) => {
+    try {
+      await axios.delete(`http://localhost:3000/api/online/id/${id}`);
+      setOnlinesList(onlinesList.filter((formacion) => formacion._id !== id));
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <div className="admin">
       <div className="objetos">
         <h1>FORMACIONES ONLINE</h1>
         <div className="enumera">
-          {formacionesList.map((formacion) => (
-            <div className="linea" key={formacion._id}>
-              <h2>{formacion.titulo}</h2>
+          {onlinesList.map((online) => (
+            <div className="linea" key={online._id}>
+              <h2>{online.titulo}</h2>
               <div className="iconitos">
-                <Link href={`/admin/editformacion/${formacion._id}`}>
+                <Link href={`/admin/editonline/${online._id}`}>
                   <a>
                     <FaRegEdit className="tamaño" />
                   </a>
@@ -57,15 +65,15 @@ const Admin = ({ formaciones, programas, token }) => {
                 <div>
                   <FiTrash2
                     className="tamaño"
-                    onClick={() => deleteFormacion(formacion._id)}
+                    onClick={() => deleteOnline(online._id)}
                   />
                 </div>
               </div>
             </div>
           ))}
         </div>
-        <Link href="/admin/creaformacion">
-          <a className="btn">CREA UNA NUEVA FORMACIÓN</a>
+        <Link href="/admin/creaonline">
+          <a className="btn">+ NUEVA FORMACIÓN ONLINE</a>
         </Link>
       </div>
       <div className="objetos">
@@ -91,7 +99,7 @@ const Admin = ({ formaciones, programas, token }) => {
           ))}
         </div>
         <Link href="/admin/creaformacion">
-          <a className="btn">CREA UNA NUEVA FORMACIÓN</a>
+          <a className="btn">+ NUEVA FORMACIÓN PRESENCIAL</a>
         </Link>
       </div>
       <div className="objetos">
@@ -117,7 +125,7 @@ const Admin = ({ formaciones, programas, token }) => {
           ))}
         </div>
         <Link href="/admin/creaprograma">
-          <a className="btn">CREA UN NUEVO PROGRAMA</a>
+          <a className="btn">+ NUEVO PROGRAMA</a>
         </Link>
       </div>
     </div>
@@ -130,6 +138,7 @@ export const getServerSideProps = async ({ req }) => {
   const cookies = parseCookies(req);
   const res1 = await axios.get("http://localhost:3000/api/programa");
   const res2 = await axios.get("http://localhost:3000/api/formacion");
+  const res3 = await axios.get("http://localhost:3000/api/online");
   if (cookies.token) {
     const token = cookies.token;
     return {
@@ -137,6 +146,7 @@ export const getServerSideProps = async ({ req }) => {
         token: token || null,
         programas: res1.data,
         formaciones: res2.data,
+        onlines: res3.data,
       },
     };
   } else {
