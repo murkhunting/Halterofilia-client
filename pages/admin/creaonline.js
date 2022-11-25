@@ -71,12 +71,12 @@ const Creaonline = () => {
           <select
             name="idioma"
             id="type"
-            defaultValue="español"
+            defaultValue="esp"
             onChange={handleChange}
           >
-            <option value="español">Español</option>
-            <option value="inglés">Inglés</option>
-            <option value="portugués">Portugués</option>
+            <option value="esp">Español</option>
+            <option value="ing">Inglés</option>
+            <option value="por">Portugués</option>
           </select>
         </div>
         <div className="grupo">

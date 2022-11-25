@@ -39,7 +39,7 @@ const Editonline = () => {
   const updateOnline = async (online) => {
     try {
       const res = await axios.put(
-        `http://localhost:8800/api/online/${id}`,
+        `http://localhost:3000/api/online/id/${id}`,
         online
       );
       const data = res.data;
@@ -65,9 +65,9 @@ const Editonline = () => {
           defaultValue={idioma}
           onChange={handleChange}
         >
-          <option value="español">Español</option>
-          <option value="inglés">Inglés</option>
-          <option value="portugués">Portugués</option>
+          <option value="esp">Español</option>
+          <option value="eng">Inglés</option>
+          <option value="por">Portugués</option>
         </select>
       </div>
       <div className="grupo">

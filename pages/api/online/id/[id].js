@@ -39,9 +39,6 @@ export default async function handler(req, res) {
 
   //DELETE ONLINE BY ID
   if (method === "DELETE") {
-    if (!token || token !== process.env.token) {
-      return res.status(401).json("Not authenticated!");
-    }
     try {
       await Online.findByIdAndDelete(id);
       res.status(200).json("La Formacion ha sido borrada");

@@ -6,10 +6,17 @@ const Card = ({ online }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const { titulo, precio, img, _id, idioma } = online;
-
+  console.log(idioma);
   return (
     <div className="card">
-      <h1 className="idioma">ESPAÑOL</h1>
+      {idioma === "por" ? (
+        <h1 className="idioma">PORTUGUÊS</h1>
+      ) : idioma === "eng" ? (
+        <h1 className="idioma">ENGLISH</h1>
+      ) : (
+        <h1 className="idioma">ESPAÑOL</h1>
+      )}
+
       {isHovered ? (
         <div className="cardconthover">
           <div className="spacehover">

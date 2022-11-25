@@ -14,7 +14,7 @@ import ReactWhatsapp from "react-whatsapp";
 const Navbar = () => {
   const router = useRouter();
   const [cookies, setCookie] = useCookies(["lang"]);
-  console.log(cookies.token);
+
   //LANGUAGE TOGGLE
   const [show, setShow] = useState(false);
   const onClick = () => setShow(!show);

@@ -49,7 +49,7 @@ const Edit = () => {
   const updateFormacion = async (formacion) => {
     try {
       const res = await axios.put(
-        `http://localhost:8800/api/formacion/${id}`,
+        `http://localhost:3000/api/formacion/id/${id}`,
         formacion
       );
       const data = res.data;

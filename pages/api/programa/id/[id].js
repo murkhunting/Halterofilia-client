@@ -7,9 +7,7 @@ export default async function handler(req, res) {
   const {
     method,
     query: { id },
-    cookies,
   } = req;
-  const token = cookies.token;
 
   dbConnect();
 
@@ -25,9 +23,6 @@ export default async function handler(req, res) {
 
   //UPDATE PROGRAMA BY ID
   if (method === "PUT") {
-    if (!token || token !== process.env.token) {
-      return res.status(401).json("Not authenticated!");
-    }
     try {
       const updatedPrograma = await Programa.findByIdAndUpdate(
         id,
@@ -44,9 +39,6 @@ export default async function handler(req, res) {
 
   //DELETE PROGRAMA BY ID
   if (method === "DELETE") {
-    if (!token || token !== process.env.token) {
-      return res.status(401).json("Not authenticated!");
-    }
     try {
       await Programa.findByIdAndDelete(id);
       res.status(200).json("La Formacion ha sido borrada");

@@ -11,7 +11,6 @@ import { FaRegEdit } from "react-icons/fa";
 import { FiTrash2 } from "react-icons/fi";
 
 const Admin = ({ formaciones, programas, onlines, token }) => {
-  console.log(token);
   const [programasList, setProgramasList] = useState(programas);
   const [formacionesList, setFormacionesList] = useState(formaciones);
   const [onlinesList, setOnlinesList] = useState(onlines);

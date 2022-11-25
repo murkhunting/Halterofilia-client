@@ -39,7 +39,7 @@ const Editprograma = () => {
   const updatePrograma = async (programa) => {
     try {
       const res = await axios.put(
-        `http://localhost:8800/api/programa/${id}`,
+        `http://localhost:3000/api/programa/id/${id}`,
         programa
       );
       const data = res.data;

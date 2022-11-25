@@ -3,7 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 
 import { useRouter } from "next/router";
-import { parseCookies } from "../lib/parseCookies";
+import { parseCookies } from "../../lib/parseCookies";
 
 const Creaprograma = () => {
   const [programa, setPrograma] = useState({});
