@@ -7,8 +7,12 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import { useCookies } from "react-cookie";
 
+import "animate.css";
+
 import { AiOutlineWhatsApp } from "react-icons/ai";
 import { IoLanguage } from "react-icons/io5";
+import { HiMenu } from "react-icons/hi";
+import { RiCloseFill } from "react-icons/ri";
 import ReactWhatsapp from "react-whatsapp";
 
 const Navbar = () => {
@@ -18,6 +22,10 @@ const Navbar = () => {
   //LANGUAGE TOGGLE
   const [show, setShow] = useState(false);
   const onClick = () => setShow(!show);
+
+  const [showMenu, setShowMenu] = useState(false);
+  const onClickMenu = () => setShowMenu(!showMenu);
+  console.log(showMenu);
 
   const [lang, setLang] = useState(cookies.lang);
   // () => JSON.parse(initialLang)
@@ -35,6 +43,125 @@ const Navbar = () => {
             <img className="logo" src="/images/logo.png" alt="logo" />
           </a>
         </Link>
+        {/* HAMBURGER MENU FOR MOVILE AND TABLET */}
+        <div className="menuMovil">
+          <h1 onClick={onClickMenu}>
+            <HiMenu />
+          </h1>
+          <div
+            className={
+              showMenu
+                ? "menucontainer animate__animated animate__slideInDown"
+                : "nomenucontainer"
+            }
+          >
+            <Link href="/formaciones">
+              <a
+                className={
+                  router.pathname == "/formaciones"
+                    ? "menuactive"
+                    : "menuinactive"
+                }
+                onClick={onClickMenu}
+              >
+                {lang === "esp" ? (
+                  <h2>FORMACIONES</h2>
+                ) : lang === "eng" ? (
+                  <h2>FORMATIONS</h2>
+                ) : (
+                  <h2>FORMAÇÕES</h2>
+                )}
+              </a>
+            </Link>
+            <Link href="/programas">
+              <a
+                className={
+                  router.pathname == "/programas"
+                    ? "menuactive"
+                    : "menuinactive"
+                }
+                onClick={onClickMenu}
+              >
+                {lang === "esp" ? (
+                  <h2>PROGRAMAS</h2>
+                ) : lang === "eng" ? (
+                  <h2>PROGRAMS</h2>
+                ) : (
+                  <h2>PROGRAMA</h2>
+                )}
+              </a>
+            </Link>
+            <Link href="/clases">
+              <a
+                className={
+                  router.pathname == "/clases" ? "menuactive" : "menuinactive"
+                }
+                onClick={onClickMenu}
+              >
+                {lang === "esp" ? (
+                  <h2>CLASES</h2>
+                ) : lang === "eng" ? (
+                  <h2>CLASSES</h2>
+                ) : (
+                  <h2>AULAS</h2>
+                )}
+              </a>
+            </Link>
+            <Link href="/nosotros">
+              <a
+                className={
+                  router.pathname == "/nosotros" ? "menuactive" : "menuinactive"
+                }
+                onClick={onClickMenu}
+              >
+                {lang === "esp" ? (
+                  <h2>NOSOTROS</h2>
+                ) : lang === "eng" ? (
+                  <h2>US</h2>
+                ) : (
+                  <h2>NÓS</h2>
+                )}
+              </a>
+            </Link>
+            <Link href="/contacto">
+              <a
+                className={
+                  router.pathname == "/contacto" ? "menuactive" : "menuinactive"
+                }
+                onClick={onClickMenu}
+              >
+                {lang === "esp" ? (
+                  <h2>CONTACTO</h2>
+                ) : lang === "eng" ? (
+                  <h2>CONTACT</h2>
+                ) : (
+                  <h2>CONTATO</h2>
+                )}
+              </a>
+            </Link>
+            <Link href="/info">
+              <a
+                className={
+                  router.pathname == "/info" ? "menuactive" : "menuinactive"
+                }
+                onClick={onClickMenu}
+              >
+                {lang === "esp" ? (
+                  <h2>INFO</h2>
+                ) : lang === "eng" ? (
+                  <h2>INFO</h2>
+                ) : (
+                  <h2>INFO</h2>
+                )}
+              </a>
+            </Link>
+            <div className="close" onClick={onClickMenu}>
+              <RiCloseFill />
+            </div>
+          </div>
+        </div>
+
+        {/* NAVBAR MENU FOR PC */}
         <div className="menu">
           <Link href="/formaciones">
             <a

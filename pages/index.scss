@@ -191,6 +191,9 @@
         .items {
           display: flex;
           flex-direction: row;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
         }
       }
       .formacionlink {
@@ -318,12 +321,11 @@
       }
     }
     .container {
-      width: auto;
-      height: 700px;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-around;
+      flex-wrap: wrap;
       .nextformacion {
         display: flex;
         flex-direction: column;
@@ -490,4 +492,7 @@
   to {
     transform: translateX(-100%);
   }
+}
+
+@media (max-width: 768px) {
 }
