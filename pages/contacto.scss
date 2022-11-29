@@ -49,7 +49,7 @@
       border: none;
       color: $second;
       background-color: $main;
-      margin: 0 20px 60px;
+      margin: 0 0 60px;
       width: 220px;
       display: flex;
       flex-direction: column;
@@ -91,5 +91,102 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .contacto {
+    .name {
+      margin: 30px 0 0 0;
+      z-index: 200;
+      margin-bottom: 60px;
+      h1 {
+        font-size: 60px;
+        font-weight: 800;
+        margin-bottom: -60px;
+      }
+    }
+    .masinfo {
+      margin-bottom: 20px;
+      h2 {
+        font-size: 35px;
+        margin: 0px;
+      }
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .contacto {
+    .name {
+      margin: 40px 0 0 0;
+      z-index: 200;
+      margin-bottom: 50px;
+      h1 {
+        font-size: 48px;
+        font-weight: 800;
+        margin-bottom: -40px;
+      }
+    }
+    .masinfo {
+      margin-bottom: 20px;
+      h2 {
+        font-size: 25px;
+        margin: 0px;
+      }
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .contacto {
+    .name {
+      margin: 50px 0 0 0;
+      z-index: 200;
+      margin-bottom: 40px;
+      h1 {
+        font-size: 40px;
+        font-weight: 800;
+        margin-bottom: -30px;
+      }
+    }
+    .masinfo {
+      margin-bottom: 20px;
+      h2 {
+        font-size: 20px;
+        margin: 0px;
+      }
+    }
+    .contactinfo {
+      margin: 10px 0 10px 0;
+      .separador {
+        margin: 0 20px 40px;
+        width: 220px;
+
+        .boton {
+          height: 90px;
+          transition: transform 0.4s ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .contacto {
+    .name {
+      margin: 60px 0 0 0;
+      z-index: 200;
+      margin-bottom: 30px;
+      h1 {
+        font-size: 28px;
+        font-weight: 800;
+        margin-bottom: -15px;
+      }
+    }
+    .masinfo {
+      margin-bottom: 20px;
+      h2 {
+        font-size: 16px;
+        margin: 0px;
+      }
+    }
+  }
 }
