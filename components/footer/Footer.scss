@@ -178,6 +178,9 @@
       .ayunta {
         margin: 15px 0 10px;
         width: 120px;
+        .logoayunta {
+          width: 170px;
+        }
       }
       .center {
         .contacta {
@@ -212,6 +215,60 @@
         width: 180px;
         .logo {
           width: 80px;
+          transition: 0.2s ease-in-out;
+        }
+        .logo:hover {
+          scale: 1.1;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .footer {
+    .infofooter {
+      flex-direction: column;
+      .ayunta {
+        margin: 15px 0 10px;
+        width: 80px;
+        .logoayunta {
+          width: 140px;
+        }
+      }
+      .center {
+        .contacta {
+          font-size: 17px;
+          margin: 0;
+          h5 {
+            margin: 5px;
+          }
+        }
+        .social {
+          display: flex;
+          flex-direction: row;
+          margin: 20px 0 0 0;
+          h5 {
+            margin: 0 15px;
+            font-size: 15px;
+            padding: 5px 8px 4px 8px;
+          }
+          h5:hover {
+            color: white;
+            scale: 1.1;
+          }
+        }
+
+        .diseño {
+          display: flex;
+          margin: 50px 0 10px 0;
+        }
+      }
+      .logopage {
+        margin-top: 20px;
+        width: 180px;
+        .logo {
+          width: 60px;
           transition: 0.2s ease-in-out;
         }
         .logo:hover {

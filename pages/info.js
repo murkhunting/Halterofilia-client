@@ -148,7 +148,7 @@ const Info = () => {
         </div>
       </div>
       <div className="tarifas">
-        <h1 onClick={onClick4}>GUIA DE MOVIMIENTOS HALTEROFILIA ▾</h1>
+        <h1 onClick={onClick4}>GUIA MOVIMIENTOS HALTEROFILIA ▾</h1>
         <div className={show4 ? "box" : "nobox"}>
           <h3>
             LA INSCRIPCIÓN COMO CLIENTE DE CLUB HALTEROFILIA BARCELONA OLÍMPICO

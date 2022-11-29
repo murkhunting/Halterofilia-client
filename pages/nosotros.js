@@ -29,7 +29,7 @@ const Nosotros = () => {
           <img className="man" src="/images/ronald.png" alt="man" />
         </div>
         <div className="grup">
-          <img className="man" src="/images/coach2.png" alt="man" />
+          <img className="man" src="/images/cris.png" alt="man" />
           <div className="sideDe">
             <h2>
               CRIS
@@ -38,11 +38,6 @@ const Nosotros = () => {
               </span>
             </h2>
             <h3>
-              {/* Mi trayectoria en el mundo del acondicionamiento físico empieza 11
-              años atrás practicando disciplinas como calistenia y
-              powerbuilding. absorviendo lo mejor de cada sistema de
-              entrenamiento para ir puliendo mis conocimientos y habilidades a
-              la hora de entrenarme a mi y a mis clientes. */}
               He trabajado durante 5 años en distintos centros aprendiendo
               nuevas metodologías de trabajo y formándome como entrenador. Mis
               conocimientos vienen de la lectura y sobre todo la formación.
@@ -55,7 +50,7 @@ const Nosotros = () => {
         <div className="grup">
           <div className="sideIz">
             <h2>
-              HERNAN GARCÍA, 26 años
+              HERNAN GARCÍA
               <span>
                 <AiFillInstagram />
               </span>
