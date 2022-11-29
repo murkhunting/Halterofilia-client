@@ -27,7 +27,7 @@ const Footer = () => {
         <div className="center">
           <Link href="/contacto">
             <a className="contacta">
-              <h5>SI QUIERES SABER MÁS NO DUDES EN CONTACTAR CON NOSOTROS</h5>
+              <h5>SI QUIERES SABER MÁS CONTACTA CON NOSOTROS</h5>
             </a>
           </Link>
           <div className="social">
@@ -53,8 +53,6 @@ const Footer = () => {
               </a>
             </Link>
           </div>
-
-          <h5 className="diseño">DESIGN & CODE BY @MURKHUNTING</h5>
         </div>
         <div className="logopage">
           <Link href="/">
@@ -64,6 +62,7 @@ const Footer = () => {
           </Link>
         </div>
       </div>
+      <h5 className="diseño">DESIGN & CODE BY @MURKHUNTING</h5>
     </div>
   );
 };
