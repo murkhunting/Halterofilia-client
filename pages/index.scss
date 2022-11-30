@@ -30,7 +30,7 @@
       justify-content: center;
 
       h1 {
-        font-size: 9vw;
+        font-size: 160px;
         font-weight: 800;
         margin: -10px;
         letter-spacing: 8px;
@@ -106,18 +106,19 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    width: 100%;
+    min-height: 80vh;
+    max-height: 100vh;
+    width: 85%;
     .iz {
-      width: 55%;
+      width: 65%;
       height: 100;
       display: flex;
       flex-direction: column;
-      padding: 60px 20px 60px 180px;
+      padding: 60px 0 60px 0;
       align-items: center;
       justify-content: center;
       h1 {
-        font-size: 5vw;
+        font-size: 88px;
         margin: 20px 0;
       }
       .flecha {
@@ -126,21 +127,21 @@
         align-items: center;
         justify-content: center;
         h2 {
-          font-size: 1.8vw;
+          font-size: 32px;
         }
         .ico {
-          font-size: 150px;
+          font-size: 160px;
           color: $detalles;
         }
       }
     }
     .de {
-      width: 45%;
+      width: 40%;
       .wrap {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-right: 180px;
+
         .boton {
           height: 250px;
           transition: transform 0.4s ease-in-out;
@@ -168,25 +169,25 @@
       align-items: center;
       justify-content: center;
       h1 {
-        font-size: 5vw;
+        font-size: 88px;
         margin: 10px 0 5px 0;
       }
     }
     .container {
-      width: auto;
+      width: 85%;
 
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-around;
-      padding: 0 180px;
+
       .nextformacion {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         h2 {
-          margin-left: 30px;
+          font-size: 32px;
         }
         .items {
           display: flex;
@@ -198,7 +199,6 @@
       }
       .formacionlink {
         text-align: left;
-        width: 80%;
 
         z-index: 400px;
         display: flex;
@@ -206,12 +206,12 @@
         align-items: center;
         justify-content: space-around;
         .ico {
-          font-size: 150px;
+          font-size: 160px;
           color: $detalles;
           transform: scaleX(-1);
         }
         h2 {
-          font-size: 1.8vw;
+          font-size: 32px;
           margin: 20px 0 20px 20px;
           text-align: right;
         }
@@ -238,7 +238,7 @@
     min-height: 70vh;
     width: 100%;
     h1 {
-      font-size: 5vw;
+      font-size: 88px;
       margin: 0 0 30px;
     }
     .cont {
@@ -246,10 +246,10 @@
       flex-direction: row;
       align-items: center;
       justify-content: center;
+      width: 85%;
       .iz {
         width: 45%;
         .wrap {
-          padding-right: 180px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -269,10 +269,9 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-        padding: 0 0 0px 180px;
 
         h2 {
-          font-size: 1.8vw;
+          font-size: 32px;
           margin: 10px 0;
         }
         .flecha {
@@ -282,7 +281,7 @@
           justify-content: center;
           .ico {
             margin-left: 30px;
-            font-size: 150px;
+            font-size: 160px;
             color: $detalles;
           }
           .hor {
@@ -292,7 +291,7 @@
             justify-content: center;
             h2 {
               text-align: left;
-              font-size: 1.8vw;
+              font-size: 32px;
             }
           }
         }
@@ -316,44 +315,43 @@
       align-items: center;
       justify-content: center;
       h1 {
-        font-size: 5vw;
+        font-size: 88px;
         margin: 10px 0 5px 0;
       }
     }
     .container {
       display: flex;
       flex-direction: row;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-around;
-      flex-wrap: wrap;
+
+      width: 85%;
       .nextformacion {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         justify-content: center;
         h2 {
-          margin-left: 30px;
+          font-size: 32px;
         }
       }
       .formacionlink {
         text-align: left;
-        width: 900px;
+        width: 55%;
         margin-right: 40px;
-        height: 700px;
+
         z-index: 400px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-        padding-bottom: 60px;
 
         h2 {
-          font-size: 1.8vw;
-          margin: 20px 40px;
+          font-size: 32px;
         }
         .boton {
           height: 250px;
-
+          margin-top: 30px;
           transition: transform 0.4s ease-in-out;
         }
         .boton:hover {
@@ -371,22 +369,22 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    width: 100%;
+    min-height: 80vh;
+    width: 85%;
     .iz {
       width: 55%;
       height: 100;
       display: flex;
       flex-direction: column;
-      padding: 10px 20px 60px 180px;
-      align-items: flex-start;
+
+      align-items: center;
       justify-content: center;
       h1 {
-        font-size: 5vw;
-        margin: 0 0 80px;
+        font-size: 88px;
+        margin: 0 0 40px;
       }
       img {
-        height: 400px;
+        height: 23vw;
       }
     }
     .de {
@@ -397,9 +395,9 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        padding: 0 180px 20px 60px;
+
         h2 {
-          font-size: 1.8vw;
+          font-size: 32px;
         }
         .boton {
           height: 250px;
@@ -418,13 +416,13 @@
     border-top: 3px solid $opacity;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
-    height: 80vh;
-    width: 100%;
+    min-height: 80vh;
+    width: 80%;
     h1 {
-      font-size: 5vw;
-      margin: 0 180px 30px 0;
+      font-size: 88px;
+      margin: 0 0 30px 0;
     }
     .cont {
       display: flex;
@@ -432,12 +430,11 @@
       align-items: center;
       justify-content: center;
       .iz {
-        width: 45%;
+        width: 40%;
         .wrap {
           display: flex;
           align-items: center;
           justify-content: center;
-          padding-left: 180px;
           .boton {
             height: 250px;
             transition: transform 0.4s ease-in-out;
@@ -449,37 +446,34 @@
         }
       }
       .de {
-        width: 55%;
+        width: 60%;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
         justify-content: center;
-        padding: 0 180px 0px 20px;
 
         h2 {
-          font-size: 1.8vw;
+          font-size: 32px;
           margin: 10px 0;
         }
         .flecha {
-          margin-right: 40px;
           display: flex;
           flex-direction: row;
           align-items: center;
           justify-content: center;
           .ico {
-            font-size: 150px;
+            font-size: 160px;
             color: $detalles;
             transform: scaleX(-1);
           }
           .hor {
-            margin-left: 60px;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
             justify-content: center;
             h2 {
               text-align: right;
-              font-size: 1.8vw;
+              font-size: 32px;
             }
           }
         }
@@ -494,5 +488,1138 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1440px) {
+  .home {
+    //PANTALLA PRINCIPAL
+    .portada {
+      .separador {
+        height: 10px;
+      }
+      .titulo {
+        z-index: 200;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+          font-size: 140px;
+          font-weight: 800;
+          margin: -10px;
+          letter-spacing: 8px;
+          text-shadow: 4px 10px 20px black;
+        }
+      }
+      .social {
+        //   position: absolute;
+        //   top: 28vh;
+        //   right: 60px;
+        //fle-direction:column;
+        display: flex;
+        flex-direction: row;
+        margin: -45px 0 -30px;
+        h5 {
+          margin: 0 30px;
+          font-size: 20px;
+          padding: 7px 11px 5px 11px;
+          border: 2px solid $second;
+          border-radius: 50px;
+          transition: 0.2s ease-in-out;
+          cursor: pointer;
+          opacity: 0.8;
+        }
+        h5:hover {
+          color: white;
+          scale: 1.1;
+          opacity: 1;
+        }
+      }
+      .baner {
+        z-index: 200;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: $detalles;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+
+        .scroll {
+          display: flex; /* Important to give the content a width */
+          align-items: center;
+          justify-content: center;
+
+          transform: translateX(100%); /* Animation start out of the screen */
+          /* infinite make reapeat the animation indefinitely */
+          animation: move 8s linear infinite;
+          h2 {
+            display: block;
+            width: 1400px;
+            font-size: 50px;
+            letter-spacing: 16px;
+            margin: 0;
+          }
+        }
+      }
+    }
+    .portada:before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      background-color: #1f1f1f00;
+    }
+
+    // PROGRAMA ONLINE
+    .programaonline {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width: 85%;
+      .iz {
+        width: 65%;
+        height: 100;
+        display: flex;
+        flex-direction: column;
+        padding: 60px 0 60px 0;
+        align-items: center;
+        justify-content: center;
+        h1 {
+          font-size: 72px;
+          margin: 20px 0;
+        }
+        .flecha {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          h2 {
+            font-size: 25px;
+          }
+          .ico {
+            font-size: 150px;
+            color: $detalles;
+          }
+        }
+      }
+      .de {
+        width: 40%;
+        .wrap {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .boton {
+            height: 250px;
+            transition: transform 0.4s ease-in-out;
+          }
+          .boton:hover {
+            scale: 1.1;
+            transform: rotate(-360deg);
+          }
+        }
+      }
+    }
+    //PROGRAMAS TIPO
+    .programastipo {
+      border-top: 3px solid $opacity;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+      min-height: 100vh;
+      width: 100%;
+      .texto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h1 {
+          font-size: 72px;
+          margin: 10px 0 5px 0;
+        }
+      }
+      .container {
+        width: 85%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        .nextformacion {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          h2 {
+            font-size: 25px;
+          }
+          .items {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+        .formacionlink {
+          text-align: left;
+
+          z-index: 400px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-around;
+          .ico {
+            font-size: 150px;
+            color: $detalles;
+            transform: scaleX(-1);
+          }
+          h2 {
+            font-size: 25px;
+            margin: 20px 0 20px 20px;
+            text-align: right;
+          }
+          .boton {
+            height: 250px;
+            margin: 0 40px;
+            transition: transform 0.4s ease-in-out;
+          }
+          .boton:hover {
+            scale: 1.1;
+            transform: rotate(-360deg);
+          }
+        }
+      }
+    }
+
+    //STREAMING
+    .streaming {
+      border-top: 3px solid $opacity;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 70vh;
+      width: 100%;
+      h1 {
+        font-size: 72px;
+        margin: 0 0 30px;
+      }
+      .cont {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 85%;
+        .iz {
+          width: 45%;
+          .wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .boton {
+              height: 250px;
+              transition: transform 0.4s ease-in-out;
+            }
+            .boton:hover {
+              scale: 1.1;
+              transform: rotate(-360deg);
+            }
+          }
+        }
+        .de {
+          width: 55%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+
+          h2 {
+            font-size: 25px;
+            margin: 10px 0;
+          }
+          .flecha {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            .ico {
+              margin-left: 30px;
+              font-size: 150px;
+              color: $detalles;
+            }
+            .hor {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              justify-content: center;
+              h2 {
+                text-align: left;
+                font-size: 25px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //FORMACIONES PRESENCIALES
+    .formacionestecnicas {
+      border-top: 3px solid $opacity;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+      min-height: 100vh;
+      width: 100%;
+      .texto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h1 {
+          font-size: 72px;
+          margin: 10px 0 5px 0;
+        }
+      }
+      .container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+
+        width: 85%;
+        .nextformacion {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          h2 {
+            font-size: 25px;
+          }
+        }
+        .formacionlink {
+          text-align: left;
+          width: 55%;
+          margin-right: 40px;
+
+          z-index: 400px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around;
+
+          h2 {
+            font-size: 25px;
+          }
+          .boton {
+            height: 250px;
+            margin-top: 30px;
+            transition: transform 0.4s ease-in-out;
+          }
+          .boton:hover {
+            scale: 1.1;
+            transform: rotate(-360deg);
+          }
+        }
+      }
+    }
+
+    //NOSOTROS
+    .sobrenosotros {
+      border-top: 3px solid $opacity;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      min-height: 80vh;
+      width: 85%;
+      .iz {
+        width: 55%;
+        height: 100;
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+        h1 {
+          font-size: 72px;
+          margin: 0 0 40px;
+        }
+        img {
+          height: 23vw;
+        }
+      }
+      .de {
+        width: 45%;
+        .wrap {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+
+          h2 {
+            font-size: 25px;
+          }
+          .boton {
+            height: 250px;
+            transition: transform 0.4s ease-in-out;
+          }
+          .boton:hover {
+            scale: 1.1;
+            transform: rotate(-360deg);
+          }
+        }
+      }
+    }
+
+    //CLASES PRESENCIALES
+    .clasespresenciales {
+      border-top: 3px solid $opacity;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 80vh;
+      width: 80%;
+      h1 {
+        font-size: 72px;
+        margin: 0 0 30px 0;
+      }
+      .cont {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        .iz {
+          width: 40%;
+          .wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .boton {
+              height: 250px;
+              transition: transform 0.4s ease-in-out;
+            }
+            .boton:hover {
+              scale: 1.1;
+              transform: rotate(-360deg);
+            }
+          }
+        }
+        .de {
+          width: 60%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          justify-content: center;
+
+          h2 {
+            font-size: 25px;
+            margin: 10px 0;
+          }
+          .flecha {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            .ico {
+              font-size: 150px;
+              color: $detalles;
+              transform: scaleX(-1);
+            }
+            .hor {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-end;
+              justify-content: center;
+              h2 {
+                text-align: right;
+                font-size: 25px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1220px) {
+  .home {
+    //PANTALLA PRINCIPAL
+    .portada {
+      .separador {
+        height: 10px;
+      }
+      .titulo {
+        h1 {
+          font-size: 110px;
+        }
+      }
+      .social {
+        h5 {
+          margin: 0 30px;
+          font-size: 18px;
+          padding: 7px 10px 5px 10px;
+        }
+      }
+    }
+    // PROGRAMA ONLINE
+    .programaonline {
+      width: 85%;
+      .iz {
+        width: 65%;
+        h1 {
+          font-size: 60px;
+          margin: 20px 0;
+        }
+        .flecha {
+          h2 {
+            font-size: 23px;
+          }
+          .ico {
+            font-size: 130px;
+          }
+        }
+      }
+      .de {
+        .wrap {
+          .boton {
+            height: 220px;
+          }
+        }
+      }
+    }
+    //PROGRAMAS TIPO
+    .programastipo {
+      .texto {
+        h1 {
+          font-size: 60px;
+          margin: 10px 0 5px 0;
+        }
+      }
+      .container {
+        width: 85%;
+        .nextformacion {
+          h2 {
+            font-size: 23px;
+          }
+          .items {
+          }
+        }
+        .formacionlink {
+          margin-top: 10px;
+          .ico {
+            font-size: 130px;
+          }
+          h2 {
+            font-size: 23px;
+            margin: 20px 0 20px 20px;
+          }
+          .boton {
+            height: 220px;
+            margin: 0 40px;
+          }
+        }
+      }
+    }
+    //STREAMING
+    .streaming {
+      h1 {
+        font-size: 60px;
+        margin: 0 0 30px;
+      }
+      .cont {
+        width: 85%;
+        .iz {
+          width: 45%;
+          .wrap {
+            .boton {
+              height: 220px;
+            }
+          }
+        }
+        .de {
+          width: 55%;
+          h2 {
+            font-size: 23px;
+            margin: 10px 0;
+          }
+          .flecha {
+            .ico {
+              margin-left: 30px;
+              font-size: 130px;
+            }
+            .hor {
+              h2 {
+                font-size: 23px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //FORMACIONES PRESENCIALES
+    .formacionestecnicas {
+      .texto {
+        h1 {
+          font-size: 60px;
+          margin: 10px 0 5px 0;
+        }
+      }
+      .container {
+        width: 85%;
+        .nextformacion {
+          h2 {
+            font-size: 23px;
+          }
+        }
+        .formacionlink {
+          text-align: left;
+          h2 {
+            font-size: 23px;
+          }
+          .boton {
+            height: 220px;
+            margin-top: 30px;
+          }
+        }
+      }
+    }
+    //NOSOTROS
+    .sobrenosotros {
+      min-height: 80vh;
+      width: 85%;
+      .iz {
+        width: 55%;
+        h1 {
+          font-size: 60px;
+          margin: 0 0 40px;
+        }
+        img {
+          height: 270px;
+        }
+      }
+      .de {
+        width: 45%;
+        .wrap {
+          h2 {
+            font-size: 23px;
+            margin: 20px;
+          }
+          .boton {
+            height: 220px;
+          }
+        }
+      }
+    }
+    //CLASES PRESENCIALES
+    .clasespresenciales {
+      min-height: 80vh;
+      width: 80%;
+      h1 {
+        font-size: 60px;
+        margin: 0 0 30px 0;
+      }
+      .cont {
+        .iz {
+          width: 40%;
+          .wrap {
+            .boton {
+              height: 220px;
+            }
+          }
+        }
+        .de {
+          width: 60%;
+          h2 {
+            font-size: 23px;
+            margin: 10px 0;
+          }
+          .flecha {
+            .ico {
+              font-size: 130px;
+            }
+            .hor {
+              h2 {
+                text-align: right;
+                font-size: 23px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .home {
+    //PANTALLA PRINCIPAL
+    .portada {
+      .separador {
+        height: 10px;
+      }
+      .titulo {
+        h1 {
+          font-size: 80px;
+        }
+      }
+      .social {
+        h5 {
+          margin: 0 23px;
+          font-size: 16px;
+          padding: 7px 10px 5px 10px;
+        }
+      }
+    }
+    // PROGRAMA ONLINE
+    .programaonline {
+      width: 85%;
+      .iz {
+        width: 65%;
+        h1 {
+          font-size: 45px;
+          margin: 20px 0;
+        }
+        .flecha {
+          h2 {
+            font-size: 18px;
+          }
+          .ico {
+            font-size: 90px;
+          }
+        }
+      }
+      .de {
+        .wrap {
+          .boton {
+            height: 180px;
+          }
+        }
+      }
+    }
+    //PROGRAMAS TIPO
+    .programastipo {
+      .texto {
+        h1 {
+          font-size: 45px;
+          margin: 10px 0 5px 0;
+        }
+      }
+      .container {
+        width: 85%;
+        .nextformacion {
+          h2 {
+            font-size: 18px;
+          }
+          .items {
+          }
+        }
+        .formacionlink {
+          margin-top: 10px;
+          .ico {
+            font-size: 90px;
+          }
+          h2 {
+            font-size: 18px;
+            margin: 20px 0 20px 20px;
+          }
+          .boton {
+            height: 180px;
+            margin: 0 40px;
+          }
+        }
+      }
+    }
+    //STREAMING
+    .streaming {
+      h1 {
+        font-size: 45px;
+        margin: 0 0 30px;
+      }
+      .cont {
+        width: 85%;
+        .iz {
+          width: 45%;
+          .wrap {
+            .boton {
+              height: 180px;
+            }
+          }
+        }
+        .de {
+          width: 55%;
+          h2 {
+            font-size: 18px;
+            margin: 10px 0;
+          }
+          .flecha {
+            .ico {
+              margin-left: 30px;
+              font-size: 90px;
+            }
+            .hor {
+              h2 {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+    //FORMACIONES PRESENCIALES
+    .formacionestecnicas {
+      .texto {
+        h1 {
+          font-size: 45px;
+          margin: 10px 0 5px 0;
+        }
+      }
+      .container {
+        width: 85%;
+        .nextformacion {
+          h2 {
+            font-size: 18px;
+          }
+        }
+        .formacionlink {
+          text-align: left;
+          h2 {
+            font-size: 18px;
+          }
+          .boton {
+            height: 180px;
+            margin-top: 30px;
+          }
+        }
+      }
+    }
+    //NOSOTROS
+    .sobrenosotros {
+      min-height: 80vh;
+      width: 85%;
+      .iz {
+        width: 55%;
+        h1 {
+          font-size: 45px;
+          margin: 0 0 40px;
+        }
+        img {
+          height: 230px;
+        }
+      }
+      .de {
+        width: 45%;
+        .wrap {
+          h2 {
+            font-size: 18px;
+            margin: 20px;
+          }
+          .boton {
+            height: 180px;
+          }
+        }
+      }
+    }
+    //CLASES PRESENCIALES
+    .clasespresenciales {
+      min-height: 80vh;
+      width: 80%;
+      h1 {
+        font-size: 45px;
+        margin: 0 0 30px 0;
+      }
+      .cont {
+        .iz {
+          width: 40%;
+          .wrap {
+            .boton {
+              height: 180px;
+            }
+          }
+        }
+        .de {
+          width: 60%;
+          h2 {
+            font-size: 18px;
+            margin: 10px 0;
+          }
+          .flecha {
+            .ico {
+              font-size: 90px;
+            }
+            .hor {
+              h2 {
+                text-align: right;
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .home {
+    //PANTALLA PRINCIPAL
+    .portada {
+      .separador {
+        height: 10px;
+      }
+      .titulo {
+        h1 {
+          font-size: 80px;
+        }
+      }
+      .social {
+        h5 {
+          margin: 0 23px;
+          font-size: 16px;
+          padding: 7px 10px 5px 10px;
+        }
+      }
+    }
+
+    // PROGRAMA ONLINE
+    .programaonline {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 80vh;
+      max-height: 100vh;
+      width: 85%;
+      .iz {
+        width: 100%;
+        height: 100;
+        padding: 20px 0;
+        flex-direction: column;
+        text-align: center;
+        h1 {
+          font-size: 45px;
+          margin: 20px 0;
+        }
+        .flecha {
+          h2 {
+            font-size: 18px;
+          }
+          .ico {
+            display: none;
+          }
+        }
+      }
+      .de {
+        width: 100%;
+        .wrap {
+          .boton {
+            height: 160px;
+          }
+        }
+      }
+    }
+    //PROGRAMAS TIPO
+    .programastipo {
+      .texto {
+        h1 {
+          font-size: 45px;
+          margin: 10px 0 5px 0;
+        }
+      }
+      .container {
+        width: 85%;
+        .nextformacion {
+          display: flex;
+          flex-direction: column;
+          h2 {
+            font-size: 18px;
+            margin: 15px 0 0;
+          }
+          .items {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+        .formacionlink {
+          text-align: center;
+          flex-direction: column-reverse;
+          .ico {
+            display: none;
+          }
+          h2 {
+            font-size: 18px;
+            margin: 5px 0 20px 20px;
+            text-align: center;
+          }
+          .boton {
+            height: 160px;
+            margin: 0 40px;
+          }
+        }
+      }
+    }
+    //STREAMING
+    .streaming {
+      h1 {
+        font-size: 45px;
+        margin: 0 0 30px;
+      }
+      .cont {
+        display: flex;
+        flex-direction: column;
+
+        .iz {
+          width: 100%;
+          .wrap {
+            .boton {
+              height: 160px;
+            }
+          }
+        }
+        .de {
+          width: 100%;
+          h2 {
+            font-size: 18px;
+            margin: 0 0 30px;
+          }
+          .flecha {
+            .ico {
+              display: none;
+            }
+            .hor {
+              h2 {
+                text-align: center;
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //FORMACIONES PRESENCIALES
+    .formacionestecnicas {
+      .texto {
+        h1 {
+          font-size: 45px;
+          margin: 10px 0 5px 0;
+        }
+      }
+      .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 85%;
+        .nextformacion {
+          h2 {
+            font-size: 18px;
+          }
+        }
+        .formacionlink {
+          margin-right: 0;
+          text-align: center;
+          width: 100%;
+
+          h2 {
+            font-size: 18px;
+          }
+          .boton {
+            height: 160px;
+            margin: 10px 0;
+          }
+        }
+      }
+    }
+
+    //NOSOTROS
+    .sobrenosotros {
+      flex-direction: column;
+      width: 85%;
+      .iz {
+        width: 100%;
+        h1 {
+          font-size: 45px;
+          margin: 0 0 10px;
+        }
+        img {
+          height: 230px;
+        }
+      }
+      .de {
+        width: 100%;
+        .wrap {
+          h2 {
+            font-size: 18px;
+          }
+          .boton {
+            height: 160px;
+          }
+        }
+      }
+    }
+
+    //CLASES PRESENCIALES
+    .clasespresenciales {
+      flex-direction: column;
+      width: 85%;
+      h1 {
+        font-size: 45px;
+        margin: 0 0 10px 0;
+      }
+      .cont {
+        flex-direction: column-reverse;
+        .iz {
+          width: 100%;
+          .wrap {
+            .boton {
+              margin-top: 15px;
+              height: 160px;
+            }
+          }
+        }
+        .de {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          h2 {
+            font-size: 18px;
+            margin: 5px 0;
+          }
+          .flecha {
+            .ico {
+              display: none;
+            }
+            .hor {
+              align-items: center;
+
+              h2 {
+                text-align: center;
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

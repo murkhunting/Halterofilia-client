@@ -9,12 +9,12 @@
   align-items: center;
   justify-content: center;
   width: 420px;
-  height: 550px;
+  height: 500px;
 
   .idioma {
     font-size: 18px;
     position: absolute;
-    margin-top: -500px;
+    margin-top: -450px;
     margin-right: 320px;
     padding: 10px 20px;
     z-index: 1000;
@@ -24,7 +24,7 @@
 
   .cardcont {
     width: 420px;
-    height: 550px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     object-fit: auto;

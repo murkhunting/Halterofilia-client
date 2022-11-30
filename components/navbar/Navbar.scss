@@ -38,7 +38,7 @@
       justify-content: center;
       width: 100vw;
       height: 100vh;
-      background-color: rgba(0, 0, 0, 0.966);
+      background-color: rgba(0, 0, 0, 0.425);
       backdrop-filter: blur(20px);
       z-index: 1000;
       h2 {
@@ -183,6 +183,12 @@
     }
     .menuMovil {
       display: flex;
+      .menucontainer {
+        h2 {
+          font-size: 22px;
+          margin: 10px;
+        }
+      }
     }
     .perfil {
       margin-right: 30px;
