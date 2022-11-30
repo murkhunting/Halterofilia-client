@@ -1,6 +1,7 @@
 import React from "react";
-import { AiFillInstagram } from "react-icons/ai";
+import { AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
 
+AiFillLinkedin;
 const Nosotros = () => {
   return (
     <div className="nosotros">
@@ -10,11 +11,15 @@ const Nosotros = () => {
       <div className="fundador">
         <h1>LOS FUNDADORES:</h1>
         <div className="grup">
+          <img className="man" src="/images/ronald.png" alt="man" />
           <div className="sideIz">
             <h2>
               RONALD PAZ
               <span>
                 <AiFillInstagram />
+              </span>
+              <span>
+                <AiFillLinkedin />
               </span>
             </h2>
             <h3>
@@ -26,15 +31,17 @@ const Nosotros = () => {
               electronic typesetting, remaining essentially unchanged.
             </h3>
           </div>
-          <img className="man" src="/images/ronald.png" alt="man" />
         </div>
         <div className="grup">
           <img className="man" src="/images/cris.png" alt="man" />
-          <div className="sideDe">
+          <div className="sideIz">
             <h2>
               CRIS
               <span>
                 <AiFillInstagram />
+              </span>
+              <span>
+                <AiFillLinkedin />
               </span>
             </h2>
             <h3>
@@ -48,11 +55,15 @@ const Nosotros = () => {
       <div className="fundador">
         <h1>NUESTROS COACHES:</h1>
         <div className="grup">
+          <img className="man" src="/images/hernan.png" alt="man" />
           <div className="sideIz">
             <h2>
               HERNAN GARCÍA
               <span>
                 <AiFillInstagram />
+              </span>
+              <span>
+                <AiFillLinkedin />
               </span>
             </h2>
             <h3>
@@ -62,15 +73,17 @@ const Nosotros = () => {
               el mundo de la halterofilia.
             </h3>
           </div>
-          <img className="man" src="/images/hernan.png" alt="man" />
         </div>
         <div className="grup">
           <img className="man" src="/images/coach2.png" alt="man" />
-          <div className="sideDe">
+          <div className="sideIz">
             <h2>
               JORDI GARCÍA
               <span>
                 <AiFillInstagram />
+              </span>
+              <span>
+                <AiFillLinkedin />
               </span>
             </h2>
             <h3>
@@ -82,12 +95,12 @@ const Nosotros = () => {
               He trabajado durante 5 años en distintos centros aprendiendo
               nuevas metodologías de trabajo y formándome como entrenador. Mis
               conocimientos vienen de la lectura y sobre todo la formación.
-              <br />
+              {/* <br />
               <br /> - CFGS acondicionamiento físico (CAR Sant Cugat) <br />-
               Máster en fisioterapia (Grupo ESNECA) <br />- Máster en
               rehabilitación y prevención de lesiones (Grupo ESNECA) <br />-
               Curso Formativo Entrenamientos EPOC (ANEF) <br />- Curso Formativo
-              Entrenamientos Periodo de embarazo (ANEF)
+              Entrenamientos Periodo de embarazo (ANEF) */}
             </h3>
           </div>
         </div>
@@ -113,6 +126,18 @@ const Nosotros = () => {
             </h3>
           </div>
         </div> */}
+      </div>
+      <div className="club">
+        <h1>EL CLUB:</h1>
+        <h3>
+          Club Halterofilia Barcelona pone a tu disposición un espacio único de
+          150 m2 específicamente diseñado para la práctica de la Halterofilia.
+          Doce puestos de levantamiento totalmente equipados con tarimas de
+          madera, discos y barras olimpicas, racks, tacos de madera … para que
+          entrenes como los profesionales y con total seguridad. Tambien
+          disponemos de una amplia zona de vestuarios con taquillas y duchas.
+        </h3>
+        <div className="galeria"></div>
       </div>
     </div>
   );
