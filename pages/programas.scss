@@ -3,10 +3,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   color: $second;
+  margin: 20px 0;
   .elemento {
-    width: 65vw;
+    width: 70vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,10 +35,6 @@
       height: 130px;
       transition: transform 0.4s ease-in-out;
     }
-    // .boton:hover {
-    //   scale: 1.1;
-    //   transform: rotate(-360deg);
-    // }
   }
   .elemento:hover {
     scale: 1.02;
@@ -48,5 +45,101 @@
   }
   .elemento:hover h2 {
     color: $second;
+  }
+}
+
+@media (max-width: 1024px) {
+  .programas {
+    .elemento {
+      width: 90vw;
+
+      margin: 10px 0;
+      .enlace {
+        margin: 30px 0 10px;
+        h1 {
+          font-size: 44px;
+          margin: 0;
+        }
+        h2 {
+          font-size: 20px;
+          color: $second;
+          margin: 0 0 5px;
+          text-align: center;
+        }
+      }
+      .boton {
+        height: 115px;
+      }
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .programas {
+    .elemento {
+      width: 90vw;
+
+      margin: 10px 0;
+      .enlace {
+        margin: 30px 0 10px;
+        h1 {
+          font-size: 36px;
+          margin: 0;
+        }
+        h2 {
+          font-size: 16px;
+          color: $second;
+          margin: 0 0 5px;
+        }
+      }
+      .boton {
+        height: 100px;
+      }
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .programas {
+    .elemento {
+      width: 93vw;
+
+      margin: 10px 0;
+      .enlace {
+        margin: 30px 0 10px;
+        h1 {
+          font-size: 26px;
+          margin: 0;
+        }
+        h2 {
+          font-size: 14px;
+          color: $second;
+          margin: 0 0 5px;
+        }
+      }
+      .boton {
+        height: 100px;
+      }
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .programas {
+    .elemento {
+      .enlace {
+        h1 {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 14px;
+          color: $second;
+          margin: 0 0 5px;
+        }
+      }
+      .boton {
+        height: 100px;
+      }
+    }
   }
 }
