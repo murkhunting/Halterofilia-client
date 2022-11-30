@@ -1394,7 +1394,6 @@
         }
       }
     }
-
     // PROGRAMA ONLINE
     .programaonline {
       display: flex;
@@ -1465,7 +1464,7 @@
           }
           h2 {
             font-size: 18px;
-            margin: 5px 0 20px 20px;
+            margin: 5px 0 20px 0;
             text-align: center;
           }
           .boton {
@@ -1513,7 +1512,6 @@
         }
       }
     }
-
     //FORMACIONES PRESENCIALES
     .formacionestecnicas {
       .texto {
@@ -1547,7 +1545,6 @@
         }
       }
     }
-
     //NOSOTROS
     .sobrenosotros {
       flex-direction: column;
@@ -1574,7 +1571,6 @@
         }
       }
     }
-
     //CLASES PRESENCIALES
     .clasespresenciales {
       flex-direction: column;
@@ -1615,6 +1611,354 @@
               h2 {
                 text-align: center;
                 font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .home {
+    //PANTALLA PRINCIPAL
+    .portada {
+      .separador {
+        height: 10px;
+      }
+      .titulo {
+        h1 {
+          font-size: 65px;
+        }
+      }
+    }
+    // PROGRAMA ONLINE
+    .programaonline {
+      .iz {
+        h1 {
+          font-size: 35px;
+          margin: 20px 0;
+        }
+        .flecha {
+          h2 {
+            font-size: 16px;
+          }
+          .ico {
+            display: none;
+          }
+        }
+      }
+      .de {
+        .wrap {
+          .boton {
+            height: 140px;
+          }
+        }
+      }
+    }
+    //PROGRAMAS TIPO
+    .programastipo {
+      .texto {
+        h1 {
+          font-size: 35px;
+          margin: 10px 0 5px 0;
+        }
+      }
+      .container {
+        width: 85%;
+        .nextformacion {
+          h2 {
+            font-size: 16px;
+            margin: 15px 0 0;
+          }
+          .items {
+          }
+        }
+        .formacionlink {
+          h2 {
+            font-size: 16px;
+          }
+          .boton {
+            height: 140px;
+            margin: 0 40px;
+          }
+        }
+      }
+    }
+    //STREAMING
+    .streaming {
+      h1 {
+        font-size: 35px;
+        margin: 0 0 30px;
+      }
+      .cont {
+        .iz {
+          .wrap {
+            .boton {
+              height: 140px;
+            }
+          }
+        }
+        .de {
+          h2 {
+            font-size: 16px;
+            margin: 0 0 30px;
+          }
+          .flecha {
+            .hor {
+              h2 {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+    //FORMACIONES PRESENCIALES
+    .formacionestecnicas {
+      .texto {
+        h1 {
+          font-size: 35px;
+          margin: 10px 0 5px 0;
+        }
+      }
+      .container {
+        .nextformacion {
+          h2 {
+            font-size: 16px;
+          }
+        }
+        .formacionlink {
+          h2 {
+            font-size: 16px;
+          }
+          .boton {
+            height: 140px;
+            margin: 10px 0;
+          }
+        }
+      }
+    }
+    //NOSOTROS
+    .sobrenosotros {
+      .iz {
+        h1 {
+          font-size: 35px;
+          margin: 0 0 10px;
+        }
+        img {
+          height: 230px;
+        }
+      }
+      .de {
+        .wrap {
+          h2 {
+            font-size: 16px;
+          }
+          .boton {
+            height: 140px;
+          }
+        }
+      }
+    }
+    //CLASES PRESENCIALES
+    .clasespresenciales {
+      h1 {
+        font-size: 35px;
+        margin: 0 0 10px 0;
+      }
+      .cont {
+        .iz {
+          .wrap {
+            .boton {
+              height: 140px;
+            }
+          }
+        }
+        .de {
+          h2 {
+            font-size: 16px;
+            margin: 5px 0;
+          }
+          .flecha {
+            .hor {
+              h2 {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 490px) {
+  .home {
+    //PANTALLA PRINCIPAL
+    .portada {
+      .separador {
+        height: 10px;
+      }
+      .titulo {
+        h1 {
+          font-size: 50px;
+        }
+      }
+    }
+    // PROGRAMA ONLINE
+    .programaonline {
+      .iz {
+        h1 {
+          font-size: 35px;
+          margin: 20px 0;
+        }
+        .flecha {
+          h2 {
+            font-size: 16px;
+          }
+          .ico {
+            display: none;
+          }
+        }
+      }
+      .de {
+        .wrap {
+          .boton {
+            height: 140px;
+          }
+        }
+      }
+    }
+    //PROGRAMAS TIPO
+    .programastipo {
+      .texto {
+        h1 {
+          font-size: 35px;
+          margin: 10px 0 5px 0;
+        }
+      }
+      .container {
+        width: 85%;
+        .nextformacion {
+          h2 {
+            font-size: 16px;
+            margin: 15px 0 0;
+          }
+          .items {
+          }
+        }
+        .formacionlink {
+          h2 {
+            font-size: 16px;
+          }
+          .boton {
+            height: 140px;
+            margin: 0 40px;
+          }
+        }
+      }
+    }
+    //STREAMING
+    .streaming {
+      h1 {
+        font-size: 35px;
+        margin: 0 0 30px;
+      }
+      .cont {
+        .iz {
+          .wrap {
+            .boton {
+              height: 140px;
+            }
+          }
+        }
+        .de {
+          h2 {
+            font-size: 16px;
+            margin: 0 0 30px;
+          }
+          .flecha {
+            .hor {
+              h2 {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+    //FORMACIONES PRESENCIALES
+    .formacionestecnicas {
+      .texto {
+        h1 {
+          font-size: 35px;
+          margin: 10px 0 5px 0;
+        }
+      }
+      .container {
+        .nextformacion {
+          h2 {
+            font-size: 16px;
+          }
+        }
+        .formacionlink {
+          h2 {
+            font-size: 16px;
+          }
+          .boton {
+            height: 140px;
+            margin: 10px 0;
+          }
+        }
+      }
+    }
+    //NOSOTROS
+    .sobrenosotros {
+      .iz {
+        h1 {
+          font-size: 35px;
+          margin: 0 0 10px;
+        }
+        img {
+          height: 230px;
+        }
+      }
+      .de {
+        .wrap {
+          h2 {
+            font-size: 16px;
+          }
+          .boton {
+            height: 140px;
+          }
+        }
+      }
+    }
+    //CLASES PRESENCIALES
+    .clasespresenciales {
+      h1 {
+        font-size: 35px;
+        margin: 0 0 10px 0;
+      }
+      .cont {
+        .iz {
+          .wrap {
+            .boton {
+              height: 140px;
+            }
+          }
+        }
+        .de {
+          h2 {
+            font-size: 16px;
+            margin: 5px 0;
+          }
+          .flecha {
+            .hor {
+              h2 {
+                font-size: 16px;
               }
             }
           }
