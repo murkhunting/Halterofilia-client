@@ -6,8 +6,7 @@ import Link from "next/link";
 const Ficha = (formacion) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  const { titulo, precio, oferta, precioferta, agotado, inicio, img, _id } =
-    formacion.formacion;
+  const { titulo, precio, agotado, inicio, img, _id } = formacion.formacion;
 
   return (
     <div className="ficha">
@@ -15,18 +14,14 @@ const Ficha = (formacion) => {
       {isHovered ? (
         <div className="fichaconthover">
           <div className="spacehover">
-            <h2>APÚNTATE!!</h2>
+            <span className="bum">APÚNTATE!!</span>
             <div className="img">
               <img src={img} alt="cross" />
             </div>
             <h3 className="titulo">{titulo}</h3>
             <h3 className="titulo">{inicio}</h3>
-            <h3 className={oferta ? "noprecio" : "precio"}>{precio}</h3>
-            <h3 className={oferta ? "oferta" : "noferta"}>
-              {"OFERTA: " + precioferta}
-            </h3>
+            <h3 className="precio">{precio}</h3>
           </div>
-
           <Link href={`/formaciones/fpresenciales/${_id}`}>
             <a>
               <img
@@ -43,18 +38,14 @@ const Ficha = (formacion) => {
         <div>
           <div className="fichacont">
             <div className="space">
-              <h2>APÚNTATE!!</h2>
+              <span className="bum">APÚNTATE!!</span>
               <div className="img">
                 <img src={img} alt="cross" />
               </div>
               <h3 className="titulo">{titulo}</h3>
               <h3 className="titulo">{inicio}</h3>
-              <h3 className={oferta ? "noprecio" : "precio"}>{precio}</h3>
-              <h3 className={oferta ? "oferta" : "noferta"}>
-                {"OFERTA: " + precioferta}
-              </h3>
+              <h3 className="precio">{precio}</h3>
             </div>
-
             <Link href={`/presenciales/formaciones/${_id}`}>
               <a>
                 <img

@@ -1,5 +1,5 @@
 .item {
-  margin: 20px 20px 40px;
+  margin: 20px 20px;
   text-decoration: none;
   color: $second;
   box-shadow: 4px 10px 20px black;
@@ -8,37 +8,37 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 360px;
-  height: 460px;
+  width: 400px;
+  height: 500px;
   background-color: $third;
   .space {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    h2 {
-      font-size: 25px;
+    margin-bottom: 8px;
+    .bum {
+      font-size: 35px;
       color: $third;
       margin: 10px 5px 10px 5px;
     }
     img {
-      height: 220px;
-      width: 360px;
+      height: 230px;
+      width: 400px;
       filter: grayscale(100%);
       object-fit: cover;
     }
     .titulo {
       margin: 2px;
-      font-size: 18px;
+      font-size: 22px;
     }
     .precio {
       margin: 2px;
-      font-size: 20px;
+      font-size: 24px;
     }
   }
   .fichaboton {
-    width: 90px;
-    height: 90px;
+    width: 100px;
     margin-bottom: 15px;
     transition: transform 0.4s ease-in-out;
   }
@@ -52,7 +52,7 @@
 }
 
 .itemhover {
-  margin: 20px 20px 40px;
+  margin: 20px 20px;
   text-decoration: none;
   color: $second;
   box-shadow: 4px 10px 20px black;
@@ -61,8 +61,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 360px;
-  height: 460px;
+  width: 400px;
+  height: 500px;
   background-image: url("/images/gif1.gif");
   background-size: cover;
   .space {
@@ -70,29 +70,29 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    h2 {
-      font-size: 25px;
+    margin-bottom: 8px;
+    .bum {
+      font-size: 35px;
       color: $detalles;
       margin: 10px 5px 10px 5px;
     }
     img {
-      height: 220px;
-      width: 360px;
+      height: 230px;
+      width: 400px;
       filter: grayscale(40%);
       object-fit: cover;
     }
     .titulo {
       margin: 2px;
-      font-size: 18px;
+      font-size: 22px;
     }
     .precio {
       margin: 2px;
-      font-size: 20px;
+      font-size: 24px;
     }
   }
   .fichaboton {
-    width: 90px;
-    height: 90px;
+    width: 100px;
     margin-bottom: 15px;
     transition: transform 0.4s ease-in-out;
   }
@@ -105,5 +105,137 @@
   scale: 1.02;
 }
 
-@media (max-width: 1220px) {
+@media (max-width: 1440px) {
+  .item {
+    margin: 20px 20px;
+    width: 368px;
+    height: 460px;
+    .space {
+      margin-bottom: 8px;
+      .bum {
+        font-size: 28px;
+        margin: 10px 5px 10px 5px;
+      }
+      img {
+        height: 210px;
+        width: 368px;
+      }
+      .titulo {
+        font-size: 20px;
+      }
+      .precio {
+        font-size: 22px;
+      }
+    }
+    .fichaboton {
+      width: 90px;
+      height: 90px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .itemhover {
+    margin: 20px 20px;
+
+    width: 368px;
+    height: 460px;
+
+    .space {
+      margin-bottom: 8px;
+      .bum {
+        font-size: 28px;
+
+        margin: 10px 5px 10px 5px;
+      }
+      img {
+        height: 210px;
+        width: 368px;
+      }
+      .titulo {
+        font-size: 20px;
+      }
+      .precio {
+        font-size: 22px;
+      }
+    }
+    .fichaboton {
+      width: 90px;
+      height: 90px;
+      margin-bottom: 15px;
+    }
+  }
+}
+@media (max-width: 780px) {
+  .item {
+    margin: 10px 10px;
+    background-image: url("/images/gif1.gif");
+    background-size: cover;
+    .space {
+      .bum {
+        color: $detalles;
+        font-size: 28px;
+        margin: 10px 5px 10px 5px;
+      }
+    }
+  }
+  .item:hover {
+    margin: 10px 10px;
+  }
+}
+@media (max-width: 560px) {
+  .item {
+    width: 320px;
+    height: 400px;
+    .space {
+      margin-bottom: 3px;
+      .bum {
+        font-size: 26px;
+        margin: 10px 5px 10px 5px;
+      }
+      img {
+        height: 180px;
+        width: 320px;
+      }
+      .titulo {
+        font-size: 18px;
+      }
+      .precio {
+        font-size: 20px;
+      }
+    }
+    .fichaboton {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .itemhover {
+    width: 320px;
+    height: 400px;
+
+    .space {
+      margin-bottom: 3px;
+      .bum {
+        font-size: 26px;
+
+        margin: 10px 5px 10px 5px;
+      }
+      img {
+        height: 180px;
+        width: 320px;
+      }
+      .titulo {
+        font-size: 18px;
+      }
+      .precio {
+        font-size: 20px;
+      }
+    }
+    .fichaboton {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 15px;
+    }
+  }
 }

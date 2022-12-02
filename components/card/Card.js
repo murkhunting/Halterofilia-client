@@ -20,7 +20,7 @@ const Card = ({ online }) => {
       {isHovered ? (
         <div className="cardconthover">
           <div className="spacehover">
-            <h2>ADQUIÉRELO!</h2>
+            <span className="bum">ADQUIÉRELO!</span>
             <div className="img">
               <img src={img} alt="cross" />
             </div>
@@ -44,7 +44,7 @@ const Card = ({ online }) => {
         <div>
           <div className="cardcont">
             <div className="space">
-              <h2>ADQUIÉRELO!</h2>
+              <span className="bum">ADQUIÉRELO!</span>
               <div className="img">
                 <img src={img} alt="cross" />
               </div>

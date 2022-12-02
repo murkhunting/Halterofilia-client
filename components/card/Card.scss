@@ -1,5 +1,5 @@
 .card {
-  margin: 20px 20px 40px;
+  margin: 20px 20px;
   text-decoration: none;
   color: $second;
   box-shadow: 4px 10px 20px black;
@@ -8,22 +8,22 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 420px;
+  width: 400px;
   height: 500px;
 
   .idioma {
     font-size: 18px;
     position: absolute;
-    margin-top: -450px;
-    margin-right: 320px;
-    padding: 10px 20px;
+    margin-top: -422px;
+    margin-right: 315px;
+    padding: 10px 15px;
     z-index: 1000;
     background-color: $detalles;
     color: $second;
   }
 
   .cardcont {
-    width: 420px;
+    width: 400px;
     height: 500px;
     display: flex;
     flex-direction: column;
@@ -38,32 +38,30 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      h2 {
+      margin-bottom: 8px;
+      .bum {
         font-size: 35px;
         color: $third;
         margin: 10px 5px 10px 5px;
       }
-
       img {
-        height: 200px;
-        width: 350px;
+        height: 230px;
+        width: 400px;
         filter: grayscale(100%);
         object-fit: cover;
       }
-      h3 {
-        font-size: 22px;
-      }
       .titulo {
         margin: 2px 8px;
+        font-size: 22px;
       }
       .precio {
         margin: 2px;
+        font-size: 24px;
       }
     }
 
     .cardboton {
-      width: 120px;
-      height: 120px;
+      width: 100px;
       margin-bottom: 15px;
       transition: transform 0.4s ease-in-out;
     }
@@ -75,8 +73,8 @@
 
   //HOVERED
   .cardconthover {
-    width: 420px;
-    height: 550px;
+    width: 400px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     object-fit: auto;
@@ -91,32 +89,30 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      h2 {
+      margin-bottom: 8px;
+      .bum {
         font-size: 35px;
         color: $detalles;
         margin: 10px 5px 10px 5px;
       }
-
       img {
-        height: 200px;
-        width: 350px;
-        filter: grayscale(40%);
+        height: 230px;
+        width: 400px;
+        filter: grayscale(100%);
         object-fit: cover;
-      }
-      h3 {
-        font-size: 22px;
       }
       .titulo {
         margin: 2px 8px;
+        font-size: 22px;
       }
       .precio {
         margin: 2px;
+        font-size: 24px;
       }
     }
 
     .cardboton {
-      width: 120px;
-      height: 120px;
+      width: 100px;
       margin-bottom: 15px;
       transition: transform 0.4s ease-in-out;
     }
@@ -125,7 +121,157 @@
       scale: 1.05;
     }
   }
+  .cardcont:hover {
+    scale: 1.02;
+  }
+  .cardconthover:hover {
+    scale: 1.02;
+  }
 }
-.card:hover {
-  scale: 1.02;
+
+@media (max-width: 1440px) {
+  .card {
+    margin: 20px 20px;
+    width: 368px;
+    height: 460px;
+    .idioma {
+      font-size: 17px;
+      margin-top: -395px;
+      margin-right: 292px;
+      padding: 7.5px 12px;
+    }
+    .cardcont {
+      width: 368px;
+      height: 460px;
+      .space {
+        margin-bottom: 8px;
+        .bum {
+          font-size: 28px;
+          margin: 10px 5px 10px 5px;
+        }
+        img {
+          height: 210px;
+          width: 368px;
+        }
+        .titulo {
+          font-size: 20px;
+        }
+        .precio {
+          font-size: 22px;
+        }
+      }
+      .cardboton {
+        width: 90px;
+        margin-bottom: 15px;
+      }
+    }
+    //HOVERED
+    .cardconthover {
+      width: 368px;
+      height: 460px;
+      .spacehover {
+        margin-bottom: 8px;
+        .bum {
+          font-size: 28px;
+          margin: 10px 5px 10px 5px;
+        }
+        img {
+          height: 210px;
+          width: 368px;
+        }
+        .titulo {
+          font-size: 20px;
+        }
+        .precio {
+          font-size: 22px;
+        }
+      }
+      .cardboton {
+        width: 90px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .card {
+    margin: 10px 10px;
+    .cardcont {
+      background-image: url("/images/gif1.gif");
+      background-size: cover;
+      .space {
+        .bum {
+          color: $detalles;
+          font-size: 28px;
+          margin: 10px 5px 10px 5px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .card {
+    margin: 5px 5px;
+    width: 320px;
+    height: 400px;
+    .idioma {
+      font-size: 15px;
+      margin-top: -340px;
+      margin-right: 260px;
+      padding: 7.5px 12px;
+    }
+    .cardcont {
+      width: 320px;
+      height: 400px;
+      .space {
+        margin-bottom: 3px;
+        .bum {
+          font-size: 26px;
+          margin: 10px 5px 10px 5px;
+        }
+        img {
+          height: 180px;
+          width: 320px;
+        }
+        .titulo {
+          font-size: 18px;
+        }
+        .precio {
+          font-size: 20px;
+        }
+      }
+      .cardboton {
+        width: 80px;
+        margin-bottom: 15px;
+      }
+    }
+    //HOVERED
+    .cardconthover {
+      width: 320px;
+      height: 400px;
+      .spacehover {
+        margin-bottom: 3px;
+        .bum {
+          font-size: 26px;
+          margin: 10px 5px 10px 5px;
+        }
+        img {
+          height: 180px;
+          width: 320px;
+        }
+        .titulo {
+          font-size: 18px;
+        }
+        .precio {
+          font-size: 20px;
+        }
+      }
+      .cardboton {
+        width: 80px;
+        margin-bottom: 15px;
+      }
+    }
+  }
 }
