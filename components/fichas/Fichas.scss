@@ -14,7 +14,7 @@
   .agotado {
     font-size: 50px;
     position: absolute;
-    margin-top: -200px;
+    margin-top: -170px;
     padding: 10px 120px;
     z-index: 1000;
     background-color: $main;
@@ -131,10 +131,10 @@
     width: 368px;
     height: 520px;
     .agotado {
-      font-size: 50px;
+      font-size: 48px;
       position: absolute;
-      margin-top: -200px;
-      padding: 10px 120px;
+      margin-top: -160px;
+      padding: 10px 98px;
       z-index: 1000;
       background-color: $main;
     }
@@ -204,40 +204,24 @@
 @media (max-width: 780px) {
   .ficha {
     margin: 10px 10px;
-    .fichacont {
-      background-image: url("/images/gif1.gif");
-      background-size: cover;
-      .space {
-        .bum {
-          color: $detalles;
-          font-size: 28px;
-          margin: 10px 5px 10px 5px;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 560px) {
-  .ficha {
     width: 320px;
     height: 480px;
     .agotado {
-      font-size: 50px;
-      position: absolute;
-      margin-top: -200px;
-      padding: 10px 120px;
-      z-index: 1000;
-      background-color: $main;
+      font-size: 40px;
+      margin-top: -160px;
+      padding: 10px 88px;
     }
     .fichacont {
+      background-image: url("/images/gif1.gif");
+      background-size: cover;
       width: 320px;
       height: 480px;
 
       .space {
         margin-bottom: 3px;
         .bum {
-          font-size: 26px;
+          color: $detalles;
+          font-size: 23px;
           margin: 10px 5px 10px 5px;
         }
         img {
@@ -245,7 +229,7 @@
           width: 320px;
         }
         .titulo {
-          font-size: 18px;
+          font-size: 16px;
         }
         .precio {
           font-size: 20px;
@@ -272,7 +256,7 @@
           width: 320px;
         }
         .titulo {
-          font-size: 18px;
+          font-size: 16px;
         }
         .precio {
           font-size: 20px;
@@ -281,6 +265,76 @@
 
       .fichaboton {
         width: 80px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .ficha {
+    margin: 10px 10px;
+    width: 290px;
+    height: 430px;
+    .agotado {
+      font-size: 35px;
+      margin-top: -130px;
+      padding: 10px 82px;
+    }
+    .fichacont {
+      background-image: url("/images/gif1.gif");
+      background-size: cover;
+      width: 290px;
+      height: 430px;
+
+      .space {
+        margin-bottom: 3px;
+        .bum {
+          color: $detalles;
+          font-size: 26px;
+          margin: 10px 5px 10px 5px;
+        }
+        img {
+          height: 160px;
+          width: 290px;
+        }
+        .titulo {
+          font-size: 16px;
+        }
+        .precio {
+          font-size: 18px;
+        }
+      }
+      .fichaboton {
+        width: 70px;
+        margin-bottom: 15px;
+      }
+    }
+
+    //HOVERED
+    .fichaconthover {
+      width: 290px;
+      height: 430px;
+      .spacehover {
+        margin-bottom: 3px;
+        .bum {
+          font-size: 23px;
+          margin: 10px 5px 10px 5px;
+        }
+        img {
+          height: 160px;
+          width: 290px;
+        }
+        .titulo {
+          font-size: 16px;
+        }
+        .precio {
+          font-size: 18px;
+        }
+      }
+
+      .fichaboton {
+        width: 70px;
         margin-bottom: 15px;
       }
     }

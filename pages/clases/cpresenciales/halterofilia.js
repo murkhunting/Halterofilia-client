@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 import { BsClockHistory } from "react-icons/bs";
 import { FiUsers, FiBarChart2 } from "react-icons/fi";
@@ -28,7 +29,7 @@ const Halterofilia = () => {
         </h2>
       </div>
       <div className="horarios">
-        <h2>HORARIO DE LAS CLASES:</h2>
+        <h2 className="horario">HORARIO DE LAS CLASES:</h2>
         <div className="horas">
           <div className="hora">
             <h2>LUNES</h2>
@@ -52,7 +53,7 @@ const Halterofilia = () => {
           </div>
           <div className="hora">
             <h2>SÁBADO</h2>
-            <h2>17:00 - 21:00</h2>
+            <h2>14:00 - 20:00</h2>
           </div>
         </div>
       </div>
@@ -89,7 +90,18 @@ const Halterofilia = () => {
           técnica .
         </h2>
       </div>
-      <div className="fotos"></div>
+      <div className="enlla">
+        <h3>
+          SI TIENES ALGUNA DUDA O YA HAS DECIDIDO QUE QUIERES ENTRENAR EN EL
+          CLUB HALTEROFILIA BARCELONA, CLICA EN EL SIGUIENTE ENLACE PARA PONERTE
+          EN CONTACTO CON NOSOTROS
+        </h3>
+      </div>
+      <Link href="/contacto">
+        <a>
+          <button className="loginbtn">APÚNTATE!</button>
+        </a>
+      </Link>
     </div>
   );
 };

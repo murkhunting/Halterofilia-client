@@ -170,25 +170,12 @@
     margin: 10px 10px;
     background-image: url("/images/gif1.gif");
     background-size: cover;
-    .space {
-      .bum {
-        color: $detalles;
-        font-size: 28px;
-        margin: 10px 5px 10px 5px;
-      }
-    }
-  }
-  .item:hover {
-    margin: 10px 10px;
-  }
-}
-@media (max-width: 560px) {
-  .item {
     width: 320px;
     height: 400px;
     .space {
       margin-bottom: 3px;
       .bum {
+        color: $detalles;
         font-size: 26px;
         margin: 10px 5px 10px 5px;
       }
@@ -211,6 +198,7 @@
   }
 
   .itemhover {
+    margin: 10px 10px;
     width: 320px;
     height: 400px;
 
@@ -235,6 +223,68 @@
     .fichaboton {
       width: 80px;
       height: 80px;
+      margin-bottom: 15px;
+    }
+  }
+}
+@media (max-width: 560px) {
+  .item {
+    margin: 10px 10px;
+    background-image: url("/images/gif1.gif");
+    background-size: cover;
+    width: 290px;
+    height: 370px;
+    .space {
+      margin-bottom: 3px;
+      .bum {
+        color: $detalles;
+        font-size: 23px;
+        margin: 10px 5px 10px 5px;
+      }
+      img {
+        height: 160px;
+        width: 290px;
+      }
+      .titulo {
+        font-size: 16px;
+      }
+      .precio {
+        font-size: 18px;
+      }
+    }
+    .fichaboton {
+      width: 70px;
+      height: 70px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .itemhover {
+    margin: 10px 10px;
+    width: 290px;
+    height: 370px;
+
+    .space {
+      margin-bottom: 3px;
+      .bum {
+        font-size: 23px;
+
+        margin: 10px 5px 10px 5px;
+      }
+      img {
+        height: 160px;
+        width: 290px;
+      }
+      .titulo {
+        font-size: 16px;
+      }
+      .precio {
+        font-size: 18px;
+      }
+    }
+    .fichaboton {
+      width: 70px;
+      height: 70px;
       margin-bottom: 15px;
     }
   }

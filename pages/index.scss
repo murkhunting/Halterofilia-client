@@ -20,7 +20,8 @@
     background-color: $main;
     width: 100%;
     .separador {
-      height: 10px;
+      height: 80px;
+      background-color: $main;
     }
     .titulo {
       z-index: 200;
@@ -28,6 +29,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      margin-top: 50px;
 
       h1 {
         font-size: 8vw;
@@ -36,29 +38,25 @@
         letter-spacing: 8px;
         text-shadow: 4px 10px 20px black;
       }
-    }
-    .social {
-      //   position: absolute;
-      //   top: 28vh;
-      //   right: 60px;
-      //fle-direction:column;
-      display: flex;
-      flex-direction: row;
-      margin: -45px 0 -30px;
-      h5 {
-        margin: 0 30px;
-        font-size: 20px;
-        padding: 7px 11px 5px 11px;
-        border: 2px solid $second;
-        border-radius: 50px;
-        transition: 0.2s ease-in-out;
-        cursor: pointer;
-        opacity: 0.8;
-      }
-      h5:hover {
-        color: white;
-        scale: 1.1;
-        opacity: 1;
+      .social {
+        display: flex;
+        flex-direction: row;
+        margin: 20px 0;
+        h5 {
+          margin: 0 30px;
+          font-size: 20px;
+          padding: 7px 11px 5px 11px;
+          border: 2px solid $second;
+          border-radius: 50px;
+          transition: 0.2s ease-in-out;
+          cursor: pointer;
+          opacity: 0.8;
+        }
+        h5:hover {
+          color: white;
+          scale: 1.1;
+          opacity: 1;
+        }
       }
     }
     .baner {
@@ -102,11 +100,12 @@
 
   // PROGRAMA ONLINE
   .programaonline {
+    border-top: 3px solid $opacity;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    min-height: 80vh;
+    min-height: 70vh;
     max-height: 100vh;
     width: 85%;
     .iz {
@@ -510,29 +509,25 @@
           letter-spacing: 8px;
           text-shadow: 4px 10px 20px black;
         }
-      }
-      .social {
-        //   position: absolute;
-        //   top: 28vh;
-        //   right: 60px;
-        //fle-direction:column;
-        display: flex;
-        flex-direction: row;
-        margin: -45px 0 -30px;
-        h5 {
-          margin: 0 30px;
-          font-size: 20px;
-          padding: 7px 11px 5px 11px;
-          border: 2px solid $second;
-          border-radius: 50px;
-          transition: 0.2s ease-in-out;
-          cursor: pointer;
-          opacity: 0.8;
-        }
-        h5:hover {
-          color: white;
-          scale: 1.1;
-          opacity: 1;
+        .social {
+          display: flex;
+          flex-direction: row;
+          margin: 20px;
+          h5 {
+            margin: 0 30px;
+            font-size: 20px;
+            padding: 7px 11px 5px 11px;
+            border: 2px solid $second;
+            border-radius: 50px;
+            transition: 0.2s ease-in-out;
+            cursor: pointer;
+            opacity: 0.8;
+          }
+          h5:hover {
+            color: white;
+            scale: 1.1;
+            opacity: 1;
+          }
         }
       }
       .baner {
@@ -967,12 +962,13 @@
         h1 {
           font-size: 110px;
         }
-      }
-      .social {
-        h5 {
-          margin: 0 30px;
-          font-size: 18px;
-          padding: 7px 10px 5px 10px;
+        .social {
+          margin: 20px 0;
+          h5 {
+            margin: 0 25px;
+            font-size: 18px;
+            padding: 7px 10px 5px 10px;
+          }
         }
       }
     }
@@ -1175,14 +1171,14 @@
       }
       .titulo {
         h1 {
-          font-size: 80px;
+          font-size: 95px;
         }
-      }
-      .social {
-        h5 {
-          margin: 0 23px;
-          font-size: 16px;
-          padding: 7px 10px 5px 10px;
+        .social {
+          h5 {
+            margin: 0 23px;
+            font-size: 16px;
+            padding: 7px 10px 5px 10px;
+          }
         }
       }
     }
@@ -1379,19 +1375,22 @@
   .home {
     //PANTALLA PRINCIPAL
     .portada {
+      justify-content: space-between;
       .separador {
         height: 10px;
       }
       .titulo {
+        margin-top: 40px;
         h1 {
           font-size: 80px;
         }
-      }
-      .social {
-        h5 {
-          margin: 0 23px;
-          font-size: 16px;
-          padding: 7px 10px 5px 10px;
+        .social {
+          margin: 15px 0;
+          h5 {
+            margin: 0 20px;
+            font-size: 15px;
+            padding: 7px 9px 5px 9px;
+          }
         }
       }
     }
@@ -1401,13 +1400,12 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 80vh;
-      max-height: 100vh;
+      height: 75vh;
       width: 85%;
       .iz {
         width: 100%;
         height: 100;
-        padding: 20px 0;
+        padding: 0 0 20px;
         flex-direction: column;
         text-align: center;
         h1 {
@@ -1426,6 +1424,7 @@
       .de {
         width: 100%;
         .wrap {
+          margin-bottom: 20px;
           .boton {
             height: 160px;
           }
@@ -1579,6 +1578,7 @@
       flex-direction: column;
       width: 85%;
       h1 {
+        text-align: center;
         font-size: 45px;
         margin: 0 0 10px 0;
       }
@@ -1633,6 +1633,14 @@
       .titulo {
         h1 {
           font-size: 65px;
+        }
+        .social {
+          margin: 15px 0;
+          h5 {
+            margin: 0 16px;
+            font-size: 14px;
+            padding: 6px 9px 4px 9px;
+          }
         }
       }
     }
@@ -1806,7 +1814,16 @@
       }
       .titulo {
         h1 {
-          font-size: 50px;
+          font-size: 48px;
+          margin: -5px;
+        }
+        .social {
+          margin: 15px 0;
+          h5 {
+            margin: 0 15px;
+            font-size: 14px;
+            padding: 6px 9px 4px 9px;
+          }
         }
       }
     }

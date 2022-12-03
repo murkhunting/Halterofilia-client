@@ -21,29 +21,29 @@ export default function Home({ programas, formaciones, online }) {
           <h1>CLUB</h1>
           <h1>HALTEROFILIA</h1>
           <h1>BARCELONA</h1>
-        </div>
-        <div className="social">
-          <Link href="https://www.instagram.com/halterofiliabarcelona/?hl=es">
-            <a>
-              <h5>
-                <AiFillInstagram />
-              </h5>
-            </a>
-          </Link>
-          <Link href="https://www.facebook.com/barcelonahalterofilia">
-            <a>
-              <h5>
-                <FaFacebook />
-              </h5>
-            </a>
-          </Link>
-          <Link href="https://www.youtube.com/channel/UCW1qpR8BAfllKR98i50_gxQ?view_as=subscriber">
-            <a>
-              <h5>
-                <AiFillYoutube />
-              </h5>
-            </a>
-          </Link>
+          <div className="social">
+            <Link href="https://www.instagram.com/halterofiliabarcelona/?hl=es">
+              <a>
+                <h5>
+                  <AiFillInstagram />
+                </h5>
+              </a>
+            </Link>
+            <Link href="https://www.facebook.com/barcelonahalterofilia">
+              <a>
+                <h5>
+                  <FaFacebook />
+                </h5>
+              </a>
+            </Link>
+            <Link href="https://www.youtube.com/channel/UCW1qpR8BAfllKR98i50_gxQ?view_as=subscriber">
+              <a>
+                <h5>
+                  <AiFillYoutube />
+                </h5>
+              </a>
+            </Link>
+          </div>
         </div>
         <div className="baner">
           <div className="scroll">
@@ -85,12 +85,11 @@ export default function Home({ programas, formaciones, online }) {
       {/* PROGRAMA ONLINE */}
       <div className="programaonline">
         <div className="iz">
-          <h1>PREFIERES ENTRENAR DESDE CUALQUIER LUGAR DEL MUNDO?</h1>
+          <h1>SIENTES QUE NO AVANZAS CON LOS ENTRENOS QUE REALIZAS?</h1>
           <div className="flecha">
             <h2>
-              DESCUBRE NUESTRO PROGRAMA ONLINE 100% PERSONALIZADO Y EMPIEZA A
-              ENTRENAR DESDE DONDE QUIERAS Y CUANDO QUIERAS CON RESULTADOS
-              GARANTIZADOS
+              DESCUBRE NUESTRO PROGRAMA ONLINE 100% PERSONALIZADO, EMPIEZA A VER
+              RESULTADOS GARANTIZADOS Y CUMPLE CON TODOS TUS OBJETIVOS.
             </h2>
             <div className="ico">
               <MdDoubleArrow />
@@ -133,8 +132,8 @@ export default function Home({ programas, formaciones, online }) {
             </div>
             <h2>
               DESCUBRE NUESTROS PROGRAMAS DE ENTRENAMIENTO GUIADOS Y ADQUIERE EL
-              QUE MEJOR SE AJUSTE A TUS NECESIDADES Y ENTRENA EN CUALQUIER
-              SITIO.
+              QUE MEJOR SE AJUSTE A TUS NECESIDADES PARA ENTRENAR DESDE
+              CUALQUIER SITIO.
             </h2>
           </div>
           <div className="nextformacion">
@@ -149,15 +148,15 @@ export default function Home({ programas, formaciones, online }) {
       </div>
       {/* STREAMING */}
       <div className="streaming">
-        <h1>CLASES POR ZOOM</h1>
+        <h1>CLASES POR STREAMING</h1>
         <div className="cont">
           <div className="de">
             <div className="flecha">
               <div className="hor">
                 <h2>
                   SI QUIERES ENTRENAR DESDE CASA DE FORMA GUIADA Y DISPONES DEL
-                  MATERIAL NECESARIO DESCUBRE NUESTRAS CLASES DIRIGIDAS A TRAVÉS
-                  DE ZOOM
+                  MATERIAL NECESARIO NO TE PIERDAS NUESTRAS CLASES DIRIGIDAS A
+                  TRAVÉS DE ZOOM
                 </h2>
                 {/* <h2> TÉCNICA, FUERZA Y POTENCIA ·</h2>
                 <h2> 2 MOVIMIENTOS OLÍMPICOS ·</h2>

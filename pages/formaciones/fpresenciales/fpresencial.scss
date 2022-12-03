@@ -6,12 +6,12 @@
   color: $second;
   text-align: center;
   min-height: 100vh;
-
+  text-transform: uppercase;
+  margin-top: 30px;
   h1 {
-    margin-top: 80px;
     font-size: 70px;
     margin-bottom: 0px;
-    width: 70%;
+    width: 90%;
   }
   .detalles {
     width: 100%;
@@ -21,10 +21,12 @@
     align-items: center;
     justify-content: center;
     background-color: $detalles;
+    flex-wrap: wrap;
+    padding: 20px 0;
     h2 {
+      margin: 0 30px;
       color: $second;
-      margin: 20px 30px;
-      font-size: 28px;
+      font-size: 30px;
       span {
         margin-right: 25px;
       }
@@ -34,17 +36,255 @@
     width: 70%;
     margin-bottom: 5px;
     text-align: center;
-    font-size: 20px;
+    h2 {
+      font-size: 30px;
+      margin: 0 0 10px;
+    }
   }
   .objetivo {
     width: 70%;
-    margin-bottom: 60px;
-    text-align: left;
-    h2 {
-      font-size: 30px;
-    }
+    text-align: justify;
     h3 {
       font-size: 22px;
+      margin: 10px 0;
+    }
+  }
+  .enlla {
+    width: 70%;
+    margin-bottom: 10px;
+    text-align: justify;
+    h3 {
+      font-size: 22px;
+    }
+  }
+  .loginbtn {
+    margin: 10px 0 100px;
+    padding: 10px 20px;
+    border: 1px solid $second;
+    color: $main;
+    font-size: 20px;
+    font-weight: 500;
+    width: 300px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "Oswald", sans-serif;
+  }
+  .loginbtn:hover {
+    background-color: $detalles;
+    color: $second;
+    border: 1px solid $detalles;
+  }
+}
+
+@media (max-width: 1024px) {
+  .curso {
+    margin-top: 30px;
+    h1 {
+      font-size: 57px;
+      width: 90%;
+    }
+    .detalles {
+      width: 100%;
+      margin: 50px 0;
+      padding: 20px 0;
+      h2 {
+        margin: 0 30px;
+        font-size: 24px;
+        span {
+          margin-right: 18px;
+        }
+      }
+    }
+    .dirigido {
+      width: 80%;
+      margin-bottom: 5px;
+      h2 {
+        font-size: 24px;
+        margin: 0 0 10px;
+      }
+    }
+    .objetivo {
+      width: 80%;
+
+      h3 {
+        font-size: 18px;
+        margin: 10px 0;
+      }
+    }
+    .enlla {
+      width: 80%;
+      margin-bottom: 10px;
+      h3 {
+        font-size: 18px;
+      }
+    }
+    .loginbtn {
+      margin: 10px 0 100px;
+      padding: 10px 20px;
+      color: $main;
+      font-size: 18px;
+      width: 250px;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .curso {
+    margin-top: 40px;
+    h1 {
+      font-size: 48px;
+      width: 90%;
+    }
+    .detalles {
+      width: 100%;
+      margin: 40px 0;
+      padding: 20px 0;
+      h2 {
+        margin: 5px 20px;
+        font-size: 20px;
+        span {
+          margin-right: 10px;
+        }
+      }
+    }
+    .dirigido {
+      width: 90%;
+      margin-bottom: 5px;
+      h2 {
+        font-size: 20px;
+        margin: 0 0 10px;
+      }
+    }
+    .objetivo {
+      width: 90%;
+
+      h3 {
+        font-size: 16px;
+        margin: 10px 0;
+      }
+    }
+    .enlla {
+      width: 90%;
+      margin-bottom: 10px;
+      h3 {
+        font-size: 16px;
+      }
+    }
+    .loginbtn {
+      margin: 10px 0 100px;
+      padding: 10px 20px;
+      color: $main;
+      font-size: 16px;
+      width: 250px;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .curso {
+    margin-top: 50px;
+    h1 {
+      font-size: 38px;
+      width: 90%;
+    }
+    .detalles {
+      flex-direction: column;
+      width: 100%;
+      margin: 30px 0;
+      padding: 20px 0;
+      h2 {
+        margin: 5px 10px;
+        font-size: 18px;
+        span {
+          margin-right: 5px;
+        }
+      }
+    }
+    .dirigido {
+      width: 90%;
+      margin-bottom: 5px;
+      h2 {
+        font-size: 18px;
+        margin: 0 0 10px;
+      }
+    }
+    .objetivo {
+      width: 90%;
+
+      h3 {
+        font-size: 14px;
+        margin: 10px 0;
+      }
+    }
+    .enlla {
+      width: 90%;
+      margin-bottom: 10px;
+      h3 {
+        font-size: 14px;
+      }
+    }
+    .loginbtn {
+      margin: 10px 0 100px;
+      padding: 10px 20px;
+      color: $main;
+      font-size: 14px;
+      width: 200px;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .curso {
+    margin-top: 60px;
+    h1 {
+      font-size: 27px;
+      width: 90%;
+    }
+    .detalles {
+      width: 100%;
+      margin: 20px 0;
+      padding: 20px 0;
+      h2 {
+        margin: 5px 5px;
+        font-size: 16px;
+        span {
+          margin-right: 5px;
+        }
+      }
+    }
+    .dirigido {
+      width: 90%;
+      margin-bottom: 5px;
+      h2 {
+        font-size: 16px;
+        margin: 0 0 10px;
+      }
+    }
+    .objetivo {
+      width: 90%;
+
+      h3 {
+        font-size: 14px;
+        margin: 10px 0;
+      }
+    }
+    .enlla {
+      width: 90%;
+      margin-bottom: 10px;
+      h3 {
+        font-size: 14px;
+      }
+    }
+    .loginbtn {
+      margin: 10px 0 100px;
+      padding: 10px 20px;
+      color: $main;
+      font-size: 14px;
+      width: 180px;
+      border-radius: 10px;
     }
   }
 }

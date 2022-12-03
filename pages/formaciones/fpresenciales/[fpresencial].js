@@ -2,6 +2,7 @@ import React from "react";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Link from "next/link";
 
 import { IoPricetagsOutline } from "react-icons/io5";
 import { MdDateRange } from "react-icons/md";
@@ -73,9 +74,20 @@ const Curso = ({ formacion }) => {
         <h2>{dirigido}</h2>
       </div>
       <div className="objetivo">
-        <h2>OBJETIVO DEL CURSO:</h2>
+        <h3>OBJETIVO DE LA FORMACIÓN:</h3>
         <h3>{objetivo}</h3>
       </div>
+      <div className="enlla">
+        <h3>
+          SI ESTÁS INTERESADO EN REALIZAR ESTA FORMACIÓN PROFESIONAL CONTACTA
+          CON NOSOTROS PARA APUNTARTE.
+        </h3>
+      </div>
+      <Link href="/contacto">
+        <a>
+          <button className="loginbtn">PONTE EN CONTACTO</button>
+        </a>
+      </Link>
     </div>
   );
 };

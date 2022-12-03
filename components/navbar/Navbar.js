@@ -55,6 +55,16 @@ const Navbar = () => {
                 : "nomenucontainer"
             }
           >
+            <Link href="/">
+              <a
+                className={
+                  router.pathname == "/" ? "menuactive" : "menuinactive"
+                }
+                onClick={onClickMenu}
+              >
+                <h2>HOME</h2>
+              </a>
+            </Link>
             <Link href="/formaciones">
               <a
                 className={

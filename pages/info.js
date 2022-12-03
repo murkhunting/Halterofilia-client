@@ -17,7 +17,7 @@ const Info = () => {
     <div className="infopage">
       <div className="tarifas">
         <h1 className="top" onClick={onClick1}>
-          INFORMACIÓN DE LAS TARIFAS ▾
+          ▾ INFORMACIÓN DE LAS TARIFAS ▾
         </h1>
         <div className={show1 ? "grupotarifas" : "nobox"}>
           <div className="box">
@@ -58,7 +58,7 @@ const Info = () => {
         </div>
       </div>
       <div className="tarifas">
-        <h1 onClick={onClick2}>FUNCIONAMIENTO DE LAS CLASES ▾</h1>
+        <h1 onClick={onClick2}>▾ FUNCIONAMIENTO DE LAS CLASES ▾</h1>
         <div className={show2 ? "box" : "nobox"}>
           <h3>
             Las horas contratadas según tarifa no son acumulables a otras
@@ -103,7 +103,7 @@ const Info = () => {
         </div>
       </div>
       <div className="tarifas">
-        <h1 onClick={onClick3}>NORMATIVA DEL CLUB ▾</h1>
+        <h1 onClick={onClick3}>▾ NORMATIVA DEL CLUB ▾</h1>
         <div className={show3 ? "box" : "nobox"}>
           <h3>
             LA INSCRIPCIÓN COMO CLIENTE DE CLUB HALTEROFILIA BARCELONA OLÍMPICO
@@ -148,7 +148,7 @@ const Info = () => {
         </div>
       </div>
       <div className="tarifas">
-        <h1 onClick={onClick4}>GUIA MOVIMIENTOS HALTEROFILIA ▾</h1>
+        <h1 onClick={onClick4}>▾ GUIA MOVIMIENTOS HALTEROFILIA ▾</h1>
         <div className={show4 ? "box" : "nobox"}>
           <h3>
             LA INSCRIPCIÓN COMO CLIENTE DE CLUB HALTEROFILIA BARCELONA OLÍMPICO

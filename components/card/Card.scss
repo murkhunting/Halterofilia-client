@@ -17,7 +17,7 @@
     margin-top: -422px;
     margin-right: 315px;
     padding: 10px 15px;
-    z-index: 1000;
+    z-index: 800;
     background-color: $detalles;
     color: $second;
   }
@@ -197,22 +197,6 @@
 @media (max-width: 780px) {
   .card {
     margin: 10px 10px;
-    .cardcont {
-      background-image: url("/images/gif1.gif");
-      background-size: cover;
-      .space {
-        .bum {
-          color: $detalles;
-          font-size: 28px;
-          margin: 10px 5px 10px 5px;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 560px) {
-  .card {
     margin: 5px 5px;
     width: 320px;
     height: 400px;
@@ -223,11 +207,14 @@
       padding: 7.5px 12px;
     }
     .cardcont {
+      background-image: url("/images/gif1.gif");
+      background-size: cover;
       width: 320px;
       height: 400px;
       .space {
         margin-bottom: 3px;
         .bum {
+          color: $detalles;
           font-size: 26px;
           margin: 10px 5px 10px 5px;
         }
@@ -270,6 +257,75 @@
       }
       .cardboton {
         width: 80px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .card {
+    margin: 10px 10px;
+    margin: 5px 5px;
+    width: 290px;
+    height: 370px;
+    .idioma {
+      font-size: 14px;
+      margin-top: -308px;
+      margin-right: 230px;
+      padding: 7.5px 12px;
+    }
+    .cardcont {
+      background-image: url("/images/gif1.gif");
+      background-size: cover;
+      width: 290px;
+      height: 370px;
+      .space {
+        margin-bottom: 3px;
+        .bum {
+          color: $detalles;
+          font-size: 23px;
+          margin: 10px 5px 10px 5px;
+        }
+        img {
+          height: 160px;
+          width: 290px;
+        }
+        .titulo {
+          font-size: 16px;
+        }
+        .precio {
+          font-size: 18px;
+        }
+      }
+      .cardboton {
+        width: 70px;
+        margin-bottom: 15px;
+      }
+    }
+    //HOVERED
+    .cardconthover {
+      width: 290px;
+      height: 370px;
+      .spacehover {
+        margin-bottom: 3px;
+        .bum {
+          font-size: 23px;
+          margin: 10px 5px 10px 5px;
+        }
+        img {
+          height: 160px;
+          width: 320px;
+        }
+        .titulo {
+          font-size: 16px;
+        }
+        .precio {
+          font-size: 18px;
+        }
+      }
+      .cardboton {
+        width: 70px;
         margin-bottom: 15px;
       }
     }

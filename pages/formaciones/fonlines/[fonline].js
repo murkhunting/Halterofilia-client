@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import Link from "next/link";
 
 import { IoPricetagsOutline } from "react-icons/io5";
 import { AiOutlineRise } from "react-icons/ai";
@@ -28,9 +29,29 @@ const Online = ({ online }) => {
         <h2>{dirigido}</h2>
       </div>
       <div className="objetivo">
-        <h2>DESCRIPCIÓN DEL PROGRAMA:</h2>
+        <h3>DESCRIPCIÓN DE LA FORMACIÓN:</h3>
         <h3>{descripcion}</h3>
       </div>
+      <div className="enlla">
+        <h3 className="interesado">
+          SI ESTÁS INTERESADO EN ESTA FORMACIÓN ONLINE Y QUIERES ADQUIRIRLA
+          CLICA EN EL SIGUIENTO BOTÓN PARA PROCEDER A LA PLATAFORMA DE PAGO. UNA
+          VEZ LO HAYAS REALIZADO EL PAGO RECIBIRÁS UN MAIL CON LA FORMACIÓN AL
+          CORREO QUE HAYAS APORTADO.
+        </h3>
+        <h3 className="contacta">
+          SI TIENES ALGUNA DUDA O QUIERES CONSULTAR ALGO ANTES DE CONTINUAR AL
+          PAGO,
+          <Link href="/contacto">
+            <a> PONTE EN CONTACTO CON NOSOTROS.</a>
+          </Link>
+        </h3>
+      </div>
+      <Link href="/contacto">
+        <a>
+          <button className="loginbtn">PROCEDER AL PAGO</button>
+        </a>
+      </Link>
     </div>
   );
 };
