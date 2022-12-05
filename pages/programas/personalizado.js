@@ -32,25 +32,28 @@ const Personalizado = () => {
       <div className="descripcion">
         <h3>
           Programa de Halterofilia 100% personalizado. Se basa en tus
-          necesidades, habilidades y objetivos competitivos. Proceso de
-          evaluación intenso para detectar tus barreras de rendimiento más
-          importantes.
+          necesidades, habilidades y objetivos competitivos. Realizamos un
+          Proceso de evaluación intenso para detectar tus barreras de
+          rendimiento más importantes.
           <br />
-          durante el proceso se realizarán charlas regulares, ajustes de
+          durante el proceso se llevarán a cabo charlas regulares, ajustes de
           programa y análisis de técnicas a través de foto y video.
         </h3>
 
         <h3>
           SI ESTÁS INTERESADO RELLENA EL SIGUIENTE FORMULARIO Y ENVÍANOS TU
-          INFORMACIÓN PERSONAL PARA REALIZAR EL PROGRAMA A TU MEDIDA Y NOS
+          INFORMACIÓN PERSONAL PARA CREAR EL PROGRAMA A TU MEDIDA Y NOS
           PONDREMOS EN CONTACTO CONTIGO.
         </h3>
         <h3>
-          o SI PREFIERES HACER UNA CONSULTA PREVIA TÁMBIEN PUEDES
+          o SI PREFIERES HACER UNA CONSULTA PREVIA TÁMBIEN PUEDES PONERTE EN
           <Link href="/contacto">
-            <a> PONERTE EN CONTACTO CON NOSOTROS </a>
+            <a>
+              {" "}
+              <span>CONTACTO</span>{" "}
+            </a>
           </Link>
-          Y RESOLVEREMOS TODAS TUS DUDAS.
+          CON NOSOTROS Y RESOLVEREMOS TODAS TUS DUDAS.
         </h3>
       </div>
       <div className="formulario">
@@ -91,22 +94,43 @@ const Personalizado = () => {
           />
         </div>
         <div className="grupo">
-          <h4>objetivo:</h4>
-          <input
-            type="text"
-            placeholder="A quien va dirigido el programa..."
-            name="objetivo"
+          <h4>NIVEL:</h4>
+          <select
+            name="nivel"
+            id="type"
             // onChange={handleChange}
-          />
+          >
+            <option value="principiante">PRINCIPIANTE</option>
+            <option value="intermedio">INTERMEDIO</option>
+            <option value="avanzado">AVANZADO</option>
+            <option value="profesional">PROFESIONAL</option>
+          </select>
         </div>
         <div className="grupo">
-          <h4>ACTIVIDAD:</h4>
-          <input
-            type="text"
-            placeholder="Descripción de el programa..."
-            name="descripcion"
+          <h4>objetivo:</h4>
+          <select
+            name="objetivo"
+            id="type"
             // onChange={handleChange}
-          />
+          >
+            <option value="principiante">PRINCIPIANTE</option>
+            <option value="intermedio">INTERMEDIO</option>
+            <option value="avanzado">AVANZADO</option>
+            <option value="profesional">PROFESIONAL</option>
+          </select>
+        </div>
+        <div className="grupo">
+          <h4>ACTIVIDAD ACTUAL POR SEMANA:</h4>
+          <select
+            name="actividad"
+            id="type"
+            // onChange={handleChange}
+          >
+            <option value="5 días o más">5 días o más</option>
+            <option value="entre 3 y 5 días">entre 3 y 5 días</option>
+            <option value="entre 1 y 3 días">entre 1 y 3 días</option>
+            <option value="1 día o menos">1 día o menos</option>
+          </select>
         </div>
         <button className="loginbtn">ENVIA TU INFORMACIÓN</button>
       </div>

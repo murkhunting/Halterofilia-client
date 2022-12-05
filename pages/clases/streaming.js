@@ -32,11 +32,8 @@ const Streaming = () => {
       </div>
       <div className="material">
         <h2>MATERIAL NECESARIO:</h2>
-        <h3>- MANCUERNAS -</h3>
         <h3>- BARRA OLÍMPICA-</h3>
         <h3>- PESOS EN DISCOS -</h3>
-        <h3>- MANCUERNAS -</h3>
-        <h3>- MANCUERNAS -</h3>
       </div>
       <button className="loginbtn">PONTE EN CONTACTO</button>
     </div>

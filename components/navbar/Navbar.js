@@ -74,12 +74,12 @@ const Navbar = () => {
                 }
                 onClick={onClickMenu}
               >
-                {lang === "esp" ? (
-                  <h2>FORMACIONES</h2>
+                {lang === "por" ? (
+                  <h2>FORMAÇÕES</h2>
                 ) : lang === "eng" ? (
                   <h2>FORMATIONS</h2>
                 ) : (
-                  <h2>FORMAÇÕES</h2>
+                  <h2>FORMACIONES</h2>
                 )}
               </a>
             </Link>
@@ -92,12 +92,12 @@ const Navbar = () => {
                 }
                 onClick={onClickMenu}
               >
-                {lang === "esp" ? (
+                {lang === "por" ? (
                   <h2>PROGRAMAS</h2>
                 ) : lang === "eng" ? (
                   <h2>PROGRAMS</h2>
                 ) : (
-                  <h2>PROGRAMA</h2>
+                  <h2>PROGRAMAS</h2>
                 )}
               </a>
             </Link>
@@ -108,12 +108,12 @@ const Navbar = () => {
                 }
                 onClick={onClickMenu}
               >
-                {lang === "esp" ? (
-                  <h2>CLASES</h2>
+                {lang === "por" ? (
+                  <h2>AULAS</h2>
                 ) : lang === "eng" ? (
                   <h2>CLASSES</h2>
                 ) : (
-                  <h2>AULAS</h2>
+                  <h2>CLASES</h2>
                 )}
               </a>
             </Link>
@@ -124,12 +124,12 @@ const Navbar = () => {
                 }
                 onClick={onClickMenu}
               >
-                {lang === "esp" ? (
-                  <h2>NOSOTROS</h2>
+                {lang === "por" ? (
+                  <h2>NÓS</h2>
                 ) : lang === "eng" ? (
                   <h2>US</h2>
                 ) : (
-                  <h2>NÓS</h2>
+                  <h2>NOSOTROS</h2>
                 )}
               </a>
             </Link>
@@ -140,12 +140,12 @@ const Navbar = () => {
                 }
                 onClick={onClickMenu}
               >
-                {lang === "esp" ? (
-                  <h2>CONTACTO</h2>
+                {lang === "por" ? (
+                  <h2>CONTATO</h2>
                 ) : lang === "eng" ? (
                   <h2>CONTACT</h2>
                 ) : (
-                  <h2>CONTATO</h2>
+                  <h2>CONTACTO</h2>
                 )}
               </a>
             </Link>
@@ -156,7 +156,7 @@ const Navbar = () => {
                 }
                 onClick={onClickMenu}
               >
-                {lang === "esp" ? (
+                {lang === "por" ? (
                   <h2>INFO</h2>
                 ) : lang === "eng" ? (
                   <h2>INFO</h2>
@@ -181,12 +181,12 @@ const Navbar = () => {
                   : "menuinactive"
               }
             >
-              {lang === "esp" ? (
-                <h2>FORMACIONES</h2>
+              {lang === "por" ? (
+                <h2>FORMAÇÕES</h2>
               ) : lang === "eng" ? (
                 <h2>FORMATIONS</h2>
               ) : (
-                <h2>FORMAÇÕES</h2>
+                <h2>FORMACIONES</h2>
               )}
             </a>
           </Link>
@@ -196,12 +196,12 @@ const Navbar = () => {
                 router.pathname == "/programas" ? "menuactive" : "menuinactive"
               }
             >
-              {lang === "esp" ? (
+              {lang === "por" ? (
                 <h2>PROGRAMAS</h2>
               ) : lang === "eng" ? (
                 <h2>PROGRAMS</h2>
               ) : (
-                <h2>PROGRAMA</h2>
+                <h2>PROGRAMAS</h2>
               )}
             </a>
           </Link>
@@ -211,12 +211,12 @@ const Navbar = () => {
                 router.pathname == "/clases" ? "menuactive" : "menuinactive"
               }
             >
-              {lang === "esp" ? (
-                <h2>CLASES</h2>
+              {lang === "por" ? (
+                <h2>AULAS</h2>
               ) : lang === "eng" ? (
                 <h2>CLASSES</h2>
               ) : (
-                <h2>AULAS</h2>
+                <h2>CLASES</h2>
               )}
             </a>
           </Link>
@@ -226,12 +226,12 @@ const Navbar = () => {
                 router.pathname == "/nosotros" ? "menuactive" : "menuinactive"
               }
             >
-              {lang === "esp" ? (
-                <h2>NOSOTROS</h2>
+              {lang === "por" ? (
+                <h2>NÓS</h2>
               ) : lang === "eng" ? (
                 <h2>US</h2>
               ) : (
-                <h2>NÓS</h2>
+                <h2>NOSOTROS</h2>
               )}
             </a>
           </Link>
@@ -241,12 +241,12 @@ const Navbar = () => {
                 router.pathname == "/contacto" ? "menuactive" : "menuinactive"
               }
             >
-              {lang === "esp" ? (
-                <h2>CONTACTO</h2>
+              {lang === "por" ? (
+                <h2>CONTATO</h2>
               ) : lang === "eng" ? (
                 <h2>CONTACT</h2>
               ) : (
-                <h2>CONTATO</h2>
+                <h2>CONTACTO</h2>
               )}
             </a>
           </Link>
@@ -256,7 +256,7 @@ const Navbar = () => {
                 router.pathname == "/info" ? "menuactive" : "menuinactive"
               }
             >
-              {lang === "esp" ? (
+              {lang === "por" ? (
                 <h2>INFO</h2>
               ) : lang === "eng" ? (
                 <h2>INFO</h2>

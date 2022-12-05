@@ -6,12 +6,12 @@
   color: $second;
   text-align: center;
   min-height: 100vh;
-
+  text-transform: uppercase;
+  margin-top: 30px;
   h1 {
-    margin-top: 80px;
     font-size: 70px;
     margin-bottom: 0px;
-    width: 70%;
+    width: 90%;
   }
   .detalles {
     width: 100%;
@@ -21,28 +21,35 @@
     align-items: center;
     justify-content: center;
     background-color: $detalles;
+    flex-wrap: wrap;
+    padding: 20px 0;
     h2 {
+      margin: 0 30px;
       color: $second;
-      margin: 20px 30px;
-      font-size: 28px;
+      font-size: 30px;
       span {
         margin-right: 25px;
       }
     }
   }
   .descripcion {
-    text-align: center;
-    font-size: 20px;
-    width: 80%;
+    text-align: justify;
+    width: 70%;
+    h2 {
+      font-size: 30px;
+      margin: 0 0 10px;
+    }
   }
   .material {
     text-align: center;
+    margin-bottom: 10px;
     h2 {
       font-size: 30px;
+      margin-bottom: 10px;
     }
     h3 {
-      width: 100%;
       font-size: 22px;
+      margin: 10px 0;
     }
   }
   .loginbtn {
@@ -61,5 +68,204 @@
     background-color: $detalles;
     color: $second;
     border: 1px solid $detalles;
+  }
+}
+
+@media (max-width: 1024px) {
+  .streaming {
+    margin-top: 30px;
+    h1 {
+      font-size: 57px;
+      width: 90%;
+    }
+    .detalles {
+      width: 100%;
+      margin: 50px 0;
+      padding: 20px 0;
+      h2 {
+        margin: 0 30px;
+        font-size: 24px;
+        span {
+          margin-right: 18px;
+        }
+      }
+    }
+    .descripcion {
+      text-align: justify;
+      width: 80%;
+      h2 {
+        font-size: 24px;
+        margin: 0 0 10px;
+      }
+    }
+    .material {
+      margin-bottom: 10px;
+      text-align: center;
+      h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      h3 {
+        font-size: 18px;
+        margin: 10px 0;
+      }
+    }
+    .loginbtn {
+      margin: 10px 0 100px;
+      padding: 10px 20px;
+      color: $main;
+      font-size: 18px;
+      width: 250px;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .streaming {
+    margin-top: 40px;
+    h1 {
+      font-size: 48px;
+      width: 90%;
+    }
+    .detalles {
+      width: 100%;
+      margin: 40px 0;
+      padding: 20px 0;
+      flex-direction: column;
+      h2 {
+        margin: 5px 20px;
+        font-size: 20px;
+        span {
+          margin-right: 10px;
+        }
+      }
+    }
+    .descripcion {
+      text-align: justify;
+      width: 90%;
+      h2 {
+        font-size: 20px;
+        margin: 0 0 10px;
+      }
+    }
+    .material {
+      margin-bottom: 10px;
+      text-align: center;
+      h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      h3 {
+        font-size: 16px;
+        margin: 10px 0;
+      }
+    }
+    .loginbtn {
+      margin: 10px 0 100px;
+      padding: 10px 20px;
+      color: $main;
+      font-size: 16px;
+      width: 250px;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .streaming {
+    margin-top: 50px;
+    h1 {
+      font-size: 38px;
+      width: 90%;
+    }
+    .detalles {
+      width: 100%;
+      margin: 30px 0;
+      padding: 20px 0;
+      h2 {
+        margin: 5px 10px;
+        font-size: 18px;
+        span {
+          margin-right: 5px;
+        }
+      }
+    }
+    .descripcion {
+      width: 90%;
+      h2 {
+        font-size: 18px;
+        margin: 0 0 10px;
+      }
+    }
+    .material {
+      margin-bottom: 10px;
+      text-align: center;
+      h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      h3 {
+        font-size: 14px;
+        margin: 10px 0;
+      }
+    }
+    .loginbtn {
+      margin: 10px 0 100px;
+      padding: 10px 20px;
+      color: $main;
+      font-size: 14px;
+      width: 200px;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .streaming {
+    margin-top: 60px;
+    h1 {
+      font-size: 27px;
+      width: 90%;
+    }
+    .detalles {
+      width: 100%;
+      margin: 20px 0;
+      padding: 20px 0;
+      h2 {
+        margin: 5px 5px;
+        font-size: 16px;
+        span {
+          margin-right: 5px;
+        }
+      }
+    }
+    .descripcion {
+      width: 90%;
+      h2 {
+        font-size: 16px;
+        margin: 0 0 10px;
+      }
+    }
+    .material {
+      margin-bottom: 10px;
+      text-align: center;
+      h2 {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+      h3 {
+        font-size: 14px;
+        margin: 10px 0;
+      }
+    }
+    .loginbtn {
+      margin: 10px 0 100px;
+      padding: 10px 20px;
+      color: $main;
+      font-size: 14px;
+      width: 180px;
+      border-radius: 10px;
+    }
   }
 }

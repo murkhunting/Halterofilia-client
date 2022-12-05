@@ -37,6 +37,12 @@
     h3 {
       font-size: 22px;
       margin: 0 0 20px;
+      a {
+        span {
+          text-decoration: underline $detalles;
+          text-decoration-thickness: 3px;
+        }
+      }
     }
   }
   .formulario {
@@ -58,6 +64,7 @@
         text-align: center;
         background-color: $second;
       }
+
       .archivo {
         font-family: "Oswald", sans-serif;
         text-align: center;
