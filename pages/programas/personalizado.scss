@@ -6,12 +6,12 @@
   color: $second;
   text-align: center;
   min-height: 100vh;
-
+  text-transform: uppercase;
+  margin-top: 30px;
   h1 {
-    margin-top: 80px;
     font-size: 70px;
     margin-bottom: 0px;
-    width: 70%;
+    width: 90%;
   }
   .detalles {
     width: 100%;
@@ -21,10 +21,12 @@
     align-items: center;
     justify-content: center;
     background-color: $detalles;
+    flex-wrap: wrap;
+    padding: 20px 0;
     h2 {
+      margin: 0 30px;
       color: $second;
-      margin: 20px 30px;
-      font-size: 28px;
+      font-size: 30px;
       span {
         margin-right: 25px;
       }
@@ -64,18 +66,6 @@
         text-align: center;
         background-color: $second;
       }
-
-      .archivo {
-        font-family: "Oswald", sans-serif;
-        text-align: center;
-        background-color: transparent;
-        border-radius: 0;
-        border: none;
-        padding-left: 200px;
-        margin: 8px;
-        height: 30px;
-        width: 450px;
-      }
     }
     .loginbtn {
       margin: 60px 0 20px;
@@ -93,6 +83,212 @@
       background-color: $detalles;
       color: $second;
       border: 1px solid $detalles;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .personalizado {
+    margin-top: 30px;
+    h1 {
+      font-size: 57px;
+      width: 90%;
+    }
+    .detalles {
+      margin: 50px 0;
+      padding: 20px 0;
+      h2 {
+        margin: 0 30px;
+        color: $second;
+        font-size: 24px;
+        span {
+          margin-right: 18px;
+        }
+      }
+    }
+    .descripcion {
+      width: 80%;
+      margin-bottom: 5px;
+      h3 {
+        font-size: 18px;
+        margin: 0 0 20px;
+      }
+    }
+    .formulario {
+      margin-bottom: 100px;
+      .grupo {
+        h4 {
+          font-size: 18px;
+          margin: 10px 0 5px;
+        }
+        input,
+        select {
+          width: 450px;
+          height: 35px;
+        }
+      }
+      .loginbtn {
+        margin: 40px 0 0;
+        padding: 10px 20px;
+        color: $main;
+        font-size: 18px;
+        width: 250px;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .personalizado {
+    margin-top: 40px;
+    h1 {
+      font-size: 48px;
+      width: 90%;
+    }
+    .detalles {
+      flex-direction: column;
+      margin: 40px 0;
+      padding: 20px 0;
+      h2 {
+        margin: 5px 20px;
+        font-size: 20px;
+        span {
+          margin-right: 10px;
+        }
+      }
+    }
+    .descripcion {
+      width: 90%;
+      margin-bottom: 5px;
+      h3 {
+        font-size: 16px;
+        margin: 0 0 10px;
+      }
+    }
+    .formulario {
+      margin-bottom: 100px;
+      .grupo {
+        h4 {
+          font-size: 16px;
+          margin: 10px 0 5px;
+        }
+        input,
+        select {
+          width: 350px;
+          height: 35px;
+        }
+      }
+      .loginbtn {
+        margin: 40px 0 0;
+        padding: 10px 20px;
+        color: $main;
+        font-size: 16px;
+        width: 250px;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .personalizado {
+    margin-top: 50px;
+    h1 {
+      font-size: 38px;
+      width: 90%;
+    }
+    .detalles {
+      margin: 30px 0;
+      padding: 20px 0;
+      h2 {
+        margin: 5px 10px;
+        font-size: 18px;
+        span {
+          margin-right: 5px;
+        }
+      }
+    }
+    .descripcion {
+      width: 90%;
+      margin-bottom: 5px;
+      h3 {
+        font-size: 14px;
+        margin: 0 0 10px;
+      }
+    }
+    .formulario {
+      margin-bottom: 60px;
+      .grupo {
+        h4 {
+          font-size: 14px;
+          margin: 10px 0 5px;
+        }
+        input,
+        select {
+          width: 300px;
+          height: 30px;
+        }
+      }
+      .loginbtn {
+        margin: 30px 0 0;
+        padding: 10px 20px;
+        color: $main;
+        font-size: 14px;
+        width: 200px;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .personalizado {
+    margin-top: 60px;
+    h1 {
+      font-size: 27px;
+      width: 90%;
+    }
+    .detalles {
+      margin: 20px 0;
+      padding: 20px 0;
+      h2 {
+        margin: 5px 5px;
+        font-size: 16px;
+        span {
+          margin-right: 5px;
+        }
+      }
+    }
+    .descripcion {
+      width: 90%;
+      margin-bottom: 5px;
+      h3 {
+        font-size: 14px;
+        margin: 0 0 10px;
+      }
+    }
+    .formulario {
+      margin-bottom: 60px;
+      .grupo {
+        h4 {
+          font-size: 14px;
+          margin: 10px 0 5px;
+        }
+        input,
+        select {
+          width: 280px;
+          height: 30px;
+        }
+      }
+      .loginbtn {
+        margin: 30px 0 0;
+        padding: 10px 20px;
+        color: $main;
+        font-size: 14px;
+        width: 200px;
+        border-radius: 10px;
+      }
     }
   }
 }

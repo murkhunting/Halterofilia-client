@@ -62,7 +62,11 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-      <h5 className="diseño">DESIGN & CODE BY @MURKHUNTING</h5>
+      <Link href="https://github.com/murkhunting">
+        <a>
+          <h5 className="diseño">DESIGN & CODE BY @MURKHUNTING</h5>
+        </a>
+      </Link>
     </div>
   );
 };

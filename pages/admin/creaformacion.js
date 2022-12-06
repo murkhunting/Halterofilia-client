@@ -72,27 +72,6 @@ const Crea = () => {
         />
       </div>
       <div className="grupo">
-        <h4>OFERTA:</h4>
-        <select
-          name="oferta"
-          id="type"
-          defaultValue="false"
-          onChange={handleChange}
-        >
-          <option value="true">Sí</option>
-          <option value="false">No</option>
-        </select>
-      </div>
-      <div className="grupo">
-        <h4>PRECIO DE LA OFERTA:</h4>
-        <input
-          type="text"
-          placeholder="90€..."
-          name="precioferta"
-          onChange={handleChange}
-        />
-      </div>
-      <div className="grupo">
         <h4>AGOTADO:</h4>
         <select
           name="agotado"
@@ -147,6 +126,15 @@ const Crea = () => {
           type="text"
           placeholder="Objetivo y descripción de la formación..."
           name="objetivo"
+          onChange={handleChange}
+        />
+      </div>
+      <div className="grupo">
+        <h4>LINK DEL PAGO:</h4>
+        <input
+          type="text"
+          placeholder="Copia el link para pagar..."
+          name="link"
           onChange={handleChange}
         />
       </div>

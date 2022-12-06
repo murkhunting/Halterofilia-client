@@ -120,7 +120,7 @@ const Personalizado = () => {
           </select>
         </div>
         <div className="grupo">
-          <h4>ACTIVIDAD ACTUAL POR SEMANA:</h4>
+          <h4>ENTRENO ACTUAL POR SEMANA:</h4>
           <select
             name="actividad"
             id="type"

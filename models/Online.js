@@ -7,6 +7,7 @@ const OnlineSchema = new mongoose.Schema({
   dirigido: { type: String },
   objetivo: { type: String },
   descripcion: { type: String },
+  link: { type: String },
   img: { type: String },
   pdf: { type: String },
 });

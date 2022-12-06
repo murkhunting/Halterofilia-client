@@ -1,11 +1,12 @@
 import mongoose from "mongoose";
 
 const ProgramaSchema = new mongoose.Schema({
-  titulo: { type: String, required: true },
-  precio: { type: String, unique: false },
-  dirigido: { type: String, required: true },
-  objetivo: { type: String, required: true },
-  descripcion: { type: String, required: true },
+  titulo: { type: String },
+  precio: { type: String },
+  dirigido: { type: String },
+  objetivo: { type: String },
+  descripcion: { type: String },
+  link: { type: String },
   img: { type: String },
   pdf: { type: String },
 });

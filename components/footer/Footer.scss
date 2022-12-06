@@ -95,11 +95,6 @@
           scale: 1.1;
         }
       }
-
-      .diseño {
-        display: flex;
-        margin: 50px 0 10px 0;
-      }
     }
     .logopage {
       display: flex;
@@ -114,6 +109,13 @@
         scale: 1.1;
       }
     }
+  }
+  .diseño {
+    margin: 40px 0 10px 0;
+    transition: 0.2s ease-in-out;
+  }
+  .diseño:hover {
+    scale: 1.1;
   }
 }
 
@@ -151,11 +153,6 @@
             scale: 1.1;
           }
         }
-
-        .diseño {
-          display: flex;
-          margin: 50px 0 10px 0;
-        }
       }
       .logopage {
         width: 180px;
@@ -167,6 +164,10 @@
           scale: 1.1;
         }
       }
+    }
+    .diseño {
+      display: flex;
+      margin: 40px 0 10px 0;
     }
   }
 }
@@ -204,11 +205,6 @@
             scale: 1.1;
           }
         }
-
-        .diseño {
-          display: flex;
-          margin: 50px 0 10px 0;
-        }
       }
       .logopage {
         margin-top: 20px;
@@ -221,6 +217,10 @@
           scale: 1.1;
         }
       }
+    }
+    .diseño {
+      display: flex;
+      margin: 20px 0 10px 0;
     }
   }
 }
@@ -258,11 +258,6 @@
             scale: 1.1;
           }
         }
-
-        .diseño {
-          display: flex;
-          margin: 50px 0 10px 0;
-        }
       }
       .logopage {
         margin-top: 20px;
@@ -275,6 +270,10 @@
           scale: 1.1;
         }
       }
+    }
+    .diseño {
+      display: flex;
+      margin: 20px 0 10px 0;
     }
   }
 }

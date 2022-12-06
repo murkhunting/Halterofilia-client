@@ -86,27 +86,6 @@ const Edit = () => {
         />
       </div>
       <div className="grupo">
-        <h4>OFERTA:</h4>
-        <select
-          name="oferta"
-          id="type"
-          defaultValue="false"
-          onChange={handleChange}
-        >
-          <option value="true">Sí</option>
-          <option value="false">No</option>
-        </select>
-      </div>
-      <div className="grupo">
-        <h4>PRECIO DE LA OFERTA:</h4>
-        <input
-          type="text"
-          name="precioferta"
-          defaultValue={precioferta}
-          onChange={handleChange}
-        />
-      </div>
-      <div className="grupo">
         <h4>AGOTADO:</h4>
         <select
           name="oferta"
@@ -145,7 +124,6 @@ const Edit = () => {
           onChange={handleChange}
         />
       </div>
-
       <div className="grupo">
         <h4>DIRIGIDO A:</h4>
         <input
@@ -163,6 +141,15 @@ const Edit = () => {
           placeholder="Objetivo y descripción de la formación..."
           name="objetivo"
           defaultValue={objetivo}
+          onChange={handleChange}
+        />
+      </div>
+      <div className="grupo">
+        <h4>LINK DEL PAGO:</h4>
+        <input
+          type="text"
+          placeholder="Copia el link para pagar..."
+          name="link"
           onChange={handleChange}
         />
       </div>
