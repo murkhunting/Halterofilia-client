@@ -10,7 +10,7 @@ export default async function handler(req, res) {
   let formaciones = [];
   try {
     formaciones = await Formacion.aggregate([
-      { $match: { agotado: undefined } },
+      { $match: { agotado: false } },
       { $limit: 1 },
     ]);
     res.status(200).json(formaciones);

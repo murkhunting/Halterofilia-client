@@ -25,7 +25,6 @@ const Navbar = () => {
 
   const [showMenu, setShowMenu] = useState(false);
   const onClickMenu = () => setShowMenu(!showMenu);
-  console.log(showMenu);
 
   const [lang, setLang] = useState(cookies.lang);
   // () => JSON.parse(initialLang)

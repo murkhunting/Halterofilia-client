@@ -28,22 +28,25 @@ export default async function handler(req, res) {
   //CREATE
   if (method === "POST") {
     try {
-      const imgUploaded = await cloudinary.uploader.upload(uploadImg, {
-        upload_preset: "halterofilia",
-      });
+      const imgUploaded = uploadImg
+        ? await cloudinary.uploader.upload(uploadImg, {
+            upload_preset: "halterofilia",
+          })
+        : null;
 
       const formacion = {
         titulo: req.body.titulo,
         precio: req.body.precio,
-        oferta: req.body.oferta,
-        precioferta: req.body.precioferta,
         agotado: req.body.agotado,
         inicio: req.body.inicio,
         duracion: req.body.duracion,
         horario: req.body.horario,
         dirigido: req.body.dirigido,
         objetivo: req.body.objetivo,
-        img: imgUploaded.secure_url,
+        link: req.body.link,
+        img: imgUploaded
+          ? imgUploaded.secure_url
+          : "https://res.cloudinary.com/dokghwlwj/image/upload/v1667469370/pexels-victor-freitas-791763_ikp9ro.jpg",
       };
       const newFormacion = new Formacion(formacion);
       const savedFormacion = await newFormacion.save();

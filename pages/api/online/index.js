@@ -33,12 +33,16 @@ export default async function handler(req, res) {
     data.append("uploadImg", uploadImg);
     data.append("upload_preset", "uploads");
     try {
-      const imgUploaded = await cloudinary.uploader.upload(uploadImg, {
-        upload_preset: "halterofilia",
-      });
-      const pdfUploaded = await cloudinary.uploader.upload(uploadPdf, {
-        upload_preset: "halterofilia",
-      });
+      const imgUploaded = uploadImg
+        ? await cloudinary.uploader.upload(uploadImg, {
+            upload_preset: "halterofilia",
+          })
+        : null;
+      const pdfUploaded = uploadPdf
+        ? await cloudinary.uploader.upload(uploadPdf, {
+            upload_preset: "halterofilia",
+          })
+        : null;
 
       const online = {
         idioma: req.body.idioma,
@@ -47,8 +51,11 @@ export default async function handler(req, res) {
         dirigido: req.body.dirigido,
         objetivo: req.body.objetivo,
         descripcion: req.body.descripcion,
-        img: imgUploaded.secure_url,
-        pdf: pdfUploaded.secure_url,
+        link: req.body.link,
+        img: imgUploaded
+          ? imgUploaded.secure_url
+          : "https://res.cloudinary.com/dokghwlwj/image/upload/v1667469370/pexels-victor-freitas-791763_ikp9ro.jpg",
+        pdf: pdfUploaded ? pdfUploaded.secure_url : "",
       };
       const newOnline = new Online(online);
       const savedOnline = await newOnline.save();

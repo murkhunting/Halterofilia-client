@@ -4,26 +4,25 @@
   align-items: center;
   justify-content: center;
   color: $second;
-
   .clases {
-    width: 80%;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    margin-top: 30px;
+    margin-bottom: 0px;
     .titulo {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      margin-top: 30px;
       text-align: center;
       h1 {
         font-size: 70px;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
       }
       h2 {
+        width: 80%;
         text-align: justify;
         font-size: 24px;
         margin: 0 0 10px;
@@ -50,6 +49,114 @@
         .boton:hover {
           scale: 1.1;
           transform: rotate(-360deg);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .presencial {
+    .clases {
+      margin-top: 30px;
+      .titulo {
+        h1 {
+          font-size: 57px;
+          margin-bottom: 20px;
+        }
+        h2 {
+          width: 80%;
+          font-size: 22px;
+          margin: 0 0 10px;
+        }
+      }
+      .botones {
+        .conjunto {
+          .boton {
+            margin: 30px 50px 50px;
+            height: 180px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .presencial {
+    .clases {
+      margin-top: 40px;
+      .titulo {
+        h1 {
+          font-size: 48px;
+          margin-bottom: 20px;
+        }
+        h2 {
+          width: 90%;
+          font-size: 20px;
+          margin: 0 0 10px;
+        }
+      }
+      .botones {
+        .conjunto {
+          .boton {
+            margin: 30px 50px 50px;
+            height: 150px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .presencial {
+    .clases {
+      margin-top: 50px;
+      .titulo {
+        h1 {
+          font-size: 38px;
+          margin-bottom: 15px;
+        }
+        h2 {
+          width: 90%;
+          font-size: 18px;
+          margin: 0 0 10px;
+        }
+      }
+      .botones {
+        .conjunto {
+          .boton {
+            margin: 20px 50px 50px;
+            height: 130px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .presencial {
+    .clases {
+      margin-top: 60px;
+      .titulo {
+        h1 {
+          font-size: 27px;
+          margin-bottom: 15px;
+        }
+        h2 {
+          width: 90%;
+          font-size: 16px;
+          margin: 0 0 10px;
+        }
+      }
+      .botones {
+        .conjunto {
+          .boton {
+            margin: 15px 15px 30px;
+            height: 120px;
+          }
         }
       }
     }

@@ -25,17 +25,8 @@ const Edit = () => {
     getFormacion();
   }, [id]);
 
-  const {
-    titulo,
-    precio,
-    precioferta,
-    inicio,
-    duracion,
-    horario,
-    dirigido,
-    objetivo,
-    img,
-  } = formacion;
+  const { titulo, precio, inicio, duracion, horario, dirigido, objetivo } =
+    formacion;
 
   //FORMACION EDITADA
   const [formacionEditada, setFormacionEditada] = useState({});
@@ -150,17 +141,6 @@ const Edit = () => {
           type="text"
           placeholder="Copia el link para pagar..."
           name="link"
-          onChange={handleChange}
-        />
-      </div>
-      <div className="grupo">
-        <h4>IMAGEN DE LA FORMACIÓN:</h4>
-        <input
-          className="archivo"
-          type="file"
-          placeholder="Sube una imagen..."
-          name="img"
-          defaultValue={img}
           onChange={handleChange}
         />
       </div>

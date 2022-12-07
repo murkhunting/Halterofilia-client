@@ -6,7 +6,6 @@ const Card = ({ online }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const { titulo, precio, img, _id, idioma } = online;
-  console.log(idioma);
   return (
     <div className="card">
       {idioma === "por" ? (

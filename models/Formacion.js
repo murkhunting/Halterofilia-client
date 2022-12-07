@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const FormacionSchema = new mongoose.Schema({
   titulo: { type: String },
-  precio: { type: String },
+  precio: { type: String, unique: false },
   agotado: { type: Boolean },
   inicio: { type: String },
   duracion: { type: String },

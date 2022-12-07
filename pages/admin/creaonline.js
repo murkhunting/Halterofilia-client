@@ -125,6 +125,15 @@ const Creaonline = () => {
           />
         </div>
         <div className="grupo">
+          <h4>LINK DEL PAGO:</h4>
+          <input
+            type="text"
+            placeholder="Copia el link para pagar..."
+            name="link"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="grupo">
           <h4>IMAGEN DE LA FORMACIÓN:</h4>
           <input
             className="archivo"
