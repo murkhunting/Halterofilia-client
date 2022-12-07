@@ -16,10 +16,10 @@ const Clases = ({ initialLang }) => {
         <a>
           <div className="elemento animate__animated animate__zoomIn">
             <div className="enlace">
-              {lang === "esp" ? (
+              {lang === "por" ? (
                 <>
                   <h1>CLASES PRESENCIALES</h1>
-                  <h2>CURSOS Y SEMINARIOS PARA PROFESIONALES DE ALTO NIVEL</h2>
+                  <h2>DESCUBRE COMO SON Y COMO FUNCIONAN NUESTRAS CLASES PRESENCIAL</h2>
                 </>
               ) : lang === "eng" ? (
                 <>
@@ -28,8 +28,8 @@ const Clases = ({ initialLang }) => {
                 </>
               ) : (
                 <>
-                  <h1>FORMASAO</h1>
-                  <h2>CURSOS Y SEMINARIOS PARA PROFESIONALES DE ALTO NIVEL</h2>
+              <h1>CLASES PRESENCIALES</h1>
+                <h2>DESCUBRE COMO SON Y COMO FUNCIONAN NUESTRAS CLASES PRESENCIAL</h2>
                 </>
               )}
             </div>

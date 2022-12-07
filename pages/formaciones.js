@@ -12,7 +12,7 @@ const Formaciones = () => {
           <div className="elemento animate__animated animate__zoomIn">
             <div className="enlace">
               <h1>FORMACIONES ONLINE</h1>
-              <h2>NOS ADAPTAMOS A TI Y A TUS OBJETIVOS, 100% PERSONALIZADO</h2>
+              <h2>CURSOS Y SEMINARIOS ONLINE DE HALTEROFILIA PARA PROFESIONALES Y ATLETAS DE ALTO NIVEL</h2>
             </div>
             <img className="boton" src="/images/15ONLINE.png" alt="logo" />
           </div>

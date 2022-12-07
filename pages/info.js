@@ -147,40 +147,9 @@ const Info = () => {
           </h3>
         </div>
       </div>
-      <div className="tarifas">
+      {/* <div className="tarifas">
         <h1 onClick={onClick4}>▾ GUIA MOVIMIENTOS HALTEROFILIA ▾</h1>
         <div className={show4 ? "box" : "nobox"}>
-          <h3>
-            LA INSCRIPCIÓN COMO CLIENTE DE CLUB HALTEROFILIA BARCELONA OLÍMPICO
-            CUBRIRÁ EL PERIODO DURANTE EL QUE DICHO CLIENTE SATISFAGA LA
-            CORRESPONDIENTE CUOTA SEGÚN LO DISPUESTO EN EL PRESENTE DOCUMENTO.
-          </h3>
-          <h3>
-            Las bajas o modificaciones deberán comunicarse antes del día 15 del
-            mes anterior a la baja, así como cualquier cambio de tarifa. En caso
-            contrario la baja o modificación no podrá ser efectiva hasta el
-            siguiente mes y se cobrara la cuota de manera habitual. La no
-            asistencia del titular o del beneficiario a las instalaciones del
-            Club con independencia de su duración o de la causa que lo origine,
-            en ningún caso dará derecho a la devolución de cantidad alguna de
-            dinero.
-          </h3>
-          <h3>
-            El mes de Agosto se cobrara íntegramente ya que los periodos
-            vacaciones así como los días festivos están prorrateados a lo largo
-            de las cuotas mensuales. En caso de baja durante este periodo y
-            deseo por parte del socio de una nueva inscripción pasado el citado
-            periodo, se deberá abonar la matricula estipulada para estos casos.
-          </h3>
-          <h3>
-            Únicamente en caso de lesión (ocasionada en el devenir de un entteno
-            en el club única y exclusívamente), cabe la posibilidad de congelar
-            la cuota por un periodo máximo de un mes, en caso de tratarse de un
-            periodo superior el socio deberá considerarse la baja del Club y
-            realizar una nueva alta tras la recuperación con el pago de la
-            correspondiente matricula. Este procedimiento de congelación es
-            posible realizarlo únicamente 1 vez anualmente.
-          </h3>
           <h3>
             En caso de impago de una cuota los gastos de devolución correrán
             íntegramente a cargo del socio, en caso de no abonar dicho importe
@@ -190,8 +159,8 @@ const Info = () => {
             más los gastos, a la vez que la matrícula y cuota estipulada en ese
             momento.
           </h3>
-        </div>
-      </div>
+      </div> 
+      </div>*/}
     </div>
   );
 };
