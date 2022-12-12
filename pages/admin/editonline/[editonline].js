@@ -24,7 +24,7 @@ const Editonline = () => {
     getOnline();
   }, [id]);
 
-  const { idioma, titulo, precio, dirigido, objetivo, descripcion, img, pdf } =
+  const { idioma, titulo, precio, dirigido, objetivo, descripcion, link } =
     online;
 
   //ONLINE EDITADO
@@ -120,24 +120,12 @@ const Editonline = () => {
         />
       </div>
       <div className="grupo">
-        <h4>IMAGEN DE LA FORMACIÓN:</h4>
+        <h4>LINK DEL PAGO:</h4>
         <input
-          className="archivo"
-          type="file"
-          placeholder="Sube una imagen..."
-          name="img"
-          defaultValue={img}
-          onChange={handleChange}
-        />
-      </div>
-      <div className="grupo">
-        <h4>PDF DE LA FORMACIÓN:</h4>
-        <input
-          className="archivo"
-          type="file"
-          placeholder="Sube el pdf..."
-          name="pdf"
-          defaultValue={pdf}
+          type="text"
+          placeholder="Copia el link para pagar..."
+          name="link"
+          defaultValue={link}
           onChange={handleChange}
         />
       </div>

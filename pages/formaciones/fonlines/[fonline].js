@@ -8,7 +8,7 @@ import { IoPricetagsOutline } from "react-icons/io5";
 import { AiOutlineRise } from "react-icons/ai";
 
 const Online = ({ online }) => {
-  const { idioma, titulo, precio, dirigido, objetivo, descripcion } = online;
+  const { titulo, precio, dirigido, objetivo, descripcion, link } = online;
 
   return (
     <div className="online">
@@ -37,19 +37,23 @@ const Online = ({ online }) => {
       <div className="enlla">
         <h3 className="interesado">
           SI ESTÁS INTERESADO EN ESTA FORMACIÓN ONLINE Y QUIERES ADQUIRIRLA
-          CLICA EN EL SIGUIENTO BOTÓN PARA PROCEDER A LA PLATAFORMA DE PAGO. UNA
-          VEZ LO HAYAS REALIZADO EL PAGO RECIBIRÁS UN MAIL CON LA FORMACIÓN AL
-          CORREO QUE HAYAS APORTADO.
+          PULSA EL SIGUIENTE BOTÓN PARA PROCEDER A LA PLATAFORMA DE PAGO. UNA
+          VEZ LO HAYAS REALIZADO RECIBIRÁS UN MAIL CON LA FORMACIÓN AL CORREO
+          QUE HAYAS APORTADO.
         </h3>
         <h3 className="contacta">
-          SI TIENES ALGUNA DUDA O QUIERES CONSULTAR ALGO ANTES DE CONTINUAR AL
-          PAGO,
+          SI TIENES ALGUNA DUDA O QUIERES CONSULTAR ALGO ANTES DE PROCEDER AL
+          PAGO, PONTE EN
           <Link href="/contacto">
-            <a> PONTE EN CONTACTO CON NOSOTROS.</a>
+            <a>
+              {" "}
+              <span>CONTACTO</span>{" "}
+            </a>
           </Link>
+          CON NOSOTROS.
         </h3>
       </div>
-      <Link href="/contacto">
+      <Link href={link}>
         <a>
           <button className="loginbtn">PROCEDER AL PAGO</button>
         </a>

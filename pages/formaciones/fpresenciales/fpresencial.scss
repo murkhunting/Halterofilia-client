@@ -55,6 +55,12 @@
     text-align: justify;
     h3 {
       font-size: 22px;
+      a {
+        span {
+          text-decoration: underline $detalles;
+          text-decoration-thickness: 3px;
+        }
+      }
     }
   }
   .loginbtn {

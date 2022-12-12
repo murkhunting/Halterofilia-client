@@ -8,7 +8,7 @@ import { IoPricetagsOutline } from "react-icons/io5";
 import { AiOutlineRise } from "react-icons/ai";
 
 const Programa = ({ programa }) => {
-  const { titulo, precio, dirigido, objetivo, descripcion } = programa;
+  const { titulo, precio, dirigido, objetivo, descripcion, link } = programa;
 
   return (
     <div className="programa">
@@ -37,14 +37,23 @@ const Programa = ({ programa }) => {
       <div className="enlla">
         <h3>
           SI CREES QUE ESTE PROGRAMA SE ADAPTA AL PLAN DE ENTRENO QUE BUSCAS Y
-          ESTÁS INTERESADO EN ADQUIRIRLO CLICA EN EL SIGUIENTO BOTÓN PARA
-          PROCEDER A LA PLATAFORMA DE PAGO.
-          <br />
-          UNA VEZ LO HAYAS REALIZADO EL PAGO RECIBIRÁS UN MAIL CON TU PROGRAMA
-          AL CORREO QUE HAYAS APORTADO.
+          ESTÁS INTERESADO EN ADQUIRIRLO PULSA EL SIGUIENTE BOTÓN PARA PROCEDER
+          A LA PLATAFORMA DE PAGO. UNA VEZ LO HAYAS REALIZADO RECIBIRÁS UN MAIL
+          CON TU PROGRAMA AL CORREO QUE HAYAS APORTADO.
+        </h3>
+        <h3>
+          SI TIENES ALGUNA DUDA O QUIERES CONSULTAR ALGO ANTES DE PROCEDER AL
+          PAGO, PONTE EN
+          <Link href="/contacto">
+            <a>
+              {" "}
+              <span>CONTACTO</span>{" "}
+            </a>
+          </Link>
+          CON NOSOTROS.
         </h3>
       </div>
-      <Link href="/contacto">
+      <Link href={link}>
         <a>
           <button className="loginbtn">PROCEDER AL PAGO</button>
         </a>

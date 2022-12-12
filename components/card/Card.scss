@@ -12,11 +12,13 @@
   height: 500px;
 
   .idioma {
+    width: 108px;
     font-size: 18px;
     position: absolute;
     margin-top: -422px;
     margin-right: 315px;
-    padding: 10px 15px;
+    text-align: center;
+    padding: 10px 0px;
     z-index: 800;
     background-color: $detalles;
     color: $second;
@@ -135,10 +137,11 @@
     width: 368px;
     height: 460px;
     .idioma {
+      width: 105px;
+    padding: 8px 0px;
       font-size: 17px;
-      margin-top: -395px;
-      margin-right: 292px;
-      padding: 7.5px 12px;
+      margin-top: -391px;
+      margin-right: 278px;
     }
     .cardcont {
       width: 368px;
@@ -201,10 +204,11 @@
     width: 320px;
     height: 400px;
     .idioma {
+      width: 90px;
+    padding: 7.5px 0px;
       font-size: 15px;
       margin-top: -340px;
-      margin-right: 260px;
-      padding: 7.5px 12px;
+      margin-right: 242px;
     }
     .cardcont {
       background-image: url("/images/gif1.gif");
@@ -270,10 +274,11 @@
     width: 290px;
     height: 370px;
     .idioma {
+      width: 80px;
+      padding: 7.5px 0px;
       font-size: 14px;
       margin-top: -308px;
-      margin-right: 230px;
-      padding: 7.5px 12px;
+      margin-right: 226px;
     }
     .cardcont {
       background-image: url("/images/gif1.gif");

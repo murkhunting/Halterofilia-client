@@ -25,8 +25,16 @@ const Edit = () => {
     getFormacion();
   }, [id]);
 
-  const { titulo, precio, inicio, duracion, horario, dirigido, objetivo } =
-    formacion;
+  const {
+    titulo,
+    precio,
+    inicio,
+    duracion,
+    horario,
+    dirigido,
+    objetivo,
+    link,
+  } = formacion;
 
   //FORMACION EDITADA
   const [formacionEditada, setFormacionEditada] = useState({});
@@ -141,6 +149,7 @@ const Edit = () => {
           type="text"
           placeholder="Copia el link para pagar..."
           name="link"
+          defaultValue={link}
           onChange={handleChange}
         />
       </div>

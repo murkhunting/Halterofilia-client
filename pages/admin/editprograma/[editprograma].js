@@ -24,8 +24,7 @@ const Editprograma = () => {
     getPrograma();
   }, [id]);
 
-  const { titulo, precio, dirigido, objetivo, descripcion, img, pdf } =
-    programa;
+  const { titulo, precio, dirigido, objetivo, descripcion, link } = programa;
 
   //PROGRAMA EDITADO
   const [programaEditado, setProgramaEditado] = useState({});
@@ -107,24 +106,12 @@ const Editprograma = () => {
         />
       </div>
       <div className="grupo">
-        <h4>IMAGEN DEL PROGRAMA:</h4>
+        <h4>LINK DEL PAGO:</h4>
         <input
-          className="archivo"
-          type="file"
-          placeholder="Sube una imagen..."
-          name="img"
-          defaultValue={img}
-          onChange={handleChange}
-        />
-      </div>
-      <div className="grupo">
-        <h4>PDF DEL PROGRAMA:</h4>
-        <input
-          className="archivo"
-          type="file"
-          placeholder="Sube el pdf..."
-          name="pdf"
-          defaultValue={pdf}
+          type="text"
+          placeholder="Copia el link para pagar..."
+          name="link"
+          defaultValue={link}
           onChange={handleChange}
         />
       </div>

@@ -114,6 +114,15 @@ const Creaprograma = () => {
           />
         </div>
         <div className="grupo">
+        <h4>LINK DEL PAGO:</h4>
+        <input
+          type="text"
+          placeholder="Copia el link para pagar..."
+          name="link"
+          onChange={handleChange}
+        />
+      </div>
+        <div className="grupo">
           <h4>IMAGEN DEL PROGRAMA:</h4>
           <input
             className="archivo"
@@ -121,16 +130,6 @@ const Creaprograma = () => {
             placeholder="Sube una imagen..."
             name="img"
             onChange={handleImg}
-          />
-        </div>
-        <div className="grupo">
-          <h4>PDF DEL PROGRAMA:</h4>
-          <input
-            className="archivo"
-            type="file"
-            placeholder="Sube el pdf..."
-            name="pdf"
-            onChange={handlePdf}
           />
         </div>
         <button className="loginbtn" onClick={handleCreatePrograma}>

@@ -143,16 +143,6 @@ const Creaonline = () => {
             onChange={handleImg}
           />
         </div>
-        <div className="grupo">
-          <h4>PDF DE LA FORMACIÓN:</h4>
-          <input
-            className="archivo"
-            type="file"
-            placeholder="Sube el pdf..."
-            name="pdf"
-            onChange={handlePdf}
-          />
-        </div>
         <button className="loginbtn" onClick={handleCreateOnline}>
           CREAR FORMACIÓN ONLINE
         </button>

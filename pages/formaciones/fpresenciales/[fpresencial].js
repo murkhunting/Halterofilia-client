@@ -12,35 +12,15 @@ import { CgTimelapse } from "react-icons/cg";
 import { AiOutlineSchedule } from "react-icons/ai";
 
 const Curso = ({ formacion }) => {
-  // const router = useRouter();
-  // const id = router.query.formacion;
-
-  // const [formacion, setFormacion] = useState({});
-
-  // useEffect(() => {
-  //   const getFormacion = async () => {
-  //     try {
-  //       const res = await axios.get(
-  //         `http://localhost:8800/api/formacion/${id}`
-  //       );
-  //       setFormacion(res.data);
-  //     } catch (err) {
-  //       console.log(err);
-  //     }
-  //   };
-  //   getFormacion();
-  // }, [id]);
-
   const {
     titulo,
     precio,
-    oferta,
-    precioferta,
     inicio,
     duracion,
     horario,
     dirigido,
     objetivo,
+    link,
   } = formacion;
 
   return (
@@ -81,13 +61,21 @@ const Curso = ({ formacion }) => {
       </div>
       <div className="enlla">
         <h3>
-          SI ESTÁS INTERESADO EN REALIZAR ESTA FORMACIÓN PROFESIONAL CONTACTA
-          CON NOSOTROS PARA APUNTARTE.
+          SI ESTÁS INTERESADO EN REALIZAR ESTA FORMACIÓN PROFESIONAL PUEDES
+          PULSAR EL BOTÓN PARA PROCEDER A LA PLATAFORMA DE PAGO Y APUNTARTE
+          DIRECTAMENTE. O, SI LO PREFIERES, PUEDES PONERTE EN
+          <Link href="/contacto">
+            <a>
+              {" "}
+              <span>CONTACTO</span>{" "}
+            </a>
+          </Link>
+          CON NOSOTROS Y RESOLVEREMOS TODAS TUS DUDAS
         </h3>
       </div>
-      <Link href="/contacto">
+      <Link href={link}>
         <a>
-          <button className="loginbtn">PONTE EN CONTACTO</button>
+          <button className="loginbtn">PROCEDER AL PAGO</button>
         </a>
       </Link>
     </div>
