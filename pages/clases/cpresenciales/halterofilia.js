@@ -93,8 +93,8 @@ const Halterofilia = () => {
       <div className="enlla">
         <h3>
           SI TIENES ALGUNA DUDA O YA HAS DECIDIDO QUE QUIERES ENTRENAR EN EL
-          CLUB HALTEROFILIA BARCELONA, CLICA EN EL SIGUIENTE ENLACE PARA PONERTE
-          EN CONTACTO CON NOSOTROS
+          CLUB HALTEROFILIA BARCELONA, PULSA EL SIGUIENTE ENLACE PARA PONERTE EN
+          CONTACTO CON NOSOTROS
         </h3>
       </div>
       <Link href="/contacto">

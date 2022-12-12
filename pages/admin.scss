@@ -23,8 +23,7 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-start;
+      align-items: center;
       width: 380px;
       .linea {
         width: 100%;
@@ -76,6 +75,40 @@
       background-color: $detalles;
       color: $second;
       border: 1px solid $detalles;
+    }
+  }
+}
+
+@media (max-width: 480px){
+  .admin {
+    .objetos {
+      width: 320px;
+      margin: 0 10px 20px;
+      h1 {
+        font-size: 18px;
+        margin-bottom: 30px;
+      }
+      .enumera {
+        width: 300px;
+        .linea {
+          h2 {
+            font-size: 13px;
+          }
+          .iconitos {
+            .tamaño {
+              margin-left: 10px;
+              font-size: 14px;
+              padding: 6px;
+            }
+          }
+        }
+      }
+      .btn {
+        margin: 20px 0 20px;
+        padding: 8px 15px;
+        font-size: 13px;
+        width: 200px;
+      }
     }
   }
 }
