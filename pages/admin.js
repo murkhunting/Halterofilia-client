@@ -2,10 +2,11 @@ import React from "react";
 import { useState, useRouter } from "react";
 import axios from "axios";
 import Cookie from "js-cookie";
+import Link from "next/link";
 
 import { parseCookies } from "../lib/parseCookies";
+import dbConnect from "../lib/mongo";
 
-import Link from "next/link";
 
 import { FaRegEdit } from "react-icons/fa";
 import { FiTrash2 } from "react-icons/fi";
@@ -134,6 +135,7 @@ const Admin = ({ formaciones, programas, onlines, token }) => {
 export default Admin;
 
 export const getServerSideProps = async ({ req }) => {
+  await dbConnect();
   const cookies = parseCookies(req);
   const res1 = await axios.get("http://localhost:3000/api/programa");
   const res2 = await axios.get("http://localhost:3000/api/formacion");

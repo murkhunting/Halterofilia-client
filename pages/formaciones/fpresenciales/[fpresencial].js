@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Link from "next/link";
 
+import dbConnect from "../../../lib/mongo";
+
 import { IoPricetagsOutline } from "react-icons/io5";
 import { MdDateRange } from "react-icons/md";
 import { CgTimelapse } from "react-icons/cg";
@@ -95,6 +97,7 @@ const Curso = ({ formacion }) => {
 export default Curso;
 
 export const getServerSideProps = async ({ params }) => {
+  await dbConnect();
   const id = params.fpresencial;
   console.log(id);
   const res = await axios.get(`http://localhost:3000/api/formacion/id/${id}`);

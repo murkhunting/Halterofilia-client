@@ -2,6 +2,8 @@ import React from "react";
 import axios from "axios";
 import Link from "next/link";
 
+import dbConnect from "../../../lib/mongo";
+
 import { IoPricetagsOutline } from "react-icons/io5";
 import { AiOutlineRise } from "react-icons/ai";
 
@@ -54,6 +56,7 @@ const Programa = ({ programa }) => {
 export default Programa;
 
 export const getServerSideProps = async ({ params }) => {
+  await dbConnect();
   const id = params.programa;
   const res = await axios.get(`http://localhost:3000/api/programa/id/${id}`);
   return {

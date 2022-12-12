@@ -2,8 +2,10 @@ import React from "react";
 import axios from "axios";
 
 import Online from "../../components/card/Card";
+import dbConnect from "../../lib/mongo";
 
 const Fonlines = ({ onlines }) => {
+
   return (
     <div className="fonlines">
       <div className="titulo">
@@ -25,6 +27,7 @@ const Fonlines = ({ onlines }) => {
 export default Fonlines;
 
 export const getServerSideProps = async () => {
+  await dbConnect();
   const res = await axios.get("http://localhost:3000/api/online");
   return {
     props: {

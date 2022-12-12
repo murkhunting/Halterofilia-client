@@ -5,6 +5,8 @@ import Fichas from "../components/fichas/Fichas";
 import Item from "../components/item/Item";
 import Card from "../components/card/Card";
 
+import dbConnect from "../lib/mongo";
+
 import { MdDoubleArrow } from "react-icons/md";
 import { AiFillInstagram, AiFillYoutube } from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa";
@@ -278,6 +280,7 @@ export default function Home({ programas, formaciones, online }) {
 }
 
 export const getServerSideProps = async () => {
+  await dbConnect();
   const res1 = await axios.get("http://localhost:3000/api/programa/last2");
   const res2 = await axios.get("http://localhost:3000/api/formacion/next");
   const res3 = await axios.get("http://localhost:3000/api/online/ultimo");

@@ -7,7 +7,7 @@
   justify-content: flex-start;
   width: 100%;
   cursor: pointer;
-
+margin-bottom: 50px;
   .tarifas {
     display: flex;
     flex-direction: column;
@@ -31,6 +31,7 @@
       }
       h3 {
         font-size: 20px;
+        margin: 10px;
       }
       .tabla {
         display: flex;

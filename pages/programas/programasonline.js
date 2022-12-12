@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 
+import dbConnect from "../../lib/mongo";
+
 import Item from "../../components/item/Item";
 
 const Programasonline = ({ programas }) => {
@@ -25,6 +27,7 @@ const Programasonline = ({ programas }) => {
 export default Programasonline;
 
 export const getServerSideProps = async () => {
+  await dbConnect();
   const res = await axios.get("http://localhost:3000/api/programa");
   return {
     props: {

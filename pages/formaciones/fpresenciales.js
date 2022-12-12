@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 
 import Fichas from "../../components/fichas/Fichas";
+import dbConnect from "../../lib/mongo";
 
 const Fpresenciales = ({ formaciones }) => {
   return (
@@ -25,6 +26,7 @@ const Fpresenciales = ({ formaciones }) => {
 export default Fpresenciales;
 
 export const getServerSideProps = async () => {
+  await dbConnect();
   const res = await axios.get("http://localhost:3000/api/formacion");
   return {
     props: {
