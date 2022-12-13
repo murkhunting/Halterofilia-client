@@ -53,3 +53,33 @@
     border: 1px solid $detalles;
   }
 }
+@media (max-width: 660px){
+  .crea {
+    margin: 70px 0 100px;
+    h1{
+      font-size: 22px;
+    }
+    .grupo {
+      h4 {
+        margin-bottom: 5px;
+      }
+      input,
+      select {
+        width: 280px;
+        height: 30px;
+      }
+      .archivo {
+        padding-left: 0px;
+        margin: 8px;
+        height: 30px;
+        width: 200px;
+      }
+    }
+    .loginbtn {
+      margin: 40px 0 20px;
+      padding: 10px 20px;
+      font-size: 14px;
+      width: 180px;
+    }
+  }
+}

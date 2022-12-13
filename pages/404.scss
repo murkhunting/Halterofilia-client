@@ -3,9 +3,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   background-color: $main;
-  background-image: url("/images/gordo.png");
+  background-image: url("/images/pexels-victor-freitas-2261483.jpg");
   background-size: cover;
   color: $second;
   h2 {
@@ -26,7 +26,7 @@
 
     h1 {
       text-align: center;
-      font-size: 60px;
+      font-size: 46px;
       margin: 0;
     }
   }
@@ -35,7 +35,6 @@
     text-decoration: none;
     color: $second;
     transition: 0.2s ease-in-out;
-    margin-bottom: 150px;
   }
   a:hover {
     scale: 1.1;
@@ -48,5 +47,101 @@
   right: 0px;
   bottom: 0px;
   left: 0px;
-  background-color: #1f1f1fb9;
+  background-color: #1f1f1fd5;
+}
+
+@media (max-width: 1024px){
+  .error {
+    h2 {
+      font-size: 20px;
+    }
+    .limbo {
+      margin: 0 0 10px;
+      span {
+        font-size: 80px;
+      }
+  
+      h1 {
+        font-size: 36px;
+      }
+    }
+    a {
+      z-index: 200;
+      h1{
+        font-size: 26px;
+      }
+    }
+  }
+}
+@media (max-width: 780px){
+  .error {
+    h2 {
+      font-size: 18px;
+    }
+    .limbo {
+      margin: 0 0 10px;
+      span {
+        font-size: 60px;
+      }
+  
+      h1 {
+        font-size: 24px;
+      }
+    }
+    a {
+      z-index: 200;
+      h1{
+        font-size: 22px;
+      }
+    }
+  }
+}
+@media (max-width: 560px){
+  .error {
+    h2 {
+      font-size: 18px;
+    }
+    .limbo {
+      flex-direction: column;
+      margin: 0 0 10px;
+      span {
+        font-size: 60px;
+      }
+  
+      h1 {
+        font-size: 24px;
+      }
+    }
+    a {
+      z-index: 200;
+      h1{
+        font-size: 22px;
+      }
+    }
+  }
+}
+@media (max-width: 480px){
+  .error {
+    h2 {
+      font-size: 14px;
+    }
+    .limbo {
+      flex-direction: column;
+      margin: 0 0 10px;
+      span {
+        font-size: 60px;
+      }
+  
+      h1 {
+        font-size: 22px;
+        margin: 0 10px;
+      }
+    }
+    a {
+      z-index: 200;
+      h1{
+        font-size: 18px;
+      }
+    }
+  }
 }
