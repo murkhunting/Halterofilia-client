@@ -62,9 +62,8 @@ export default function Home({ programas, formaciones, online }) {
         <div className="container">
           <div className="formacionlink">
             <h2>
-              SI ERES UN ATLETA PROFESIONAL, UN ENTRENADOR O PREPARADOR FÍSICO O
-              QUIERES APRENDER AL ÁXIMO NIVEL, NO TE PIERDAS NUESTRAS
-              FORMACIONES ONLINE Y MEJORA DESDE CUALQUIER LUGAR DEL MUNDO.
+              no es necesario vivir en Barcelona para poder aprender todos los
+              secretos de la Halterofilia. Descubre nuestras formaciones online.
             </h2>
             <Link href="/formaciones/fonlines">
               <a>
@@ -87,11 +86,12 @@ export default function Home({ programas, formaciones, online }) {
       {/* PROGRAMA ONLINE */}
       <div className="programaonline">
         <div className="iz">
-          <h1>SIENTES QUE NO AVANZAS CON LOS ENTRENOS QUE REALIZAS?</h1>
+          <h1>TENEMOS UNA PLANIFICACIÓN PARA TI.</h1>
           <div className="flecha">
             <h2>
-              DESCUBRE NUESTRO PROGRAMA ONLINE 100% PERSONALIZADO, EMPIEZA A VER
-              RESULTADOS GARANTIZADOS Y CUMPLE CON TODOS TUS OBJETIVOS.
+              CADA PERSONA TIENE UNAS NECESIDADES Y CARACTERÍSTICAS PERSONALES
+              QUE LA HACEN ÚNICA. NOS ADAPTAMOS A ELLAS CON NUESTROS PROGRAMAS
+              ONLINE 100% PERSONALIZADOS.
             </h2>
             <div className="ico">
               <MdDoubleArrow />
@@ -133,9 +133,9 @@ export default function Home({ programas, formaciones, online }) {
               <MdDoubleArrow />
             </div>
             <h2>
-              DESCUBRE NUESTROS PROGRAMAS DE ENTRENAMIENTO GUIADOS Y ADQUIERE EL
-              QUE MEJOR SE AJUSTE A TUS NECESIDADES PARA ENTRENAR DESDE
-              CUALQUIER SITIO.
+              LA CLAVE PARA CUMPLIR TUS OBJETIVOS ES LA PLANIFICACIÓN. HAZTE CON
+              UNO DE NUESTROS PROGRAMAS DE ENTRENAMIENTO GUIADOS QUE LLEVARÁN TU
+              PREPARACIÓN AL SIGUIENTE NIVEL.
             </h2>
           </div>
           <div className="nextformacion">
@@ -156,9 +156,10 @@ export default function Home({ programas, formaciones, online }) {
             <div className="flecha">
               <div className="hor">
                 <h2>
-                  SI QUIERES ENTRENAR DESDE CASA DE FORMA GUIADA Y DISPONES DEL
-                  MATERIAL NECESARIO NO TE PIERDAS NUESTRAS CLASES DIRIGIDAS A
-                  TRAVÉS DE ZOOM
+                  SI EL PROBLEMA ES LA DISTANCIA, ¡TENEMOS LA SOLUCIÓN! APRENDE
+                  HALTEROFILIA DESDE CUALQUIER LUGAR CON NUESTRAS CLASES
+                  DIRIGIDAS POR STREAMING. LOS MEJORES PROFESIONALES A TU LADO Y
+                  SIN NECESIDAD DE SALIR DE CASA.
                 </h2>
                 {/* <h2> TÉCNICA, FUERZA Y POTENCIA ·</h2>
                 <h2> 2 MOVIMIENTOS OLÍMPICOS ·</h2>
@@ -193,9 +194,11 @@ export default function Home({ programas, formaciones, online }) {
         <div className="container">
           <div className="formacionlink">
             <h2>
-              SI ERES UN ATLETA PROFESIONAL, UN ENTRENADOR O PREPARADOR FÍSICO O
-              QUIERES APRENDER AL ÁXIMO NIVEL NO TE PIERDAS NUESTROS SEMINARIOS
-              Y CURSOS DE MEJORA TÉCNICA.
+              NO TODO ES APRENDER A LEVANTAR, LA COMBINACIÓN PERFECTA SE
+              CONSIGUE CUANDO UNO SABE TAMBIÉN ENSEÑAR. EN NUESTRAS FORMACIONES
+              PRESENCIALES Y SEMINARIOS PARA PROFESIONALES Y ENTRENADORES, TE
+              FORMAMOS PARA QUE DESCUBRAS TODOS LOS SECRETOS DE LA HALTEROFILIA,
+              DESDE LA DETECCIÓN DE ERRORES HASTA ESTRUCTURAR UNA PLANIFICACIÓN.
             </h2>
             <Link href="/formaciones/fpresenciales">
               <a>
@@ -264,12 +267,10 @@ export default function Home({ programas, formaciones, online }) {
               </div>
               <div className="hor">
                 <h2>
-                  DESCUBRE MÁS SOBRE NUESTRAS CLASES PRESENCIALES Y NO DUDES EN
-                  APUNTARTE!
+                  VEN A APRENDER HALTEROFILIA CON NOSOTROS. TRABAJAREMOS EN TUS
+                  ERRORES PARA AYUDARTE A LEVANTAR MEJOR Y AVANZAR EN TUS
+                  ENTRENAMIENTOS. ESTAREMOS CONTIGO EN CADA LEVANTAMIENTO.
                 </h2>
-                <h2>- TÉCNICA, FUERZA Y CONSTANCIA</h2>
-                <h2>- 2 MOVIMIENTOS OLÍMPICOS </h2>
-                <h2>- 100% HALTEOFILIA </h2>
               </div>
             </div>
           </div>
